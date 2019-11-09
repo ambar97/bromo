@@ -419,6 +419,8 @@
         </div>
       </div>
 <!-- tutup content -->
-
+<?php $this->load->view('admin/side/rightside') ?>
 <?php $this->load->view('admin/side/footer') ?>
 <?php $this->load->view('admin/side/js') ?>
+</body>
+</html>
