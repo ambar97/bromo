@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_alamin extends CI_Model {
+class M_model extends CI_Model {
 
     public function select($table){
     return $this->db->get($table);
@@ -30,11 +30,6 @@ class M_alamin extends CI_Model {
   }
   function cek_login($table,$where){
     return $this->db->get_where($table,$where);
-  }
-
-    function get_model(){
-    $query = $this->db->query('SELECT * FROM automobil ORDER BY id_automobile ASC');
-    return $query->result();
   }
 
 }
