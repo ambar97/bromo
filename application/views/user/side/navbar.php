@@ -87,23 +87,33 @@
                         <!-- BEGIN: NAVIGATION -->       
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="dropdown">
+                                <li class="<?php if ($this->uri->segment(1)== "Home"): ?>
+                                    <?php echo "active" ?>
+                                <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('Home') ?>"><i class="fa fa-home"></i> HOME</a>
                                 </li>
-                                <li class="dropdown">
+                                <li class="<?php if ($this->uri->segment(1)== "Wisata"): ?>
+                                    <?php echo "active" ?>
+                                <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('Wisata') ?>"><i class="fa fa-map-marker"></i> WISATA</a>
                                 </li>
-                                <li class="dropdown">
+                                <li class="<?php if ($this->uri->segment(1)== "Hotel"): ?>
+                                    <?php echo "active" ?>
+                                <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('Hotel') ?>"><i class="fa fa-bed"></i> HOTEL</a>
                                 </li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" href="<?php echo base_url('PaketWisata') ?>"><i class="fa fa-suitcase"></i> PAKET WISATA</a>
                                 </li>
-                                <li class="dropdown">
+                                <li class="<?php if ($this->uri->segment(1)== "Galery"): ?>
+                                    <?php echo "active" ?>
+                                <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('Galery') ?>"><i class="fa fa-picture-o"></i> GALLERY</a>
                                 </li>
-                                <li class="dropdown mega">
-                                    <a class="dropdown-toggle" href="#"><i class="fa fa-ship"></i> CONTACT </a>
+                                <li class="<?php if ($this->uri->segment(1)== "ContactUs"): ?>
+                                    <?php echo "active" ?>
+                                <?php endif ?>">
+                                    <a class="dropdown-toggle" href="<?php echo base_url('ContactUs') ?>"><i class="fa fa-ship"></i> CONTACT </a>
                                 </li>
                             </ul>
                         </div>

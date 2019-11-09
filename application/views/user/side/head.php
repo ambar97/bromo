@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html class="load-full-screen">
-
-<!-- Mirrored from limpidthemes.com/Themeforest/cruise-demo/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Nov 2019 20:52:31 GMT -->
 <head>
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
