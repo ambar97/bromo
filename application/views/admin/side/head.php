@@ -16,5 +16,4 @@
   <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/nucleo/css/nucleo.css" type="text/css">
   <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/%40fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendorfontawesome-f/css/all.min.css" type="text/css">
-    <link href="<?php echo base_url() ?>sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
-  
+  <link href="<?php echo base_url() ?>sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
