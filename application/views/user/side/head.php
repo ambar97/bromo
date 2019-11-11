@@ -26,7 +26,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600' rel='stylesheet' type='text/css'>
     <style>
       .form_depan::placeholder{
-        color: white;
+        color: black;
       }
     </style>
 </head>

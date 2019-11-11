@@ -40,7 +40,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Rating</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="rating" value="<?php echo $h->rating; ?>">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Rating" name="rating" value="<?php echo $h->rating; ?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Deskripsi</label><br>
@@ -48,7 +48,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Harga</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="harga" value="<?php echo $h->harga; ?>">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Price" name="harga" value="<?php echo $h->harga; ?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">File input</label>
@@ -68,6 +68,24 @@
               </form>
             </div>
           </div>
+        </div>
+        <div class="row">
+          <?php foreach ($gallery->result() as $g): ?>
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-header">
+                  <?php echo $g->gambar; ?>
+                </div>
+                <div class="card-body" style="height:200px">
+                  <img class="img-fluid" src="<?php echo base_url().'gallery/hotel/'.$g->gambar; ?>" alt="">
+                </div>
+                <div class="card-footer d-flex justify-content-center">
+                  <!-- <input type="text" name="id_gambar" value="<?php// echo $g->hotel_idhotel; ?>" hidden> -->
+                  <a class="btn btn-danger text-white" href="<?php echo base_url('admin/Hotel/prosesHapusGambar/').$g->gambar; ?>">Hapus</a>
+                </div>
+              </div>
+            </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>

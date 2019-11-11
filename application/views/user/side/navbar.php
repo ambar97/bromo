@@ -76,7 +76,7 @@
                                 <li class="<?php if ($this->uri->segment(1)== "Hotel"): ?>
                                     <?php echo "active" ?>
                                 <?php endif ?>">
-                                    <a class="dropdown-toggle" href="#<?php echo base_url('Hotel') ?>"><i class="fa fa-bed"></i> HOTEL</a>
+                                    <a class="dropdown-toggle" href="<?php echo base_url('Hotel') ?>"><i class="fa fa-bed"></i> HOTEL</a>
                                 </li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" href="#<?php echo base_url('PaketWisata') ?>"><i class="fa fa-suitcase"></i> PAKET WISATA</a>
