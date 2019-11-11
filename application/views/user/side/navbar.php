@@ -73,7 +73,7 @@
                                 <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('Home') ?>"><i class="fa fa-home"></i> HOME</a>
                                 </li>
-                                <li class="<?php if ($this->uri->segment(1)== "Wisata"): ?>
+                                <!-- <li class="<?php if ($this->uri->segment(1)== "Wisata"): ?>
                                     <?php echo "active" ?>
                                 <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('Wisata') ?>"><i class="fa fa-map-marker"></i> WISATA</a>
@@ -90,7 +90,7 @@
                                     <?php echo "active" ?>
                                 <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('Galery') ?>"><i class="fa fa-picture-o"></i> GALLERY</a>
-                                </li>
+                                </li> -->
                                 <li class="<?php if ($this->uri->segment(1)== "ContactUs"): ?>
                                     <?php echo "active" ?>
                                 <?php endif ?>">
