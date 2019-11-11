@@ -12,7 +12,7 @@
 <!-- END: PRELOADER -->
 
 <!-- BEGIN: COLOR SWITCHER -->
-<div class="cswitcher">
+<!-- <div class="cswitcher">
     <div id="color-switcher">
         <h6>CHOOSE COLOR</h6>
         <ul>
@@ -26,8 +26,8 @@
             <li class="yellow" data-path="<?php echo base_url() ?>master/client/assets/css/color/yellow.css"></li>
         </ul>
     </div>
-</div>
-<span id="stoggle"><i class="fa fa-cog"></i></span>
+</div> -->
+<!-- <span id="stoggle"><i class="fa fa-cog"></i></span> -->
 <!-- END: COLOR SWITCHER -->
  
 <!-- BEGIN: SITE-WRAPPER -->

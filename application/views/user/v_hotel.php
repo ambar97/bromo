@@ -1,7 +1,7 @@
 <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
 <!-- START: MODIFY SEARCH -->
-	<div class="row modify-search modify-hotel">
+	<div class="row modify-search modify-hotel"> 
 		<div class="container clear-padding">
 			<form >
 				<div class="col-md-4">

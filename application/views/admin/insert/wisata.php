@@ -1,10 +1,11 @@
  <?php $this->load->view("admin/side/head"); ?>
+
  <?php $this->load->view("admin/side/navbar"); ?>
  <div class="content">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <form id="LoginValidation" action="<?php echo base_url('Karyawan/create') ?>" method="post">
+        <form id="LoginValidation" action="<?php echo base_url('admin/Wisata/tabahDataWisata') ?>" method="post">
           <div class="card ">
             <div class="card-header card-header-info card-header-icon">
               <div class="card-icon">
@@ -20,22 +21,30 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label for="exampleEmails" class="bmd-label-floating"> Nama Wisata (English) *</label>
-                  <input type="text" class="form-control" id="exampleEmails" required="true" name="nama" required="">
+                  <input type="text" class="form-control" id="exampleEmails" required="true" name="namae" required="">
                 </div>
               </div>
               <div class="row">
               <div class="form-group col-md-6" >
                 <label for="examplePasswords" class="bmd-label-floating"> Harga (Rp) *</label>
-                <input type="text" class="form-control" id="examplePasswords" required="true" name="posisi" required="">
+                <input type="text" class="form-control" id="examplePasswords" required="true" name="harga" required="">
               </div>
               <div class="form-group col-md-6" >
                 <label for="examplePasswords" class="bmd-label-floating"> Price ($) *</label>
-                <input type="text" class="form-control" id="examplePasswords" required="true" name="posisi" required="">
+                <input type="text" class="form-control" id="examplePasswords" required="true" name="hargae" required="">
+              </div>
+              <div class="form-group col-md-6" >
+                <label for="examplePasswords" class="bmd-label-floating"> Rating *</label>
+                <input type="text" class="form-control" id="examplePasswords" required="true" name="rating" required="">
               </div>
               </div>
               <div class="form-group">
                 <label for="examplePasswords" class="bmd-label-floating"> Deskripsi *</label>
-                <input type="text" class="form-control" id="examplePasswords" required="true" name="shift" required="">
+                <textarea id="summernote" name="deskrip" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="examplePasswords" class="bmd-label-floating"> Deskripsi (English) *</label>
+                <textarea id="summernote" name="deskripe" required></textarea>
               </div>
               <div class="category form-category">* Required fields</div>
             </div>
@@ -49,6 +58,8 @@
   </div>
 </div>
 <?php $this->load->view('admin/side/rightside') ?>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
 <script>
     $(document).ready(function() {
       // initialise Datetimepicker and Sliders
@@ -57,7 +68,14 @@
         md.initSliders();
       }
     });
+
+    $('#summernote').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 100
+      });
   </script>
+  <script src="<?php echo base_url() ?>master/admin/summernote/dist/summernote.min.js"></script>
 <?php $this->load->view('admin/side/js') ?>
 
 <?php if ($this->session->flashdata()) { ?>
