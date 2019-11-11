@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
+
+<!-- Mirrored from demos.creative-tim.com/argon-dashboard-pro/pages/dashboards/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Sep 2019 11:26:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-  <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url()?>master/admin/assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="<?php echo base_url()?>master/admin/assets/img/apple-icon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    Admin Telkom
-  </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
-  <link href="<?php echo base_url()?>master/admin/assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="<?php echo base_url()?>master/admin/assets/demo/demo.css" rel="stylesheet" />
-  <link href="<?php echo base_url() ?>sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
-</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Creative Tim">
+  <title>Admin Tokason</title>
+  <link rel="canonical" href="https://www.creative-tim.com/product/argon-dashboard-pro" />
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <link rel="icon" href="<?php echo base_url()?>master/assets/img/brand/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/%40fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendorfontawesome-f/css/all.min.css" type="text/css">
+    <link href="<?php echo base_url() ?>sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+  

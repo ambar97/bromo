@@ -16,7 +16,15 @@ class Wisata extends CI_Controller {
 		$this->load->view('admin/insert/wisata');
 	}
 	public function tabahDataWisata(){
-
+		$data = array('nama_wisata' =>$this->input->post('nama') ,
+					'rating'=>$this->input->post('rating'),
+					'deskripsi'=>$this->input->post('deskrip'),
+					'judul_eng'=>$this->input->post('namae') ,
+					'deskripsi_eng'=>$this->input->post('deskripe') ,
+					'harga'=>$this->input->post('harga') ,
+					'harga_2'=>$this->input->post('hargae'));
+		// $gambar = array('deskripsi' => , );
+		// die(var_dump($data));
 	}
 	public function hapusDataWisata($id){
 		$where = array('idwisata'=>$id);

@@ -2,10 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_wisata extends CI_Model {
-	
+public $tabel ="wisata";	
 
 	public function pilihWisata(){
-		return $this->db->get("wisata");
+		return $this->db->get($this->tabel);
 	}
 	public function hapusWisata($where){
     $this->db->where($where);
