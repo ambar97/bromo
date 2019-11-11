@@ -2,7 +2,7 @@
  <?php $this->load->view("user/side/navbar"); ?>
 
 <section>
-    <div class="row full-width-search">
+    <div class="row full-width-search ">
         <div class="container clear-padding">
 
             <div class="offer-slider">
