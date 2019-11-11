@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Creative Tim">
-  <title>Admin Tokason</title>
+  <title>Admin Sunsetview</title>
   <link rel="canonical" href="https://www.creative-tim.com/product/argon-dashboard-pro" />
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <link rel="icon" href="<?php echo base_url()?>master/assets/img/brand/favicon.png" type="image/png">
