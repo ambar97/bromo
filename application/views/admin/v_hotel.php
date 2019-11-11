@@ -53,7 +53,7 @@
                     <?php foreach ($hotel->result() as $h): ?>
                       <tr>
                         <td>
-                          <?php echo $h->hotelcol; ?>
+                          <?php echo $h->idhotel; ?>
                         </td>
                         <td>
                           <?php echo $h->nama_hotel; ?>
@@ -62,7 +62,7 @@
                           <?php echo number_format($h->harga); ?>
                         </td>
                         <td>
-                          <a class="btn btn-warning" href="<?php echo base_url('admin/Hotel/editHotel/'.$h->hotelcol); ?>">Edit</a>
+                          <a class="btn btn-warning" href="<?php echo base_url('admin/Hotel/editHotel/'.$h->idhotel); ?>">Edit</a>
                           <button class="btn btn-danger">Hapus</button>
                         </td>
                       </tr>

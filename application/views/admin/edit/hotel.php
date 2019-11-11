@@ -1,7 +1,4 @@
 <?php $this->load->view("admin/side/head"); ?>
-<!-- include summernote css/js -->
-<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
 <?php $this->load->view("admin/side/navbar");?>
 
 
@@ -33,32 +30,41 @@
         <div class="row">
           <div class="col-md-12">
             <div class="card ">
+              <form method="post" action="<?php echo base_url('admin/Hotel/prosesEditHotel'); ?>">
               <div class="card-header card-header-rose card-header-icon">
                 <h4 class="card-title">Edit Hotel</h4>
               </div>
               <div class="card-body ">
-                <form method="post" action="#">
-                  <div class="form-group">
-                    <label for="exampleEmail" class="bmd-label-floating">Nama Hotel</label>
-                    <input type="text" class="form-control" id="exampleEmail">
-                  </div>
-                  <div class="form-group">
-                    <label for="examplePass" class="bmd-label-floating">Rating</label>
-                    <input type="text" class="form-control" id="examplePass">
-                  </div>
-                  <div class="form-group">
-                    <label for="examplePass" class="bmd-label-floating">Deskripsi</label>
-                    <textarea class="form-control" id="summernote" name="deskripsi"></textarea>
-                  </div>
-                  <div class="form-group">
-                    <label for="examplePass" class="bmd-label-floating">Harga</label>
-                    <input type="int" class="form-control" id="examplePass">
-                  </div>
-                </form>
+                  <?php foreach ($hotel->result() as $h): ?>
+                    <div class="form-group">
+                      <label for="exampleEmail" class="bmd-label-floating">Nama Hotel</label>
+                      <input type="text" class="form-control" id="exampleEmail" name="idhotel" value="<?php echo $h->idhotel; ?>" hidden>
+                      <input type="text" class="form-control" id="exampleEmail" name="nama_hotel" value="<?php echo $h->nama_hotel; ?>">
+                    </div>
+                    <div class="form-group">
+                      <label for="examplePass" class="bmd-label-floating">Rating</label>
+                      <input type="text" class="form-control" id="examplePass" name="rating" value="<?php echo $h->rating; ?>">
+                    </div>
+                    <div class="form-group">
+                      <label for="examplePass" class="bmd-label-floating">Deskripsi</label>
+                      <textarea class="form-control" id="examplePass" name="deskripsi">
+                        <?php echo $h->deskripsi; ?>
+                      </textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="examplePass" class="bmd-label-floating">Harga</label>
+                      <input type="int" class="form-control" id="examplePass" name="harga" value="<?php echo $h->harga; ?>">
+                    </div>
+                    <div class="form-group">
+                      <label for="examplePass" class="bmd-label-floating">Upload Gambar Baru</label>
+                      <input class="form-control" type="file" name="gambar">
+                    </div>
+                  <?php endforeach; ?>
               </div>
               <div class="card-footer ">
-                <button type="submit" class="btn btn-fill btn-rose">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
               </div>
+              </form>
             </div>
           </div>
         </div>
