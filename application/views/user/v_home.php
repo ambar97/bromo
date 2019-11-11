@@ -4,246 +4,57 @@
 <section>
     <div class="row full-width-search ">
         <div class="container clear-padding">
+          <div class="col-md-2"></div>
+          <div class="col-md-8" style="padding: 5px;border: 1px solid white;border-radius: 10px;background:transparent;min-height:50px;margin-top:300px;">
+            <form>
+
+              <div class="clearfix"></div>
+              <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 col-sm-4 search-col-padding">
+                <div class="input-group">
+                  <input type="text" style="background:transparent;" name="departure_city" class="destination form_depan form-control" required placeholder="Destination">
+                  <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
+                </div>
+              </div>
+              <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 m-t-30 col-sm-3 search-col-padding">
+                <div class="input-group">
+                  <input style="background:transparent;" type="text" name="departure_city" class="travelers form_depan form-control" required placeholder="Travelers">
+                  <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                </div>
+              </div>
+              <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 m-t-30 col-sm-3 search-col-padding">
+                <div class="input-group">
+                  <input style="background:transparent;" type="text" name="departure_city" class="duration form_depan form-control" required placeholder="Duration">
+                  <span class="input-group-addon"><i class="fa fa-clock-o fa-fw"></i></span>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-3 search-col-padding">
+                <button type="submit" style="padding:1px;border-radius:10px;" class="search-button btn btn-sm form-control transition-effect">GO</button>
+              </div>
+
+
+
+              <div class="clearfix"></div>
+            </form>
+          </div>
+          <div class="col-md-2"></div>
 
             <div class="offer-slider">
-                <div class="owl-carousel col-md-4 text-right" id="offer1">
-                    <div class="item">
-                        <h3>Hong Kong Fun</h3>
-                        <h4>Starting From $599/Person</h4>
-                        <a href="#">KNOW MORE</a>
-                    </div>
-                    <div style="border-radius: 10px;" class="item">
-                        <h3>Romantic Paris</h3>
-                        <h4>Starting From $999/Person</h4>
-                        <a href="#">KNOW MORE</a>
-                    </div>
-                    <div style="border-radius: 10px;" class="item">
-                        <h3>Sky High Dubai</h3>
-                        <h4>Starting From $399/Person</h4>
-                        <a href="#">KNOW MORE</a>
-                    </div>
+                <div class="owl-carousel col-md-4 text-right" id="offer1" >
+
                 </div>
             </div>
+
         </div>
     </div>
-</section>
 
-<section id="how-it-work">
-        <div style="border-radius: 10px;" class="row work-row">
-            <div style="border-radius: 10px;" class="container">
-                <div style="border-radius: 10px;" class="section-title text-center">
-                    <h2>HOW IT WORKS?</h2>
-                    <h4>SEARCH - SELECT - BOOK</h4>
-                    <div style="border-radius: 10px;" class="space"></div>
-                    <p>
-                        Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                </div>
-                <div style="border-radius: 10px;" class="work-step">
-                    <div style="border-radius: 10px;" class="col-md-4 col-sm-4 first-step text-center">
-                        <i class="fa fa-search"></i>
-                        <h5>SEARCH</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </div>
-                    <div style="border-radius: 10px;" class="col-md-4 col-sm-4 second-step text-center">
-                        <i class="fa fa-heart-o"></i>
-                        <h5>SELECT</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </div>
-                    <div style="border-radius: 10px;" class="col-md-4 col-sm-4 third-step text-center">
-                        <i class="fa fa-shopping-cart"></i>
-                        <h5>BOOK</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 </section>
-<!--END: HOW IT WORK -->
-
-<!-- START: PRODUCT SECTION-->
-<section class="hotel-product home-product">
-    <!-- START: PRODUCT ROW 1 -->
-    <div style="border-radius: 10px;" class="row light-row">
-            <div style="border-radius: 10px;" class="col-md-6 clear-padding wow slideInLeft">
-                <div style="border-radius: 10px;" class="product-wrapper">
-                    <div style="border-radius: 10px;" class="col-md-6 col-sm-6 home-product-padding tooltip-right">
-                        <h4>Romantic Paris</h4>
-                        <h5><i class="fa fa-map-marker"></i> France</h5>
-                        <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing.</p>
-                        <div style="border-radius: 10px;" class="rating-box">
-                            <div style="border-radius: 10px;" class="pull-left">
-                                <img src="<?php echo base_url() ?>master/client/assets/images/tripadvisor.png" alt="cruise"><span>4.0/5</span>
-                            </div>
-                            <div style="border-radius: 10px;" class="pull-right">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><span>4.5/5</span>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="pricing-info">
-                            <div class="pull-left">
-                                <span>$999/Person</span>
-                            </div>
-                            <div style="border-radius: 10px;" class="pull-right">
-                                <a href="#" class="wow fadeIn">BOOK NOW</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                    <div style="border-radius: 10px;" class="col-md-6 col-sm-6 clear-padding image-sm text-center">
-                        <img src="<?php echo base_url() ?>master/client/assets/images/tour12.jpg" alt="cruise">
-                        <div style="border-radius: 10px;" class="detail-link-wrapper">
-                            <div style="border-radius: 10px;" class="detail-link">
-                                <a href="#"><i class="fa fa-search"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="border-radius: 10px;" class="clearfix"></div>
-                <div style="border-radius: 10px;" class="product-wrapper">
-                    <div style="border-radius: 10px;" class="col-md-6 col-sm-6 clear-padding image-sm text-center">
-                        <img src="<?php echo base_url() ?>master/client/assets/images/tour11.jpg" alt="cruise">
-                        <div style="border-radius: 10px;" class="detail-link-wrapper">
-                            <div style="border-radius: 10px;" class="detail-link">
-                                <a href="#"><i class="fa fa-search"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="border-radius: 10px;" class="col-md-6 col-sm-6 home-product-padding tooltip-left">
-                        <h4>Blue Beach</h4>
-                        <h5><i class="fa fa-map-marker"></i> Dubai</h5>
-                        <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing.</p>
-                        <div style="border-radius: 10px;" class="rating-box">
-                            <div style="border-radius: 10px;" class="pull-left">
-                                <img src="<?php echo base_url() ?>master/client/assets/images/tripadvisor.png" alt="cruise"><span>4.0/5</span>
-                            </div>
-                            <div style="border-radius: 10px;" class="pull-right">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><span>4.5/5</span>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="pricing-info">
-                            <div class="pull-left">
-                                <span>$899/Person</span>
-                            </div>
-                            <div style="border-radius: 10px;" class="pull-right">
-                                <a href="#" class="wow fadeIn">BOOK NOW</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-            <div style="border-radius: 10px;" class="clearfix visible-sm-block"></div>
-            <div style="border-radius: 10px;" class="col-md-6 clear-padding image-lg wow slideInRight">
-                <img src="<?php echo base_url() ?>master/client/assets/images/home31.jpg" alt="cruise">
-                <div style="border-radius: 10px;" class="overlay">
-                    <div style="border-radius: 10px;" class="product-detail text-center">
-                        <h3>Africa Safari</h3>
-                        <h5><i class="fa fa-map-marker"></i> KENYA</h5>
-                        <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing.</p>
-                        <div style="border-radius: 10px;" class="rating-box">
-                            <div style="border-radius: 10px;" class="pull-left">
-                                <img src="<?php echo base_url() ?>master/client/assets/images/tripadvisor.png" alt="cruise"><span>4.0/5</span>
-                            </div>
-                            <div style="border-radius: 10px;" class="pull-right">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><span>4.5/5</span>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="pricing-info">
-                            <div class="pull-left">
-                                <span>$499/Person</span>
-                            </div>
-                            <div style="border-radius: 10px;" class="pull-right">
-                                <a href="#" class="wow fadeIn">BOOK NOW</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-    </div>
-    <!-- END: PRODUCT ROW 1 -->
-</section>
-<!-- END: PRODUCT SECTION -->
-
-<!-- BEGIN: TOP DESTINATION SECTION -->
-<section id="home-top-destination">
-    <div style="border-radius: 10px;" class="row image-background">
-        <div style="border-radius: 10px;" class="td-overlay">
-            <div style="border-radius: 10px;" class="container">
-                <div style="border-radius: 10px;" class="light-section-title text-center">
-                    <h2>TOP DESTINATION</h2>
-                    <h4>EXPLORE</h4>
-                    <div style="border-radius: 10px;" class="space"></div>
-                    <p>
-                        Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                </div>
-                <div style="border-radius: 10px;" class="col-md-10 col-md-offset-1 on-top clear-padding">
-                    <div style="border-radius: 10px;" class="col-md-6 col-sm-6 td-product text-center clear-padding wow slideInUp" data-wow-delay="0.1s">
-                        <img src="<?php echo base_url() ?>master/client/assets/images/tour1.jpg" alt="cruise">
-                        <div style="border-radius: 10px;" class="overlay">
-                            <div style="border-radius: 10px;" class="wrapper">
-                                <h5>FRANCE</h5>
-                                <h3><span>ROMANTIC PARIS</span></h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                                <a href="#">KNOW MORE</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="border-radius: 10px;" class="col-md-6 col-sm-6 td-product text-center clear-padding wow slideInUp" data-wow-delay="0.2s">
-                        <img src="<?php echo base_url() ?>master/client/assets/images/tour2.jpg" alt="cruise">
-                        <div style="border-radius: 10px;" class="overlay">
-                            <div style="border-radius: 10px;" class="wrapper">
-                                <h5>BANGKOK</h5>
-                                <h3><span>DISENYLAND BANGKOK</span></h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                                <a href="#">KNOW MORE</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="border-radius: 10px;" class="clearfix visible-md-block"></div>
-                    <div style="border-radius: 10px;" class="col-md-6 col-sm-6 td-product text-center clear-padding wow slideInUp" data-wow-delay="0.1s">
-                        <img src="<?php echo base_url() ?>master/client/assets/images/tour3.jpg" alt="cruise">
-                        <div style="border-radius: 10px;" class="overlay">
-                            <div style="border-radius: 10px;" class="wrapper">
-                                <h5>DUBAI</h5>
-                                <h3><span>SKY HIGH DUBAI</span></h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                                <a href="#">KNOW MORE</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="border-radius: 10px;" class="col-md-6 col-sm-6 td-product text-center clear-padding wow slideInUp" data-wow-delay="0.2s">
-                        <img src="<?php echo base_url() ?>master/client/assets/images/tour5.jpg" alt="cruise">
-                        <div style="border-radius: 10px;" class="overlay">
-                            <div style="border-radius: 10px;" class="wrapper">
-                                <h5>AUSTRIA</h5>
-                                <h3><span>HILLY VIEW</span></h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                                <a href="#">KNOW MORE</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="border-radius: 10px;" class="clearfix visible-md-block"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END: TOP DESTINATION SECTION -->
 
 <!-- BEGIN: RECENT BLOG POST -->
 <section id="recent-blog">
     <div style="border-radius: 10px;" class="row top-offer">
         <div style="border-radius: 10px;" class="container">
             <div style="border-radius: 10px;" class="section-title text-center">
-                <h2>RECENT BLOG POSTS</h2>
-                <h4>NEWS</h4>
+                <h2>Popular Tour Packages</h2>
             </div>
             <div style="border-radius: 10px;" class="owl-carousel" id="post-list">
                 <div style="border-radius: 10px;" class="room-grid-view wow slideInUp" data-wow-delay="0.1s">
@@ -386,17 +197,14 @@
                 <h2>WHY CHOOSE US?</h2>
                 <h4>REASONS TO TRUST US</h4>
                 <div style="border-radius: 10px;" class="space"></div>
-                <p>
-                    Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                </p>
+
             </div>
             <div style="border-radius: 10px;" class="col-md-4 col-sm-4 wow slideInLeft">
                 <div style="border-radius: 10px;" class="choose-us-item text-center">
                     <div style="border-radius: 10px;" class="choose-icon"><i class="fa fa-suitcase"></i></div>
                     <h4>Handpicked Tour</h4>
                     <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <a href="#">KNOW MORE</a>
+                    <a href="#" style="border-radius:10px">KNOW MORE</a>
                 </div>
             </div>
             <div style="border-radius: 10px;" class="col-md-4 col-sm-4 wow slideInUp">
@@ -404,7 +212,7 @@
                     <div style="border-radius: 10px;" class="choose-icon"><i class="fa fa-phone"></i></div>
                     <h4>Dedicated Support</h4>
                     <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <a href="#">KNOW MORE</a>
+                    <a href="#" style="border-radius:10px">KNOW MORE</a>
                 </div>
             </div>
             <div style="border-radius: 10px;" class="col-md-4 col-sm-4 wow slideInRight">
@@ -412,7 +220,7 @@
                     <div style="border-radius: 10px;" class="choose-icon"><i class="fa fa-smile-o"></i></div>
                     <h4>Lowest Price</h4>
                     <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <a href="#">KNOW MORE</a>
+                    <a href="#" style="border-radius:10px">KNOW MORE</a>
                 </div>
             </div>
         </div>
@@ -687,12 +495,254 @@
                     slides                  :   [       //Slideshow Images
                                                         {image : '<?php echo base_url() ?>master/client/assets/images/bromo1.jpg', title : 'Slide 1'},
                                                         {image : '<?php echo base_url() ?>master/client/assets/images/bromo2.jpg', title : 'Slide 2'},
-                                                        {image : '<?php echo base_url() ?>master/client/assets/images/bromo3.jpg', title : 'Slide 3'},
+                                                        {image : '<?php echo base_url() ?>master/client/assets/images/bromo0.jpg', title : 'Slide 3'},
                                                 ]
 
                 });
             });
 
+  $(document).ready(function(){
+    $(document).on("focus",".destination",function(){
+      $("#destination").modal("toggle");
+    })
+  })
 </script>
 </body>
 </html>
+<!-- modal small -->
+<div class="modal fade" id="destination" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <div class="row col-md-12">
+          <div class="col-md-4" >
+            <div class="holiday-grid-view" style="border-radius:10px">
+      					<div class="holiday-header-wrapper">
+      						<div class="holiday-header">
+      							<div class="holiday-img">
+      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
+      							</div>
+      							<div class="detail">
+      								<a href="#"><i class="fa fa-plus"></i></a>
+      							</div>
+      							<div class="holiday-price">
+      								<h4>$499</h4>
+      								<h5>7 Days</h5>
+      							</div>
+      							<div class="holiday-title">
+      								<h3>Step Into Heaven</h3>
+      								<h5>Asia &#187; Nepal</h5>
+      							</div>
+      						</div>
+      					</div>
+      			</div>
+          </div>
+          <div class="col-md-4" style="border-radius:10px">
+            <div class="holiday-grid-view" style="border-radius:10px">
+      					<div class="holiday-header-wrapper">
+      						<div class="holiday-header">
+      							<div class="holiday-img">
+      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
+      							</div>
+      							<div class="detail">
+      								<a href="#"><i class="fa fa-plus"></i></a>
+      							</div>
+      							<div class="holiday-price">
+      								<h4>$499</h4>
+      								<h5>7 Days</h5>
+      							</div>
+      							<div class="holiday-title">
+      								<h3>Step Into Heaven</h3>
+      								<h5>Asia &#187; Nepal</h5>
+      							</div>
+      						</div>
+      					</div>
+      			</div>
+          </div>
+          <div class="col-md-4" style="border-radius:10px">
+            <div class="holiday-grid-view" style="border-radius:10px">
+      					<div class="holiday-header-wrapper">
+      						<div class="holiday-header">
+      							<div class="holiday-img">
+      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
+      							</div>
+      							<div class="detail">
+      								<a href="#"><i class="fa fa-plus"></i></a>
+      							</div>
+      							<div class="holiday-price">
+      								<h4>$499</h4>
+      								<h5>7 Days</h5>
+      							</div>
+      							<div class="holiday-title">
+      								<h3>Step Into Heaven</h3>
+      								<h5>Asia &#187; Nepal</h5>
+      							</div>
+      						</div>
+      					</div>
+      			</div>
+          </div>
+          <div class="col-md-4" style="border-radius:10px">
+            <div class="holiday-grid-view" style="border-radius:10px">
+      					<div class="holiday-header-wrapper">
+      						<div class="holiday-header">
+      							<div class="holiday-img">
+      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
+      							</div>
+      							<div class="detail">
+      								<a href="#"><i class="fa fa-plus"></i></a>
+      							</div>
+      							<div class="holiday-price">
+      								<h4>$499</h4>
+      								<h5>7 Days</h5>
+      							</div>
+      							<div class="holiday-title">
+      								<h3>Step Into Heaven</h3>
+      								<h5>Asia &#187; Nepal</h5>
+      							</div>
+      						</div>
+      					</div>
+      			</div>
+          </div>
+          <div class="col-md-4" style="border-radius:10px">
+            <div class="holiday-grid-view" style="border-radius:10px">
+      					<div class="holiday-header-wrapper">
+      						<div class="holiday-header">
+      							<div class="holiday-img">
+      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
+      							</div>
+      							<div class="detail">
+      								<a href="#"><i class="fa fa-plus"></i></a>
+      							</div>
+      							<div class="holiday-price">
+      								<h4>$499</h4>
+      								<h5>7 Days</h5>
+      							</div>
+      							<div class="holiday-title">
+      								<h3>Step Into Heaven</h3>
+      								<h5>Asia &#187; Nepal</h5>
+      							</div>
+      						</div>
+      					</div>
+      			</div>
+          </div>
+          <div class="col-md-4" style="border-radius:10px">
+            <div class="holiday-grid-view" style="border-radius:10px">
+      					<div class="holiday-header-wrapper">
+      						<div class="holiday-header">
+      							<div class="holiday-img">
+      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
+      							</div>
+      							<div class="detail">
+      								<a href="#"><i class="fa fa-plus"></i></a>
+      							</div>
+      							<div class="holiday-price">
+      								<h4>$499</h4>
+      								<h5>7 Days</h5>
+      							</div>
+      							<div class="holiday-title">
+      								<h3>Step Into Heaven</h3>
+      								<h5>Asia &#187; Nepal</h5>
+      							</div>
+      						</div>
+      					</div>
+      			</div>
+          </div>
+          <div class="col-md-4" style="border-radius:10px">
+            <div class="holiday-grid-view" style="border-radius:10px">
+      					<div class="holiday-header-wrapper">
+      						<div class="holiday-header">
+      							<div class="holiday-img">
+      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
+      							</div>
+      							<div class="detail">
+      								<a href="#"><i class="fa fa-plus"></i></a>
+      							</div>
+      							<div class="holiday-price">
+      								<h4>$499</h4>
+      								<h5>7 Days</h5>
+      							</div>
+      							<div class="holiday-title">
+      								<h3>Step Into Heaven</h3>
+      								<h5>Asia &#187; Nepal</h5>
+      							</div>
+      						</div>
+      					</div>
+      			</div>
+          </div>
+          <div class="col-md-4" style="border-radius:10px">
+            <div class="holiday-grid-view" style="border-radius:10px">
+      					<div class="holiday-header-wrapper">
+      						<div class="holiday-header">
+      							<div class="holiday-img">
+      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
+      							</div>
+      							<div class="detail">
+      								<a href="#"><i class="fa fa-plus"></i></a>
+      							</div>
+      							<div class="holiday-price">
+      								<h4>$499</h4>
+      								<h5>7 Days</h5>
+      							</div>
+      							<div class="holiday-title">
+      								<h3>Step Into Heaven</h3>
+      								<h5>Asia &#187; Nepal</h5>
+      							</div>
+      						</div>
+      					</div>
+      			</div>
+          </div>
+          <div class="col-md-4" style="border-radius:10px">
+            <div class="holiday-grid-view" style="border-radius:10px">
+      					<div class="holiday-header-wrapper">
+      						<div class="holiday-header">
+      							<div class="holiday-img">
+      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
+      							</div>
+      							<div class="detail">
+      								<a href="#"><i class="fa fa-plus"></i></a>
+      							</div>
+      							<div class="holiday-price">
+      								<h4>$499</h4>
+      								<h5>7 Days</h5>
+      							</div>
+      							<div class="holiday-title">
+      								<h3>Step Into Heaven</h3>
+      								<h5>Asia &#187; Nepal</h5>
+      							</div>
+      						</div>
+      					</div>
+      			</div>
+          </div>
+          <div class="col-md-4" style="border-radius:10px">
+            <div class="holiday-grid-view" style="border-radius:10px">
+      					<div class="holiday-header-wrapper">
+      						<div class="holiday-header">
+      							<div class="holiday-img">
+      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
+      							</div>
+      							<div class="detail">
+      								<a href="#"><i class="fa fa-plus"></i></a>
+      							</div>
+      							<div class="holiday-price">
+      								<h4>$499</h4>
+      								<h5>7 Days</h5>
+      							</div>
+      							<div class="holiday-title">
+      								<h3>Step Into Heaven</h3>
+      								<h5>Asia &#187; Nepal</h5>
+      							</div>
+      						</div>
+      					</div>
+      			</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row modal-footer">
+        <button class="btn btn-primary btn-md pull-right" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal small -->
