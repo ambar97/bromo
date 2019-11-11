@@ -21,7 +21,8 @@ class Destination extends CI_Controller {
 				'allowed_types' => 'gif|jpg|png|jpeg'
 			);
 			$this -> load -> library ('upload',$config);
-			if ($this->upload->do_upload('photo')){
+          // die(var_dump($rt));
+			if ($this->upload->do_upload('pilih')){
 				$upload_data = $this -> upload -> data ();
 				$foto = "gallery/wisata/".$upload_data['file_name'];
 				$data = array('nama_wisata' =>$this->input->post('nama') ,

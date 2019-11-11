@@ -62,7 +62,7 @@
              <!-- <div data-toggle="quill" data-quill-placeholder="" name="deskrip"></div> -->
            </div>
            <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
-           <input type="file" name="photo" class="form-control-label">
+           <input type="file" name="pilih" class="form-control-label">
           <hr>
           <div>
             <button class="btn btn-icon btn-primary float-right" type="submit" name="btnSimpan">
