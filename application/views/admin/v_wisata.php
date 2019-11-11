@@ -1,94 +1,100 @@
 <?php $this->load->view("admin/side/head"); ?>
-<?php $this->load->view("admin/side/navbar"); ?>
-<div class="content">
- 	<div class="container-fluid">
- 		<div class="row">
- 			<div class="col-md-12">
- 				<div class="card">
- 					<div class="card-header card-header-info">
- 						<h4 class="card-title " style="font-weight: bold;">Tabel Data Wisata</h4>
- 						<p class="card-category"> Klik <span style="font-weight: bold;">Tambah Wisata</span> untuk tambah data baru</p>
- 						<div style="float: right;">
- 							<a class="btn btn-danger" href="<?php echo base_url('admin/Wisata/tambahWisata') ?>">Tambah Wisata</a>
- 						</div>
- 					</div>
- 					<div class="card-body">
- 						<div class="toolbar">
- 						</div>
- 						<div class="material-datatables">
- 							<table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
- 								<thead>
- 									<tr>
- 										<th>No</th>
- 										<th>Nama Wisata</th>
- 										<th>Rating</th>
- 										<th>Harga</th>
- 										<th>Deskripsi</th>
- 										<th class="disabled-sorting text-right">Actions</th>
- 									</tr>
- 								</thead>
- 								<tbody>
- 									<?php $no = 1; foreach ($wisata as $listwisata): ?> 
- 										<tr>
- 											<td ><?php echo $no++; ?></td>
- 											<td class="text-danger"><?php echo $listwisata->nama_wisata; ?></td>
- 											<td><?php echo $listwisata->rating; ?></td>
- 											<td><?php echo $listwisata->harga; ?></td>
- 											<td><?php echo $listwisata->deskripsi; ?></td>
- 											<td class="text-right">
- 												<a href="<?php echo base_url('admin/Wisata/ubahWisata') ?>" title="edit" class="btn btn-link btn-warning btn-just-icon edit" ><i class="material-icons">dvr</i></a>
- 												<a href="<?php echo base_url('admin/Wisata/hapusDataWisata/'.$listwisata->idwisata) ?>" title="hapus" onclick="javascript: return confirm('Anda Yakin Akan Menghapus ?')" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
- 											</td>
- 										</tr>
- 									<?php endforeach ?> 
- 								</tbody>
- 							</table>
- 						</div>
- 					</div>
- 				</div>
- 			</div>
- 		</div>
- 	</div>
- </div>
- <?php $this->load->view('admin/side/rightside') ?>
+ <!-- Page plugins -->
+  <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/datatables.net-select-bs4/css/select.bootstrap4.min.css">
+ <?php $this->load->view("admin/side/navbar"); ?>
+<div class="header bg-primary pb-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+              <h6 class="h2 text-white d-inline-block mb-0">Destination</h6>
+              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                  <li class="breadcrumb-item"><a href="#">Destination</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Data Destination</li>
+                </ol>
+              </nav>
+            </div>
+            <div class="col-lg-6 col-5 text-right">
+              <a href="<?php echo base_url('admin/Destination/tambahWisata') ?>" class="btn btn-sm btn-neutral">New</a>
+              <!-- <a href="#" class="btn btn-sm btn-neutral">Filters</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--6">
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header">
+              <h3 class="mb-0">Data Destination</h3>
+              <p class="text-sm mb-0"> 
+                Klik <i>tombol new</i> untuk menambah data baru.
+              </p>
+            </div>
+            <div class="table-responsive py-4">
+              <table class="table table-flush" id="datatable-basic">
+                <thead class="thead-light">
+                  <tr>
+                    <th>No</th>
+                    <th>Nama Wisata</th>
+                    <th>Rating</th>
+                    <th>Harga</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama Wisata</th>
+                    <th>Rating</th>
+                    <th>Harga</th>
+                    <th>Action</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <?php $no=1; foreach ($wisata as $barang): ?>
+                  <tr>
+                    <td><?php echo $no++ ?></td>
+                    <td><a href="" class="btn-sm btn"><?php echo $barang->nama_wisata ?></a></td>
+                    <td><?php echo $barang->rating ?></td>
+                    <td><?php echo $barang->harga ?></td>
+                    <td>
+                      <!-- <a href="" class="btn-sm btn-success" title="Preview"><i class="fa fa-eye"></i></a> -->
+                      <a href="<?php echo base_url('admin/Destination/ubahWisata/'.$barang->idwisata) ?>" class="btn-sm btn-warning" title="Edit"><i class="fa fa-brush"></i></a>
+                      <a href="<?php echo base_url('admin/Destination/hapusDataWisata/'.$barang->idwisata) ?>" class="btn-sm btn-danger" title="Hapus" onclick="javascript: return confirm('Anda Yakin Akan ingin memvalidasi pembayaran ?')"><i class="fa fa-trash"></i></a>
+                    </td>
+                  </tr>
+                  <?php endforeach ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
 <?php $this->load->view('admin/side/footer') ?>
+
 <?php $this->load->view('admin/side/js') ?>
-<script>
-    $(document).ready(function() {
-      $('#datatables').DataTable({
-        "pagingType": "full_numbers",
-        "lengthMenu": [
-          [10, 25, 50, -1],
-          [10, 25, 50, "All"]
-        ],
-        responsive: true,
-        language: {
-          search: "_INPUT_",
-          searchPlaceholder: "Search records",
-        }
-      });
-
-      var table = $('#datatable').DataTable();
-
-      // Edit record
-      table.on('click', '.edit', function() {
-        $tr = $(this).closest('tr');
-        var data = table.row($tr).data();
-        alert('You press on Row: ' + data[0] + ' ' + data[1] + ' ' + data[2] + '\'s row.');
-      });
-
-      // Delete a record
-      table.on('click', '.remove', function(e) {
-        $tr = $(this).closest('tr');
-        table.row($tr).remove().draw();
-        e.preventDefault();
-      });
-
-      //Like record
-      table.on('click', '.like', function() {
-        alert('You clicked on Like button');
-      });
-    });
-  </script>
+<!-- Optional JS -->
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-buttons/js/buttons.html5.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-buttons/js/buttons.flash.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-buttons/js/buttons.print.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-select/js/dataTables.select.min.js"></script>
+  <!-- Argon JS -->
+<script src="<?php echo base_url()?>master/assets/js/argon.min9f1e.js?v=1.1.0"></script>
+<?php if ($this->session->flashdata()) { ?>
+<?php echo $this->session->flashdata('Pesan'); ?>                   
+<?php } ?>
 </body>
 </html>

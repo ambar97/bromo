@@ -1,85 +1,92 @@
  <?php $this->load->view("admin/side/head"); ?>
-
+ <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/select2/dist/css/select2.min.css">
+ <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/quill/dist/quill.core.css">
  <?php $this->load->view("admin/side/navbar"); ?>
- <div class="content">
+ <div class="header bg-primary pb-6">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <form id="LoginValidation" action="<?php echo base_url('admin/Wisata/tabahDataWisata') ?>" method="post">
-          <div class="card ">
-            <div class="card-header card-header-info card-header-icon">
-              <div class="card-icon">
-                <i class="material-icons">contacts</i>
-              </div>
-              <h4 class="card-title">Tambah Data Wisata</h4>
-            </div>
-            <div class="card-body ">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-6 col-7">
+          <h6 class="h2 text-white d-inline-block mb-0">Edit Destination</h6>
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+              <li class="breadcrumb-item"><a href="#">Destination</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Edit Destination</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-lg-6 col-5 text-right">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt--6">
+ <div class="row">
+  <div class="col-lg-12">
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Tambah Data Destination</h3>
+        </div>
+        <div class="card-body">
+          <form action="<?php echo base_url('admin/Destination/tabahDataWisata') ?>" method="post" enctype="multipart/form-data">
+            <h2 class="">Data Destination</h2>
+            <div class="form-group">
               <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="exampleEmails" class="bmd-label-floating"> Nama Wisata *</label>
-                  <input type="text" class="form-control" id="exampleEmails" required="true" name="nama" required="">
+                <div class="col-lg-6">
+                  <label class="form-control-label" for="exampleFormControlInput1">Nama Destination</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama Destination" name="nama" required="" value="">
+                </div>  
+                <div class="col-lg-6">
+                  <label class="form-control-label" for="exampleFormControlInput1">Harga</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Rp." name="harga" required="">
+                  <small>Penulisan format harga tanpa titik atau koma (ex 250000)</small>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="exampleEmails" class="bmd-label-floating"> Nama Wisata (English) *</label>
-                  <input type="text" class="form-control" id="exampleEmails" required="true" name="namae" required="">
-                </div>
               </div>
-              <div class="row">
-              <div class="form-group col-md-6" >
-                <label for="examplePasswords" class="bmd-label-floating"> Harga (Rp) *</label>
-                <input type="text" class="form-control" id="examplePasswords" required="true" name="harga" required="">
-              </div>
-              <div class="form-group col-md-6" >
-                <label for="examplePasswords" class="bmd-label-floating"> Price ($) *</label>
-                <input type="text" class="form-control" id="examplePasswords" required="true" name="hargae" required="">
-              </div>
-              <div class="form-group col-md-6" >
-                <label for="examplePasswords" class="bmd-label-floating"> Rating *</label>
-                <input type="text" class="form-control" id="examplePasswords" required="true" name="rating" required="">
-              </div>
-              </div>
-              <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> Deskripsi *</label>
-                <textarea id="summernote" name="deskrip" required></textarea>
-              </div>
-              <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> Deskripsi (English) *</label>
-                <textarea id="summernote" name="deskripe" required></textarea>
-              </div>
-              <div class="category form-category">* Required fields</div>
             </div>
-            <div class="card-footer ml-auto" style="float: right;">
-              <button type="submit" class="btn btn-rose" >Simpan</button>
+            <div class="row">
+            <div class="form-group col-lg-6">
+              <label class="form-control-label" for="exampleFormControlInput1">No Telp</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="No Telp" name="noTelp" required="">
             </div>
+            <div class="form-group col-lg-6">
+              <label class="form-control-label" for="exampleFormControlInput1">Rating</label>
+              <input type="number" class="form-control" id="exampleFormControlInput1" max="5" placeholder="0" name="rating" required="">
+            </div>
+            </div>
+            <div class="form-group">
+             <label class="form-control-label" for="exampleFormControlInput1">Deskripsi</label>
+             <!-- <textarea data-toggle="quill" data-quill-placeholder="" class="form-control" ></textarea> -->
+             <div data-toggle="quill" data-quill-placeholder="" name="deskrip"></div>
+           </div>
+
+           <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
+           <input type="file" name="pilih" class="form-control">
+          <hr>
+          <div>
+            <button class="btn btn-icon btn-primary float-right" type="submit" name="btnSimpan">
+              <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
+              <span class="btn-inner--text">Simpan</span>
+            </button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
-<?php $this->load->view('admin/side/rightside') ?>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
-<script>
-    $(document).ready(function() {
-      // initialise Datetimepicker and Sliders
-      md.initFormExtendedDatetimepickers();
-      if ($('.slider').length != 0) {
-        md.initSliders();
-      }
-    });
-
-    $('#summernote').summernote({
-        placeholder: 'Hello stand alone ui',
-        tabsize: 2,
-        height: 100
-      });
-  </script>
-  <script src="<?php echo base_url() ?>master/admin/summernote/dist/summernote.min.js"></script>
+</div>
+</div>
+<?php $this->load->view('admin/side/footer') ?>    
 <?php $this->load->view('admin/side/js') ?>
+<script src="<?php echo base_url()?>master/assets/vendor/quill/dist/quill.min.js"></script>
+<script src="<?php echo base_url()?>master/assets/vendor/select2/dist/js/select2.min.js"></script>
+<script src="<?php echo base_url()?>master/assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
+<script src="<?php echo base_url()?>master/assets/js/argon.min9f1e.js?v=1.1.0"></script>
 
 <?php if ($this->session->flashdata()) { ?>
   <?php echo $this->session->flashdata('Pesan'); ?>                   
-  <?php } ?>
+<?php } ?>
 </body>
 </html>

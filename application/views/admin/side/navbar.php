@@ -12,7 +12,8 @@
       <!-- Brand -->
       <div class="sidenav-header d-flex align-items-center">
         <a class="navbar-brand" href="dashboard.html">
-          <img src="<?php echo base_url()?>master/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+          <h1>Sunsetview</h1>
+          <!-- <img src="<?php echo base_url()?>master/assets/img/brand/blue.png" class="navbar-brand-img" alt="..."> -->
         </a>
         <div class="ml-auto">
           <!-- Sidenav toggler -->
@@ -30,16 +31,16 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(1)=='Dashboard'): ?>
+            <!-- <li class="nav-item">
+              <a class="nav-link <?php if ($this->uri->segment(2)=='Dashboard'): ?>
                 <?php echo 'active' ?>
               <?php endif ?>" href="<?php echo base_url('admin/Dashboard') ?>" >
                 <i class="ni ni-shop text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(1)=='Destination'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(2)=='Destination'): ?>
                 <?php echo 'active' ?>
               <?php endif ?>" href="<?php echo base_url('admin/Destination') ?>">
                 <i class="ni ni-user-run text-orange"></i>
@@ -47,7 +48,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(1)=='Package'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(2)=='Package'): ?>
                 <?php echo 'active' ?>
               <?php endif ?>" href="<?php echo base_url('admin/Package')?>">
                 <i class="ni ni-cart text-info"></i>
@@ -55,7 +56,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(1)=='Hotel'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(2)=='Hotel'): ?>
                 <?php echo 'active' ?>
               <?php endif ?>" href="<?php echo base_url('admin/Hotel') ?>">
                 <i class="ni ni-single-copy-04 text-pink"></i>
@@ -63,7 +64,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(1)=='Gallery'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(2)=='Gallery'): ?>
                 <?php echo 'active' ?>
               <?php endif ?>" href="<?php echo base_url('admin/Gallery') ?>">
                 <i class="ni ni-single-copy-04 text-pink"></i>
@@ -71,7 +72,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(1)=='Contact'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(2)=='Contact'): ?>
                 <?php echo 'active' ?>
               <?php endif ?>" href="<?php echo base_url('admin/Contact') ?>">
                 <i class="ni ni-single-copy-04 text-pink"></i>
@@ -315,7 +316,7 @@
                     <img alt="Image placeholder" src="<?php echo base_url()?>master/assets/img/theme/team-4.jpg">
                   </span>
                   <div class="media-body ml-2 d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                    <span class="mb-0 text-sm  font-weight-bold"><?php echo $this->session->userdata('nama') ?></span>
                   </div>
                 </div>
               </a>
@@ -323,24 +324,12 @@
                 <div class="dropdown-header noti-title">
                   <h6 class="text-overflow m-0">Welcome!</h6>
                 </div>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-single-02"></i>
-                  <span>My profile</span>
-                </a>
-                <a href="#!" class="dropdown-item">
+                <a href="<?php echo base_url('admin/Dashboard/profile') ?>" class="dropdown-item">
                   <i class="ni ni-settings-gear-65"></i>
                   <span>Settings</span>
                 </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-calendar-grid-58"></i>
-                  <span>Activity</span>
-                </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-support-16"></i>
-                  <span>Support</span>
-                </a>
                 <div class="dropdown-divider"></div>
-                <a href="#!" class="dropdown-item">
+                <a href="<?php echo base_url('Login/logout') ?>" class="dropdown-item">
                   <i class="ni ni-user-run"></i>
                   <span>Logout</span>
                 </a>

@@ -6,18 +6,14 @@
    <div class="header-body">
      <div class="row align-items-center py-4">
        <div class="col-lg-6 col-7">
-         <h6 class="h2 text-white d-inline-block mb-0">Dashboard</h6>
+         <h6 class="h2 text-white d-inline-block mb-0">Hotel</h6>
          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
              <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-             <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+             <li class="breadcrumb-item"><a href="#">Hotel</a></li>
              <!-- <li class="breadcrumb-item active" aria-current="page">Default</li> -->
            </ol>
          </nav>
-       </div>
-       <div class="col-lg-6 col-5 text-right">
-         <a href="#" class="btn btn-sm btn-neutral">Testimoni</a>
-         <!-- <a href="#" class="btn btn-sm btn-neutral">Filters</a> -->
        </div>
      </div>
      <!-- Card stats -->
@@ -33,8 +29,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-primary">
-              <h4 class="card-title ">Simple Table</h4>
-              <p class="card-category"> Here is a subtitle for this table</p>
+              <h4 class="card-title ">Daftar Hotel</h4>
+              <button class="btn btn-primary">Tambah Hotel</button>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -44,121 +40,33 @@
                       ID
                     </th>
                     <th>
-                      Name
+                      Nama Hotel
                     </th>
                     <th>
-                      Country
+                      Harga
                     </th>
                     <th>
-                      City
-                    </th>
-                    <th>
-                      Salary
+                      Aksi
                     </th>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>
-                        1
-                      </td>
-                      <td>
-                        Dakota Rice
-                      </td>
-                      <td>
-                        Niger
-                      </td>
-                      <td>
-                        Oud-Turnhout
-                      </td>
-                      <td class="text-primary">
-                        $36,738
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        2
-                      </td>
-                      <td>
-                        Minerva Hooper
-                      </td>
-                      <td>
-                        Curaçao
-                      </td>
-                      <td>
-                        Sinaai-Waas
-                      </td>
-                      <td class="text-primary">
-                        $23,789
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        3
-                      </td>
-                      <td>
-                        Sage Rodriguez
-                      </td>
-                      <td>
-                        Netherlands
-                      </td>
-                      <td>
-                        Baileux
-                      </td>
-                      <td class="text-primary">
-                        $56,142
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        4
-                      </td>
-                      <td>
-                        Philip Chaney
-                      </td>
-                      <td>
-                        Korea, South
-                      </td>
-                      <td>
-                        Overland Park
-                      </td>
-                      <td class="text-primary">
-                        $38,735
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        5
-                      </td>
-                      <td>
-                        Doris Greene
-                      </td>
-                      <td>
-                        Malawi
-                      </td>
-                      <td>
-                        Feldkirchen in Kärnten
-                      </td>
-                      <td class="text-primary">
-                        $63,542
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        6
-                      </td>
-                      <td>
-                        Mason Porter
-                      </td>
-                      <td>
-                        Chile
-                      </td>
-                      <td>
-                        Gloucester
-                      </td>
-                      <td class="text-primary">
-                        $78,615
-                      </td>
-                    </tr>
+                    <?php foreach ($hotel->result() as $h): ?>
+                      <tr>
+                        <td>
+                          <?php echo $h->idhotel; ?>
+                        </td>
+                        <td>
+                          <?php echo $h->nama_hotel; ?>
+                        </td>
+                        <td class="text-primary">
+                          <?php echo number_format($h->harga); ?>
+                        </td>
+                        <td>
+                          <a class="btn btn-warning" href="<?php echo base_url('admin/Hotel/editHotel/'.$h->idhotel); ?>">Edit</a>
+                          <button class="btn btn-danger">Hapus</button>
+                        </td>
+                      </tr>
+                    <?php endforeach; ?>
                   </tbody>
                 </table>
               </div>

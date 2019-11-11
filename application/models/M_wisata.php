@@ -15,4 +15,16 @@ public $tabel ="wisata";
     $this->db->where($where);
     $this->db->delete('galery');
 	}
+	public function tambahData($data){
+		$this->db->insert('wisata',$data);
+	}
+	public function tambahDataGambar($data){
+		$this->db->insert('galery',$data);
+	}
+	public function pilihWisatawhere(){
+		return $this->db->get_where('wisata', array('idwisata'=>$this->uri->segment(4)));
+	}
+	public function perbarui($data,$where){
+		$this->db->update('wisata',$data,$where);
+	}
 }
