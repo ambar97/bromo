@@ -58,26 +58,12 @@
             </div>
             <div class="form-group">
              <label class="form-control-label" for="exampleFormControlInput1">Deskripsi</label>
+             <!-- <textarea data-toggle="quill" data-quill-placeholder="" class="form-control" ></textarea> -->
              <div data-toggle="quill" data-quill-placeholder="" name="deskrip"></div>
            </div>
-           <div class="card-body">
-                <!-- Single -->
-                <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
-                <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-dropzone-url="http://">
-                  <div class="fallback">
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" name="pilih">
-                      <label class="custom-file-label" for="projectCoverUploads">Choose file</label>
-                    </div>
-                  </div>
-                  <div class="dz-preview dz-preview-single">
-                    <div class="dz-preview-cover">
-                      <img class="dz-preview-img" src="...html" alt="..." data-dz-thumbnail>
-                    </div>
-                  </div>
-                </div>
-                <!-- Multiple -->
-              </div>
+
+           <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
+           <input type="file" name="pilih" class="form-control">
           <hr>
           <div>
             <button class="btn btn-icon btn-primary float-right" type="submit" name="btnSimpan">
