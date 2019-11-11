@@ -316,7 +316,7 @@
                     <img alt="Image placeholder" src="<?php echo base_url()?>master/assets/img/theme/team-4.jpg">
                   </span>
                   <div class="media-body ml-2 d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                    <span class="mb-0 text-sm  font-weight-bold"><?php echo $this->session->userdata('nama') ?></span>
                   </div>
                 </div>
               </a>
@@ -324,7 +324,7 @@
                 <div class="dropdown-header noti-title">
                   <h6 class="text-overflow m-0">Welcome!</h6>
                 </div>
-                <a href="#!" class="dropdown-item">
+                <a href="<?php echo base_url('admin/Dashboard/profile') ?>" class="dropdown-item">
                   <i class="ni ni-settings-gear-65"></i>
                   <span>Settings</span>
                 </a>

@@ -7,4 +7,7 @@ class Dashboard extends CI_Controller {
 	{
 		$this->load->view('admin/v_dashboard');
 	}
+	public function profile(){
+		$this->load->view('admin/v_profile');
+	}
 }

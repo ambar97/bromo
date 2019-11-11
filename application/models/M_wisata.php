@@ -18,6 +18,9 @@ public $tabel ="wisata";
 	public function tambahData($data){
 		$this->db->insert('wisata',$data);
 	}
+	public function tambahDataGambar($data){
+		$this->db->insert('galery',$data);
+	}
 	public function pilihWisatawhere(){
 		return $this->db->get_where('wisata', array('idwisata'=>$this->uri->segment(4)));
 	}
