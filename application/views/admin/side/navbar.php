@@ -31,35 +31,51 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(1)=='Home'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(1)=='Dashboard'): ?>
                 <?php echo 'active' ?>
-              <?php endif ?>" href="<?php echo base_url('Home') ?>" >
+              <?php endif ?>" href="<?php echo base_url('admin/Dashboard') ?>" >
                 <i class="ni ni-shop text-primary"></i>
-                <span class="nav-link-text">Dashboards</span>
+                <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(1)=='User'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(1)=='Destination'): ?>
                 <?php echo 'active' ?>
-              <?php endif ?>" href="<?php echo base_url('User') ?>">
+              <?php endif ?>" href="<?php echo base_url('admin/Destination') ?>">
                 <i class="ni ni-user-run text-orange"></i>
-                <span class="nav-link-text">User</span>
+                <span class="nav-link-text">Destination</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(1)=='Pembayaran'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(1)=='Package'): ?>
                 <?php echo 'active' ?>
-              <?php endif ?>" href="<?php echo base_url('Pembayaran')?>">
+              <?php endif ?>" href="<?php echo base_url('admin/Package')?>">
                 <i class="ni ni-cart text-info"></i>
-                <span class="nav-link-text">Pembayaran</span>
+                <span class="nav-link-text">Package</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(1)=='Barang'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(1)=='Hotel'): ?>
                 <?php echo 'active' ?>
-              <?php endif ?>" href="<?php echo base_url('Barang') ?>">
+              <?php endif ?>" href="<?php echo base_url('admin/Hotel') ?>">
                 <i class="ni ni-single-copy-04 text-pink"></i>
-                <span class="nav-link-text">Barang</span>
+                <span class="nav-link-text">Hotel</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <?php if ($this->uri->segment(1)=='Gallery'): ?>
+                <?php echo 'active' ?>
+              <?php endif ?>" href="<?php echo base_url('admin/Gallery') ?>">
+                <i class="ni ni-single-copy-04 text-pink"></i>
+                <span class="nav-link-text">Gallery</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <?php if ($this->uri->segment(1)=='Contact'): ?>
+                <?php echo 'active' ?>
+              <?php endif ?>" href="<?php echo base_url('admin/Contact') ?>">
+                <i class="ni ni-single-copy-04 text-pink"></i>
+                <span class="nav-link-text">Contact Us</span>
               </a>
             </li>
           </ul>
