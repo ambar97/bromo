@@ -684,9 +684,9 @@
                     slide_counter           :   1,      //Display slide numbers
                     slide_captions          :   1,      //Slide caption (Pull from "title" in slides array)
                     slides                  :   [       //Slideshow Images
-                                                        {image : '<?php echo base_url() ?>master/client/assets/images/switzerland.jpg', title : 'Slide 1'},
-                                                        {image : '<?php echo base_url() ?>master/client/assets/images/slide18.jpg', title : 'Slide 2'},
-                                                        {image : '<?php echo base_url() ?>master/client/assets/images/beach.jpg', title : 'Slide 3'},
+                                                        {image : '<?php echo base_url() ?>master/client/assets/images/bromo1.jpg', title : 'Slide 1'},
+                                                        {image : '<?php echo base_url() ?>master/client/assets/images/bromo2.jpg', title : 'Slide 2'},
+                                                        {image : '<?php echo base_url() ?>master/client/assets/images/bromo3.jpg', title : 'Slide 3'},
                                                 ]
 
                 });
