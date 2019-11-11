@@ -33,6 +33,12 @@ class Destination extends CI_Controller {
 					'no_telp'=>$this->input->post('noTelp'));
 				$data = $this->M_wisata->tambahData($data);
 				$tr=$this->db->insert_id();
+				$isifasil = $this->input->post('fasilitas');
+				for ($i=0; $i <count($isifasil) ; $i++) { 
+					$fasilitas = array('icon'=>$isifasil[$i],
+									'id_wisata'=>$tr);
+					$this->M_model->insert('fasilitas',$fasilitas);
+				}
 				$gambar=array('gambar'=>$foto, 'wisata_idwisata'=>$tr);
 				$this->M_wisata->tambahDataGambar($gambar);
 				redirect(base_url('admin/Destination'));
@@ -44,8 +50,8 @@ class Destination extends CI_Controller {
 	}
 	public function hapusDataWisata($id){
 		$where = array('idwisata'=>$id);
+		$this->M_wisata->hapusGalery(array('wisata_idwisata'=>$id));
 		$this->M_wisata->hapusWisata($where);
-		// $this->M_wisata->hapusGalery(array('wisata_idwisata'=>$id));
 
 		redirect(base_url('admin/Destination'));
 	}

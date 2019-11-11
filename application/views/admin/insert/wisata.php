@@ -62,6 +62,29 @@
              <div data-toggle="quill" data-quill-placeholder="" name="deskrip" id="divv"></div>
              <input type="hidden" name="deskrip" id="deskripsi">
            </div>
+           <div class="form-group">
+            <label class="form-control-label" for="exampleFormControlInput1">Fasilitas</label>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input class="custom-control-input" id="musholla" type="checkbox" value="fa fa-university" name="fasilitas[]">
+                      <label class="custom-control-label" for="musholla">Gedung</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input class="custom-control-input" id="penginapan" type="checkbox" value="fa fa-bed" name="fasilitas[]">
+                      <label class="custom-control-label" for="penginapan">Penginapan</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input class="custom-control-input" id="tr" type="checkbox" value="fa fa-taxi" name="fasilitas[]">
+                      <label class="custom-control-label" for="tr">Transportasi</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input class="custom-control-input" id="mkn" type="checkbox" value="fa fa-cutlery" name="fasilitas[]">
+                      <label class="custom-control-label" for="mkn">Restaurant</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input class="custom-control-input" id="gd" type="checkbox" value="fa fa-user" name="fasilitas[]">
+                      <label class="custom-control-label" for="gd">Guide</label>
+                    </div>
+                  </div>
 
            <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
            <input type="file" name="pilih" class="form-control">

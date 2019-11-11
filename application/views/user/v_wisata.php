@@ -82,15 +82,23 @@
 				<?php foreach ($destinasi as $des): ?>
 					
 				
-				<div  class="hotel-list-view" style="border-radius: 10px;">
+				<div  class="hotel-list-view" style="border-radius: 10px; min-height: 100px;">
 					<div class="wrapper">
-						<div class="col-md-4 col-sm-6 switch-img clear-padding">
-							<img src="<?php echo base_url().$des->gambar ?>" alt="cruise">
+						<div class="col-md-4 col-sm-6 switch-img clear-padding" style="border-radius: 10px; ">
+							<img src="<?php echo base_url().$des->gambar ?>" style="border-radius: 30px; min-height: 250px;" alt="cruise">
 						</div>
-						<div class="col-md-6 col-sm-6" >
+						<div class="col-md-6 col-sm-6 hotel-info" >
 							<div>
 								<div class="hotel-header" >
-									<h5><?php echo $des->nama_wisata ?> <span><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star-o colored"></i></span></h5>
+									<h5><?php echo $des->nama_wisata ?> <span>
+										<?php  $jum = 5-$des->rating; ?>
+										<?php  for ($i=0; $i < $des->rating ; $i++) { ?> 
+										<i class="fa fa-star colored"></i>	
+										<?php } ?>
+										<?php  for ($i=0; $i <$jum ; $i++) { ?>
+											<i class="fa fa-star-o colored"></i>
+										<?php } ?>
+										</span></h5>
 									<p><i class="fa fa-map-marker"></i><?php echo $des->lokasi ?> <i class="fa fa-phone"></i><?php echo $des->no_telp ?></p>
 								</div>
 								<div class="hotel-facility">
@@ -105,10 +113,9 @@
 									<p><?php echo $des->deskripsi_w ?></p>
 								</div>
 							</div>
-							
 						</div>
-						<!-- <div class="clearfix visible-sm-block"></div> -->
-						<!-- <div class="col-md-2 rating-price-box text-center clear-padding">
+						<div class="clearfix visible-sm-block"></div>
+						<div class="col-md-2 rating-price-box text-center clear-padding">
 							<div class="rating-box">
 								<div class="tripadvisor-rating">
 									<img src="<?php echo base_url() ?>master/client/assets/images/tripadvisor.png" alt="cruise"><span>4.5/5.0</span>
@@ -119,14 +126,14 @@
 								</div>
 							</div>
 							<div class="room-book-box" style="margin-top: 40px;">
-								<div class="price">
+								<!-- <div class="price">
 									<h5>Rp. <?php echo number_format($des->harga) ?>/Person</h5>
-								</div>
+								</div> -->
 								<div class="book">
 									<a href="#" style="border-radius: 10px;">BOOK</a>
 								</div>
 							</div>
-						</div> -->
+						</div>
 					</div>
 				</div>
 				<?php endforeach ?>			
