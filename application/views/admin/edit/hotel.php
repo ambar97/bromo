@@ -30,42 +30,41 @@
         <div class="row">
           <div class="col-md-12">
             <div class="card ">
-              <form method="post" action="<?php echo base_url('admin/Hotel/prosesEditHotel'); ?>" enctype="multipart/form-data">
-              <div class="card-header card-header-rose card-header-icon">
-                <h4 class="card-title">Edit Hotel</h4>
-              </div>
-              <div class="card-body ">
+              <form role="form" action="<?php echo base_url('admin/Hotel/prosesEditHotel'); ?>" method="post" enctype="multipart/form-data">
+                <div class="card-body">
                   <?php foreach ($hotel->result() as $h): ?>
-                    <div class="form-group">
-                      <label for="exampleEmail" class="bmd-label-floating">Nama Hotel</label>
-                      <input type="text" class="form-control" id="exampleEmail" name="idhotel" value="<?php echo $h->idhotel; ?>" hidden>
-                      <input type="text" class="form-control" id="exampleEmail" name="nama_hotel" value="<?php echo $h->nama_hotel; ?>">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Nama Hotel</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="idhotel" value="<?php echo $h->idhotel; ?>" hidden>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="nama_hotel" value="<?php echo $h->nama_hotel; ?>">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Rating</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="rating" value="<?php echo $h->rating; ?>">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Deskripsi</label><br>
+                    <textarea name="deskripsi" data-toggle="quill" data-quill-placeholder="" class="form-control" ><?php echo $h->deskripsi; ?></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Harga</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="harga" value="<?php echo $h->harga; ?>">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" name="gambar">
+                      </div>
                     </div>
-                    <div class="form-group">
-                      <label for="examplePass" class="bmd-label-floating">Rating</label>
-                      <input type="text" class="form-control" id="examplePass" name="rating" value="<?php echo $h->rating; ?>">
-                    </div>
-                    <div class="form-group">
-                      <label for="examplePass" class="bmd-label-floating">Deskripsi</label>
-                      <textarea name="deskripsi" data-toggle="quill" data-quill-placeholder="" class="form-control" ><?php echo $h->deskripsi; ?></textarea>
-                    </div>
-                    <div class="form-group">
-                      <label for="examplePass" class="bmd-label-floating">Harga</label>
-                      <input type="int" class="form-control" id="examplePass" name="harga" value="<?php echo $h->harga; ?>">
-                    </div>
-                    <div class="form-group">
-                      <input type="file" name="gambar">
-                    </div>
+                  </div>
                   <?php endforeach; ?>
-              </div>
-              <div class="card-footer ">
-                <div class="">
-                  <button class="btn btn-icon btn-primary" type="submit" name="btnSimpan">
-                    <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
-                    <span class="btn-inner--text">Simpan</span>
-                  </button>
                 </div>
-              </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
               </form>
             </div>
           </div>
