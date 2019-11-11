@@ -4,372 +4,7 @@
 <section>
     <div class="row full-width-search">
         <div class="container clear-padding">
-            <div class="col-md-8 search-section">
-                <div role="tabpanel">
-                    <!-- BEGIN: CATEGORY TAB -->
-                    <ul class="nav nav-tabs search-top" role="tablist" id="searchTab">
-                        <li role="presentation" class="active text-center">
-                            <a href="#flight" aria-controls="flight" role="tab" data-toggle="tab">
-                                <i class="fa fa-plane"></i> 
-                                <span>FLIGHTS</SPAN>
-                            </a>
-                        </li>
-                        <li role="presentation" class="text-center">
-                            <a href="#hotel" aria-controls="hotel" role="tab" data-toggle="tab">
-                                <i class="fa fa-bed"></i> 
-                                <span>HOTELS</span>
-                            </a>
-                        </li>
-                        <li role="presentation" class="text-center">
-                            <a href="#holiday" aria-controls="holiday" role="tab" data-toggle="tab">
-                                <i class="fa fa-suitcase"></i>
-                                <span>HOLIDAYS</span>
-                            </a>
-                        </li>
-                        <li role="presentation" class="text-center">
-                            <a href="#taxi" aria-controls="taxi" role="tab" data-toggle="tab">
-                                <i class="fa fa-cab"></i>
-                                <span>CAR</span>
-                            </a>
-                        </li>
-                        <li role="presentation" class="text-center">
-                            <a href="#cruise" aria-controls="cruise" role="tab" data-toggle="tab">
-                                <i class="fa fa-ship"></i>
-                                <span>CRUISE</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- END: CATEGORY TAB -->
 
-                    <!-- BEGIN: TAB PANELS -->
-                    <div class="tab-content">
-                            <!-- BEGIN: FLIGHT SEARCH -->
-                            <div role="tabpanel" class="tab-pane active" id="flight">
-                                <form>
-                                    <div class="col-md-12 product-search-title">Book Flight Tickets</div>
-                                    <div class="col-md-12 search-col-padding">
-                                        <label class="radio-inline">
-                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="One Way"> One Way
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Round Trip"> Round Trip
-                                        </label>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Leaving From</label>
-                                        <div class="input-group">
-                                            <input type="text" name="departure_city" class="form-control" required placeholder="E.g. London">
-                                            <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Leaving To</label>
-                                        <div class="input-group">
-                                            <input type="text" name="destination_city" class="form-control" required placeholder="E.g. New York">
-                                            <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Departure</label>
-                                        <div class="input-group">
-                                            <input type="text" id="departure_date" name="departure_date" class="form-control" placeholder="DD/MM/YYYY">
-                                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Return</label>
-                                        <div class="input-group">
-                                            <input type="text" id="return_date" class="form-control" name="return_date" placeholder="DD/MM/YYYY">
-                                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-4 col-sm-4 search-col-padding">
-                                        <label>Adult</label><br>
-                                        <input id="adult_count" name="adult_count" value="1" class="form-control quantity-padding">
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 search-col-padding">
-                                        <label>Child</label><br>
-                                        <input type="text" id="child_count" name="child_count" value="1" class="form-control quantity-padding">
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 search-col-padding">
-                                        <label>Class</label><br>
-                                        <select class="selectpicker">
-                                            <option>Business</option>
-                                            <option>Economy</option>
-                                        </select>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-12 search-col-padding">
-                                        <button type="submit" class="search-button btn transition-effect">Search Flights</button>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </form>
-                            </div>
-                            <!-- END: FLIGHT SEARCH -->
-                            
-                            <!-- START: HOTEL SEARCH -->
-                            <div role="tabpanel" class="tab-pane" id="hotel">
-                                <form >
-                                    <div class="col-md-12 product-search-title">Book Hotel Rooms</div>
-                                    <div class="col-md-12 search-col-padding">
-                                        <label>I Want To Go</label>
-                                        <div class="input-group">
-                                            <input type="text" name="destination-city" class="form-control" required placeholder="E.g. New York">
-                                            <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Check - In</label>
-                                        <div class="input-group">
-                                            <input type="text" name="check-in" id="check_in" class="form-control" placeholder="DD/MM/YYYY">
-                                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Check - Out</label>
-                                        <div class="input-group">
-                                            <input type="text" name="check-out" id="check_out" class="form-control" placeholder="DD/MM/YYYY">
-                                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-3 col-sm-3 search-col-padding">
-                                        <label>Adult</label><br>
-                                        <input id="hotel_adult_count" name="adult_count" value="1" class="form-control quantity-padding">
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 search-col-padding">
-                                        <label>Child</label><br>
-                                        <input type="text" id="hotel_child_count" name="child_count" value="1" class="form-control quantity-padding">
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 search-col-padding">
-                                        <label>Rooms</label><br>
-                                        <select class="selectpicker" name="rooms">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3 search-col-padding">
-                                        <label>Nights</label><br>
-                                        <select class="selectpicker" name="nights">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                        </select>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-12 search-col-padding">
-                                        <button type="submit" class="search-button btn transition-effect">Search Hotels</button>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </form>
-                            </div>
-                            <!-- END: HOTEL SEARCH -->
-                                
-                            <!-- START: BEGIN HOLIDAY -->
-                            <div role="tabpanel" class="tab-pane" id="holiday">
-                                <form >
-                                    <div class="col-md-12 product-search-title">Book Holiday Packages</div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>From</label>
-                                        <div class="input-group">
-                                            <input type="text" name="pack-departure-city" class="form-control" required placeholder="E.g. New York">
-                                            <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>I Want To Go</label>
-                                        <div class="input-group">
-                                            <input type="text" name="pack-destination-city" class="form-control" required placeholder="E.g. New York">
-                                            <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Starting From</label>
-                                        <div class="input-group">
-                                            <input type="text" id="package_start" class="form-control" placeholder="DD/MM/YYYY">
-                                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Duration(Optional)</label><br>
-                                        <select class="selectpicker" name="holiday_duration">
-                                            <option>3 Days</option>
-                                            <option>5 Days</option>
-                                            <option>1 Week</option>
-                                            <option>2 Weeks</option>
-                                            <option>1 Month</option>
-                                            <option>1+ Month</option>
-                                        </select>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Package Type(Optional)</label><br>
-                                        <select class="selectpicker" name="package_type">
-                                            <option>Group</option>
-                                            <option>Family</option>
-                                            <option>Individual</option>
-                                            <option>Honeymoon</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Budget(Optional)</label><br>
-                                        <select class="selectpicker" name="package_budget">
-                                            <option>500</option>
-                                            <option>1000</option>
-                                            <option>1000+</option>
-                                        </select>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-12 search-col-padding">
-                                        <button type="submit" class="search-button btn transition-effect">Search Packages</button>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </form>
-                            </div>
-                            <!-- END: HOLIDAYS -->
-                            
-                            <!-- START: CAR SEARCH -->
-                            <div role="tabpanel" class="tab-pane" id="taxi">
-                                <form >
-                                    <div class="col-md-12 product-search-title">Search Perfect Car</div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Pick Up Location</label>
-                                        <div class="input-group">
-                                            <input type="text" name="departure-city" class="form-control" required placeholder="E.g. New York">
-                                            <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Drop Off Location</label>
-                                        <div class="input-group">
-                                            <input type="text" name="destination-city" class="form-control" required placeholder="E.g. New York">
-                                            <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Pick Up Date</label>
-                                        <div class="input-group">
-                                            <input type="text" id="car_start" class="form-control" placeholder="MM/DD/YYYY">
-                                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Pick Off Date</label>
-                                        <div class="input-group">
-                                            <input type="text" id="car_end" class="form-control" placeholder="MM/DD/YYYY">
-                                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Car Brnad(Optional)</label><br>
-                                        <select class="selectpicker" name="brand">
-                                            <option>BMW</option>
-                                            <option>Audi</option>
-                                            <option>Mercedes</option>
-                                            <option>Suzuki</option>
-                                            <option>Honda</option>
-                                            <option>Hyundai</option>
-                                            <option>Toyota</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Car Type(Optional)</label><br>
-                                        <select class="selectpicker" name="car_type">
-                                            <option>Limo</option>
-                                            <option>Sedan</option>
-                                        </select>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-12 search-col-padding">
-                                        <button type="submit" class="search-button btn transition-effect">Search Cars</button>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </form>
-                            </div>
-                            <!-- END: CAR SEARCH -->
-                            
-                            <!-- START: CRUISE SEARCH -->
-                            <div role="tabpanel" class="tab-pane" id="cruise">
-                                <form >
-                                    <div class="col-md-12 product-search-title">Cruise Holidays</div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>From</label>
-                                        <div class="input-group">
-                                            <input type="text" name="pack-departure-city" class="form-control" required placeholder="E.g. New York">
-                                            <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>I Want To Go</label>
-                                        <div class="input-group">
-                                            <input type="text" name="pack-destination-city" class="form-control" required placeholder="E.g. New York">
-                                            <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Starting From</label>
-                                        <div class="input-group">
-                                            <input type="text" id="cruise_start" class="form-control" placeholder="DD/MM/YYYY">
-                                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Duration(Optional)</label><br>
-                                        <select class="selectpicker" name="holiday_duration">
-                                            <option>3 Days</option>
-                                            <option>5 Days</option>
-                                            <option>1 Week</option>
-                                            <option>2 Weeks</option>
-                                            <option>1 Month</option>
-                                            <option>1+ Month</option>
-                                        </select>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Package Type(Optional)</label><br>
-                                        <select class="selectpicker" name="package_type">
-                                            <option>Group</option>
-                                            <option>Family</option>
-                                            <option>Individual</option>
-                                            <option>Honeymoon</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
-                                        <label>Budget(Optional)</label><br>
-                                        <select class="selectpicker" name="package_budget">
-                                            <option>500</option>
-                                            <option>1000</option>
-                                            <option>1000+</option>
-                                        </select>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div class="col-md-12 search-col-padding">
-                                        <button type="submit" class="search-button btn transition-effect">Search Cruises</button>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </form>
-                            </div>
-                            <!-- END: CRUISE SEARCH -->
-                            
-                        </div>
-                        <!-- END: TAB PANE -->
-                </div>
-            </div>
             <div class="offer-slider">
                 <div class="owl-carousel col-md-4 text-right" id="offer1">
                     <div class="item">
@@ -391,7 +26,7 @@
             </div>
         </div>
     </div>
-</section>  
+</section>
 
 <section id="how-it-work">
         <div class="row work-row">
@@ -448,7 +83,7 @@
                         <div class="clearfix"></div>
                         <div class="pricing-info">
                             <div class="pull-left">
-                                <span>$999/Person</span> 
+                                <span>$999/Person</span>
                             </div>
                             <div class="pull-right">
                                 <a href="#" class="wow fadeIn">BOOK NOW</a>
@@ -490,7 +125,7 @@
                         <div class="clearfix"></div>
                         <div class="pricing-info">
                             <div class="pull-left">
-                                <span>$899/Person</span> 
+                                <span>$899/Person</span>
                             </div>
                             <div class="pull-right">
                                 <a href="#" class="wow fadeIn">BOOK NOW</a>
@@ -519,7 +154,7 @@
                         <div class="clearfix"></div>
                         <div class="pricing-info">
                             <div class="pull-left">
-                                <span>$499/Person</span> 
+                                <span>$499/Person</span>
                             </div>
                             <div class="pull-right">
                                 <a href="#" class="wow fadeIn">BOOK NOW</a>
@@ -626,7 +261,7 @@
                                 <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
                             </div>
                             <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a> 
+                                <a href="#" class="text-center">MORE</a>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -647,7 +282,7 @@
                                 <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
                             </div>
                             <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a> 
+                                <a href="#" class="text-center">MORE</a>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -668,7 +303,7 @@
                                 <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
                             </div>
                             <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a> 
+                                <a href="#" class="text-center">MORE</a>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -689,7 +324,7 @@
                                 <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
                             </div>
                             <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a> 
+                                <a href="#" class="text-center">MORE</a>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -710,7 +345,7 @@
                                 <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
                             </div>
                             <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a> 
+                                <a href="#" class="text-center">MORE</a>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -731,7 +366,7 @@
                                 <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
                             </div>
                             <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a> 
+                                <a href="#" class="text-center">MORE</a>
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -798,31 +433,31 @@
                 <ul class="nav nav-tabs" role="tablist" id="hotDeal">
                     <li role="presentation" class="active text-center">
                         <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">
-                            <i class="fa fa-bed"></i> 
+                            <i class="fa fa-bed"></i>
                             <span>HOTELS</SPAN>
                         </a>
                     </li>
                     <li role="presentation" class="text-center">
                         <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">
-                            <i class="fa fa-suitcase"></i> 
+                            <i class="fa fa-suitcase"></i>
                             <span>HOLIDAYS</SPAN>
                         </a>
                     </li>
                     <li role="presentation" class="text-center">
                         <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">
-                            <i class="fa fa-plane"></i> 
+                            <i class="fa fa-plane"></i>
                             <span>FLIGHTS</SPAN>
                         </a>
                     </li>
                     <li role="presentation" class="text-center">
                         <a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">
-                            <i class="fa fa-taxi"></i> 
+                            <i class="fa fa-taxi"></i>
                             <span>CARS</SPAN>
                         </a>
                     </li>
                     <li role="presentation" class="text-center">
                         <a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab">
-                            <i class="fa fa-bed"></i> 
+                            <i class="fa fa-bed"></i>
                             <span>HOTEL+FLIGHTS</SPAN>
                         </a>
                     </li>
@@ -1015,12 +650,12 @@
 
 <?php $this->load->view("user/side/footer"); ?>
 <?php $this->load->view("user/side/js"); ?>
-<script type="text/javascript">  
+<script type="text/javascript">
             /* SLIDER SETTINGS */
             jQuery(function($){
                 "use strict";
                 $.supersized({
-                
+
                     //Functionality
                     slideshow               :   1,      //Slideshow on/off
                     autoplay                :   1,      //Slideshow starts playing automatically
@@ -1042,21 +677,21 @@
                     horizontal_center       :   1,      //Horizontally center background
                     fit_portrait            :   1,      //Portrait images will not exceed browser height
                     fit_landscape           :   0,      //Landscape images will not exceed browser width
-                    
+
                     //Components
                     navigation              :   1,      //Slideshow controls on/off
                     thumbnail_navigation    :   1,      //Thumbnail navigation
                     slide_counter           :   1,      //Display slide numbers
                     slide_captions          :   1,      //Slide caption (Pull from "title" in slides array)
                     slides                  :   [       //Slideshow Images
-                                                        {image : '<?php echo base_url() ?>master/client/assets/images/switzerland.jpg', title : 'Slide 1'},  
+                                                        {image : '<?php echo base_url() ?>master/client/assets/images/switzerland.jpg', title : 'Slide 1'},
                                                         {image : '<?php echo base_url() ?>master/client/assets/images/slide18.jpg', title : 'Slide 2'},
                                                         {image : '<?php echo base_url() ?>master/client/assets/images/beach.jpg', title : 'Slide 3'},
                                                 ]
-                                                
-                }); 
+
+                });
             });
-            
+
 </script>
 </body>
 </html>
