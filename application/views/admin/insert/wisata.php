@@ -31,7 +31,7 @@
           <h3 class="mb-0">Tambah Data Destination</h3>
         </div>
         <div class="card-body">
-          <form action="<?php echo base_url('admin/Destination/tabahDataWisata') ?>" method="post" enctype="multipart/form-data">
+          <form id="simpann" action="<?php echo base_url('admin/Destination/tabahDataWisata') ?>" method="post" enctype="multipart/form-data">
             <h2 class="">Data Destination</h2>
             <div class="form-group">
               <div class="row">
@@ -59,14 +59,15 @@
             <div class="form-group">
              <label class="form-control-label" for="exampleFormControlInput1">Deskripsi</label>
              <!-- <textarea data-toggle="quill" data-quill-placeholder="" class="form-control" ></textarea> -->
-             <div data-toggle="quill" data-quill-placeholder="" name="deskrip"></div>
+             <div data-toggle="quill" data-quill-placeholder="" name="deskrip" id="divv"></div>
+             <input type="hidden" name="deskrip" id="deskripsi">
            </div>
 
            <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
            <input type="file" name="pilih" class="form-control">
           <hr>
           <div>
-            <button class="btn btn-icon btn-primary float-right" type="submit" name="btnSimpan">
+            <button class="btn btn-icon btn-primary float-right" type="button" id="btnSimpan" name="btnSimpan" >
               <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
               <span class="btn-inner--text">Simpan</span>
             </button>
@@ -84,7 +85,15 @@
 <script src="<?php echo base_url()?>master/assets/vendor/select2/dist/js/select2.min.js"></script>
 <script src="<?php echo base_url()?>master/assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
 <script src="<?php echo base_url()?>master/assets/js/argon.min9f1e.js?v=1.1.0"></script>
-
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(document).on("click","#btnSimpan",function(){
+      var desk=document.querySelector(".ql-editor").innerHTML;
+      $("#deskripsi").val(desk);
+      $("#simpann").submit();
+    });
+  });
+</script>
 <?php if ($this->session->flashdata()) { ?>
   <?php echo $this->session->flashdata('Pesan'); ?>                   
 <?php } ?>

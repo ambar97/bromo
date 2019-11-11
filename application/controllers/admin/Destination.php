@@ -18,7 +18,7 @@ class Destination extends CI_Controller {
 	}
 	public function tabahDataWisata(){
 
-		if(isset($_POST['btnSimpan'])){
+		// if(isset($_POST['btnSimpan'])){
 			$config = array('upload_path' => './gallery/wisata/',
 				'allowed_types' => 'gif|jpg|png|jpeg'
 			);
@@ -28,7 +28,7 @@ class Destination extends CI_Controller {
 				$foto = "gallery/wisata/".$upload_data['file_name'];
 				$data = array('nama_wisata' =>$this->input->post('nama') ,
 					'rating'=>$this->input->post('rating'),
-					'deskripsi'=>$this->input->post('deskrip'),
+					'deskripsi_w'=>$this->input->post('deskrip'),
 					'harga'=>$this->input->post('harga'),
 					'no_telp'=>$this->input->post('noTelp'));
 				$data = $this->M_wisata->tambahData($data);
@@ -39,7 +39,8 @@ class Destination extends CI_Controller {
 			}else{
 				echo "ghghgh";
 			}
-		}
+		// }
+
 	}
 	public function hapusDataWisata($id){
 		$where = array('idwisata'=>$id);
