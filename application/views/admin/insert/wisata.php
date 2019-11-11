@@ -31,7 +31,7 @@
           <h3 class="mb-0">Tambah Data Destination</h3>
         </div>
         <div class="card-body">
-          <form action="<?php echo base_url('admin/Destination/tabahDataWisata') ?>" method="post">
+          <form action="<?php echo base_url('admin/Destination/tabahDataWisata') ?>" method="post" enctype="multipart/form-data">
             <h2 class="">Data Destination</h2>
             <div class="form-group">
               <div class="row">
@@ -53,16 +53,31 @@
             </div>
             <div class="form-group col-lg-6">
               <label class="form-control-label" for="exampleFormControlInput1">Rating</label>
-              <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0" name="rating" required="">
+              <input type="number" class="form-control" id="exampleFormControlInput1" max="5" placeholder="0" name="rating" required="">
             </div>
             </div>
             <div class="form-group">
              <label class="form-control-label" for="exampleFormControlInput1">Deskripsi</label>
-             <textarea data-toggle="quill" data-quill-placeholder="" class="form-control" ></textarea>
-             <!-- <div data-toggle="quill" data-quill-placeholder="" name="deskrip"></div> -->
+             <div data-toggle="quill" data-quill-placeholder="" name="deskrip"></div>
            </div>
-           <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
-           <input type="file" name="photo" class="form-control-label">
+           <div class="card-body">
+                <!-- Single -->
+                <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
+                <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-dropzone-url="http://">
+                  <div class="fallback">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" name="pilih">
+                      <label class="custom-file-label" for="projectCoverUploads">Choose file</label>
+                    </div>
+                  </div>
+                  <div class="dz-preview dz-preview-single">
+                    <div class="dz-preview-cover">
+                      <img class="dz-preview-img" src="...html" alt="..." data-dz-thumbnail>
+                    </div>
+                  </div>
+                </div>
+                <!-- Multiple -->
+              </div>
           <hr>
           <div>
             <button class="btn btn-icon btn-primary float-right" type="submit" name="btnSimpan">

@@ -6,6 +6,7 @@ class Destination extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('M_wisata');
+		$this->load->library('upload');
 	}
 	public function index()
 	{
@@ -16,21 +17,25 @@ class Destination extends CI_Controller {
 		$this->load->view('admin/insert/wisata');
 	}
 	public function tabahDataWisata(){
+
 		if(isset($_POST['btnSimpan'])){
 			$config = array('upload_path' => './gallery/wisata/',
 				'allowed_types' => 'gif|jpg|png|jpeg'
 			);
-			$this -> load -> library ('upload',$config);
-			if ($this->upload->do_upload('photo')){
-				$upload_data = $this -> upload -> data ();
+			$this->upload->initialize($config);
+			if ($this->upload->do_upload('pilih')){
+				$upload_data = $this->upload->data ();
 				$foto = "gallery/wisata/".$upload_data['file_name'];
 				$data = array('nama_wisata' =>$this->input->post('nama') ,
-				'rating'=>$this->input->post('rating'),
-				'deskripsi'=>$this->input->post('deskrip'),
-				'harga'=>$this->input->post('harga'));
-		// die(var_dump($data));
-		$data = $this->M_wisata->tambahData($data);
-		redirect(base_url('admin/Destination'));
+					'rating'=>$this->input->post('rating'),
+					'deskripsi'=>$this->input->post('deskrip'),
+					'harga'=>$this->input->post('harga'),
+					'no_telp'=>$this->input->post('noTelp'));
+				$data = $this->M_wisata->tambahData($data);
+				$tr=$this->db->insert_id();
+				$gambar=array('gambar'=>$foto, 'wisata_idwisata'=>$tr);
+				$this->M_wisata->tambahDataGambar($gambar);
+				redirect(base_url('admin/Destination'));
 			}else{
 				echo "ghghgh";
 			}
@@ -50,9 +55,9 @@ class Destination extends CI_Controller {
 	public function update(){
 		$where= array('idwisata'=>$this->input->post('idN'));
 		$data = array('nama_wisata' =>$this->input->post('nama') ,
-				'rating'=>$this->input->post('rating'),
-				'deskripsi'=>$this->input->post('deskrip'),
-				'harga'=>$this->input->post('harga'));
+			'rating'=>$this->input->post('rating'),
+			'deskripsi'=>$this->input->post('deskrip'),
+			'harga'=>$this->input->post('harga'));
 		$this->M_wisata->perbarui($data,$where);
 		redirect(base_url('admin/Destination'));
 	}
