@@ -68,7 +68,7 @@
                         <!-- BEGIN: NAVIGATION -->
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="<?php if ($this->uri->segment(1)== "Home"): ?>
+                                <li class="<?php if ($this->uri->segment()== "Home"): ?>
                                     <?php echo "active" ?>
                                 <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('Home') ?>"><i class="fa fa-home"></i> HOME</a>
