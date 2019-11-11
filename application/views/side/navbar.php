@@ -11,6 +11,25 @@
 </div>
 <!-- END: PRELOADER -->
 
+<!-- BEGIN: COLOR SWITCHER -->
+<!-- <div class="cswitcher">
+    <div id="color-switcher">
+        <h6>CHOOSE COLOR</h6>
+        <ul>
+            <li class="green" data-path="<?php echo base_url() ?>master/client/assets/css/color/green.css"></li>
+            <li class="light-green" data-path="<?php echo base_url() ?>master/client/assets/css/color/light-green.css"></li>
+            <li class="red" data-path="<?php echo base_url() ?>master/client/assets/css/dummy.html"></li>
+            <li class="blue" data-path="<?php echo base_url() ?>master/client/assets/css/color/blue.css"></li>  
+            <li class="brown" data-path="<?php echo base_url() ?>master/client/assets/css/color/brown.css"></li>
+            <li class="purple" data-path="<?php echo base_url() ?>master/client/assets/css/color/purple.css"></li>
+            <li class="orange" data-path="<?php echo base_url() ?>master/client/assets/css/color/orange.css"></li>
+            <li class="yellow" data-path="<?php echo base_url() ?>master/client/assets/css/color/yellow.css"></li>
+        </ul>
+    </div>
+</div> -->
+<!-- <span id="stoggle"><i class="fa fa-cog"></i></span> -->
+<!-- END: COLOR SWITCHER -->
+ 
 <!-- BEGIN: SITE-WRAPPER -->
 <div class="site-wrapper">
 <!-- BEGIN: NAV SECTION -->
@@ -60,12 +79,12 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-
+                            
                             <!-- BEGIN: LOGO -->
                             <a class="navbar-brand logo" href="index.html">CRUISE</a>
                         </div>
-
-                        <!-- BEGIN: NAVIGATION -->
+                        
+                        <!-- BEGIN: NAVIGATION -->       
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="<?php if ($this->uri->segment(1)== "Home"): ?>
