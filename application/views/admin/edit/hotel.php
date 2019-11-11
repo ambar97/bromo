@@ -30,7 +30,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="card ">
-              <form method="post" action="<?php echo base_url('admin/Hotel/prosesEditHotel'); ?>">
+              <form method="post" action="<?php echo base_url('admin/Hotel/prosesEditHotel'); ?>" enctype="multipart/form-data">
               <div class="card-header card-header-rose card-header-icon">
                 <h4 class="card-title">Edit Hotel</h4>
               </div>
@@ -47,22 +47,24 @@
                     </div>
                     <div class="form-group">
                       <label for="examplePass" class="bmd-label-floating">Deskripsi</label>
-                      <textarea class="form-control" id="examplePass" name="deskripsi">
-                        <?php echo $h->deskripsi; ?>
-                      </textarea>
+                      <textarea name="deskripsi" data-toggle="quill" data-quill-placeholder="" class="form-control" ><?php echo $h->deskripsi; ?></textarea>
                     </div>
                     <div class="form-group">
                       <label for="examplePass" class="bmd-label-floating">Harga</label>
                       <input type="int" class="form-control" id="examplePass" name="harga" value="<?php echo $h->harga; ?>">
                     </div>
                     <div class="form-group">
-                      <label for="examplePass" class="bmd-label-floating">Upload Gambar Baru</label>
-                      <input class="form-control" type="file" name="gambar">
+                      <input type="file" name="gambar">
                     </div>
                   <?php endforeach; ?>
               </div>
               <div class="card-footer ">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="">
+                  <button class="btn btn-icon btn-primary" type="submit" name="btnSimpan">
+                    <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
+                    <span class="btn-inner--text">Simpan</span>
+                  </button>
+                </div>
               </div>
               </form>
             </div>
