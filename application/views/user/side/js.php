@@ -20,4 +20,21 @@ $(function() {
      }
    });
 });
+$(document).ready(function(){
+  $(document).on("click","#done_travelers",function(){
+    var adult = parseInt($("#adult_count").val());
+    var child = parseInt($("#child_count").val());
+    if (adult=="") {
+      adult = 1;
+    }
+    if (child =="") {
+      child = 0;
+    }
+    var total = adult+child;
+    $("#adult_count").val(adult);
+    $("#child_count").val(child);
+    $("#travelers").val(total);
+    $("#trv").val(total+" Person");
+  })
+})
 </script>
