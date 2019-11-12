@@ -89,7 +89,7 @@
                                 <li class="<?php if ($this->uri->segment(1)== "ContactUs"): ?>
                                     <?php echo "active" ?>
                                 <?php endif ?>">
-                                    <a class="dropdown-toggle" href="#<?php echo base_url('ContactUs') ?>"><i class="fa fa-ship"></i> CONTACT </a>
+                                    <a class="dropdown-toggle" href="<?php echo base_url('ContactUs') ?>"><i class="fa fa-ship"></i> CONTACT </a>
                                 </li>
                             </ul>
                         </div>
