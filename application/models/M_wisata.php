@@ -27,4 +27,12 @@ public $tabel ="wisata";
 	public function perbarui($data,$where){
 		$this->db->update('wisata',$data,$where);
 	}
+	public function pilihWisataAll(){
+		$this->db->select('wisata.*, galery.*');
+          $this->db->from('wisata');
+          $this->db->join('galery', 'wisata.idwisata = galery.wisata_idwisata');
+          // $this->db->where('mobil.id_automobile', '4');
+          $data=$this->db->get();
+          return $data;
+	}
 }

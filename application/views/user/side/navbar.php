@@ -71,7 +71,11 @@
                                 <li class="<?php if ($this->uri->segment(1)== "Wisata"): ?>
                                     <?php echo "active" ?>
                                 <?php endif ?>">
-                                    <a class="dropdown-toggle" href="#<?php echo base_url('Wisata') ?>"><i class="fa fa-map-marker"></i> WISATA</a>
+                                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-map-marker"></i> TOUR <i class="fa fa-caret-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="<?php echo base_url('Wisata') ?>"> Single Tour</a></li>
+                                        <li><a href="<?php echo base_url('PaketWisata') ?>"> Package Tour</a></li>
+                                    </ul>
                                 </li>
                                 <li class="<?php if ($this->uri->segment(1)== "Hotel"): ?>
                                     <?php echo "active" ?>
@@ -93,12 +97,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- END: NAVIGATION -->
                     </div>
-                    <!--END: NAV-CONTAINER -->
                 </div>
             </div>
-            <!-- END: HEADER -->
         </div>
     </div>
 </section>
