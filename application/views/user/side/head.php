@@ -21,12 +21,23 @@
     <!-- LIGHT -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>master/client/assets/css/dummy.html" id="select-style">
     <link href="<?php echo base_url() ?>master/client/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>master/client/assets/css/daterangepicker.css" rel="stylesheet">
     <!-- FONTS -->
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600' rel='stylesheet' type='text/css'>
     <style>
       .form_depan::placeholder{
         color: black;
+      }
+      .radius{
+        border-radius: 10px;
+      }
+      .radius-img{
+        border-radius: 10px 10px 0px 0px;
+      }
+      .gold{
+        color: #f39c12;
+        background: transparent;
       }
     </style>
 </head>

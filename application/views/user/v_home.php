@@ -25,6 +25,16 @@
                     <h4>Starting From $399/Person</h4>
                     <a href="#">KNOW MORE</a>
                   </div>
+                  <div class="item">
+                    <h3>Sky High Dubai</h3>
+                    <h4>Starting From $399/Person</h4>
+                    <a href="#">KNOW MORE</a>
+                  </div>
+                  <div class="item">
+                    <h3>Sky High Dubai</h3>
+                    <h4>Starting From $399/Person</h4>
+                    <a href="#">KNOW MORE</a>
+                  </div>
                 </div>
 
             </div>
@@ -68,25 +78,22 @@
 
 <!-- BEGIN: RECENT BLOG POST -->
 <section id="recent-blog">
-    <div style="border-radius: 10px;" class="row top-offer">
-        <div style="border-radius: 10px;" class="container">
-            <div style="border-radius: 10px;" class="section-title text-center">
+    <div class="row top-offer radius">
+        <div  class="radius container">
+            <div class="radius ection-title text-center">
                 <h2>Popular Tour Packages</h2>
             </div>
-            <div style="border-radius: 10px;" class="owl-carousel" id="post-list">
-                <div style="border-radius: 10px;" class="room-grid-view wow slideInUp" data-wow-delay="0.1s">
-                    <img src="<?php echo base_url() ?>master/client/assets/images/offer1.jpg" alt="cruise">
+            <div class="radius owl-carousel" id="post-list">
+                <div class="radius room-grid-view wow slideInUp" data-wow-delay="0.1s">
+                    <img class="radius-img" style="min-height:250px;" src="<?php echo base_url() ?>master/client/assets/images/bromo1.jpg" alt="cruise">
                     <div style="border-radius: 10px;" class="room-info">
                         <div style="border-radius: 10px;" class="post-title">
-                            <h5>POST TITLE GOES HERE</h5>
-                            <p><i class="fa fa-calendar"></i> Jul 15, 2015</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="post-desc">
-                            <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <h5>Great Bromo Adventure</h5>
+                            <p><i class="fa fa-tag"></i> $220</p>
                         </div>
                         <div style="border-radius: 10px;" class="room-book">
                             <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
-                                <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
+                                <h5><i class="fa fa-star gold"></i> 2 <i class="fa fa-user"></i> 2</h5>
                             </div>
                             <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
                                 <a href="#" class="text-center">MORE</a>
@@ -95,111 +102,7 @@
                         <div style="border-radius: 10px;" class="clearfix"></div>
                     </div>
                 </div>
-                <div style="border-radius: 10px;" class="room-grid-view wow slideInUp" data-wow-delay="0.2s">
-                    <img src="<?php echo base_url() ?>master/client/assets/images/offer2.jpg" alt="cruise">
-                    <div style="border-radius: 10px;" class="room-info">
-                        <div style="border-radius: 10px;" class="post-title">
-                            <h5>POST TITLE GOES HERE</h5>
-                            <p><i class="fa fa-calendar"></i> Jul 15, 2015</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="post-desc">
-                            <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="room-book">
-                            <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
-                                <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
-                <div style="border-radius: 10px;" class="room-grid-view wow slideInUp" data-wow-delay="0.3s">
-                    <img src="<?php echo base_url() ?>master/client/assets/images/offer3.jpg" alt="cruise">
-                    <div style="border-radius: 10px;" class="room-info">
-                        <div style="border-radius: 10px;" class="post-title">
-                            <h5>POST TITLE GOES HERE</h5>
-                            <p><i class="fa fa-calendar"></i> Jul 15, 2015</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="post-desc">
-                            <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="room-book">
-                            <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
-                                <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
-                <div style="border-radius: 10px;" class="room-grid-view wow slideInUp" data-wow-delay="0.4s">
-                    <img src="<?php echo base_url() ?>master/client/assets/images/offer4.jpg" alt="cruise">
-                    <div style="border-radius: 10px;" class="room-info">
-                        <div style="border-radius: 10px;" class="post-title">
-                            <h5>POST TITLE GOES HERE</h5>
-                            <p><i class="fa fa-calendar"></i> Jul 15, 2015</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="post-desc">
-                            <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="room-book">
-                            <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
-                                <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
-                <div style="border-radius: 10px;" class="room-grid-view wow slideInUp" data-wow-delay="0.5s">
-                    <img src="<?php echo base_url() ?>master/client/assets/images/offer3.jpg" alt="cruise">
-                    <div style="border-radius: 10px;" class="room-info">
-                        <div style="border-radius: 10px;" class="post-title">
-                            <h5>POST TITLE GOES HERE</h5>
-                            <p><i class="fa fa-calendar"></i> Jul 15, 2015</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="post-desc">
-                            <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="room-book">
-                            <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
-                                <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
-                <div style="border-radius: 10px;" class="room-grid-view wow slideInUp" data-wow-delay="0.6s">
-                    <img src="<?php echo base_url() ?>master/client/assets/images/offer2.jpg" alt="cruise">
-                    <div style="border-radius: 10px;" class="room-info">
-                        <div style="border-radius: 10px;" class="post-title">
-                            <h5>POST TITLE GOES HERE</h5>
-                            <p><i class="fa fa-calendar"></i> Jul 15, 2015</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="post-desc">
-                            <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="room-book">
-                            <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
-                                <h5><i class="fa fa-comments"></i> 2 <i class="fa fa-share-alt"></i> 20 </h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -527,6 +430,7 @@
     })
     $(document).on("focus",".duration",function(){
       $("#duration").modal("toggle");
+
     })
   })
 </script>
@@ -540,7 +444,7 @@
       <div class="modal-body">
         <div class="row col-md-12">
           <div class="col-md-4" >
-            <div class="holiday-grid-view" style="border-radius:10px">
+            <div class="holiday-grid-view radius">
       					<div class="holiday-header-wrapper">
       						<div class="holiday-header">
       							<div class="holiday-img">
@@ -774,7 +678,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 
-      <div class="modal-body" style="padding-bottom:30px;">
+      <div class="modal-body">
         <form>
 
           <div class="col-md-4 col-sm-6 search-col-padding">
@@ -803,75 +707,25 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 
-      <div class="modal-body">
+      <div class="modal-body" style="padding-top:50px;">
         <form>
-          <div class="col-md-12 product-search-title">Book Flight Tickets</div>
-          <div class="col-md-12 search-col-padding">
-            <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="One Way"> One Way
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Round Trip"> Round Trip
-            </label>
+
+
+          <div class="col-md-8 col-sm-6 search-col-padding">
+            <label>Duration</label><br>
+            <input style="border-radius:10px;" type="text" id="child_count" name="datetimes" value="0" class="form-control quantity-padding">
+          </div>
+          <div class="col-md-4 col-sm-6 search-col-padding">
+            <label></label><br>
+            <button style="margin-top:5px;border-radius:10px;" class="form-control btn btn-primary btn-md pull-right" data-dismiss="modal">Done</button>
           </div>
           <div class="clearfix"></div>
-          <div class="col-md-6 col-sm-6 search-col-padding">
-            <label>Leaving From</label>
-            <div class="input-group">
-              <input type="text" name="departure_city" class="form-control" required placeholder="E.g. London">
-              <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6 search-col-padding">
-            <label>Leaving To</label>
-            <div class="input-group">
-              <input type="text" name="destination_city" class="form-control" required placeholder="E.g. New York">
-              <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-          <div class="col-md-6 col-sm-6 search-col-padding">
-            <label>Departure</label>
-            <div class="input-group">
-              <input type="text" id="departure_date" name="departure_date" class="form-control" placeholder="DD/MM/YYYY">
-              <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6 search-col-padding">
-            <label>Return</label>
-            <div class="input-group">
-              <input type="text" id="return_date" class="form-control" name="return_date" placeholder="DD/MM/YYYY">
-              <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-          <div class="col-md-4 col-sm-4 search-col-padding">
-            <label>Adult</label><br>
-            <input id="adult_count" name="adult_count" value="1" class="form-control quantity-padding">
-          </div>
-          <div class="col-md-4 col-sm-4 search-col-padding">
-            <label>Child</label><br>
-            <input type="text" id="child_count" name="child_count" value="1" class="form-control quantity-padding">
-          </div>
-          <div class="col-md-4 col-sm-4 search-col-padding">
-            <label>Class</label><br>
-            <select class="selectpicker">
-              <option>Business</option>
-              <option>Economy</option>
-            </select>
-          </div>
-          <div class="clearfix"></div>
-          <div class="col-md-12 search-col-padding">
-            <button type="submit" class="search-button btn transition-effect">Search Flights</button>
-          </div>
-          <div class="clearfix"></div>
+
         </form>
 
       </div>
-      <div class="row modal-footer">
-        <button class="btn btn-primary btn-md pull-right" data-dismiss="modal">Done</button>
-      </div>
+
     </div>
   </div>
 </div>
-<!-- end modal small -->
+<!-- end modal small
