@@ -4,44 +4,61 @@
 <section>
     <div class="row full-width-search ">
         <div class="container clear-padding">
-          <div class="col-md-2"></div>
-          <div class="col-md-8" style="padding: 5px;border: 1px solid white;border-radius: 10px;background:transparent;min-height:50px;margin-top:300px;">
-            <form>
-
-              <div class="clearfix"></div>
-              <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 col-sm-4 search-col-padding">
-                <div class="input-group">
-                  <input type="text" style="background:transparent;" name="departure_city" class="destination form_depan form-control" required placeholder="Destination">
-                  <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-                </div>
-              </div>
-              <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 m-t-30 col-sm-3 search-col-padding">
-                <div class="input-group">
-                  <input style="background:transparent;" type="text" name="departure_city" class="travelers form_depan form-control" required placeholder="Travelers">
-                  <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                </div>
-              </div>
-              <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 m-t-30 col-sm-3 search-col-padding">
-                <div class="input-group">
-                  <input style="background:transparent;" type="text" name="departure_city" class="duration form_depan form-control" required placeholder="Duration">
-                  <span class="input-group-addon"><i class="fa fa-clock-o fa-fw"></i></span>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-3 search-col-padding">
-                <button type="button" style="padding:1px;border-radius:10px;" class="search-button btn btn-sm form-control transition-effect">GO</button>
-              </div>
 
 
-
-              <div class="clearfix"></div>
-            </form>
-          </div>
-          <div class="col-md-2"></div>
 
             <div class="offer-slider">
-                <div class="owl-carousel col-md-4 text-right" id="offer1" >
 
+                <div class="owl-carousel col-md-12 text-center" id="offer1" >
+                  <div class="item">
+                    <h3>Hong Kong Fun</h3>
+                    <h4>Starting From $599/Person</h4>
+                    <a href="#">KNOW MORE</a>
+                  </div>
+                  <div class="item">
+                    <h3>Romantic Paris</h3>
+                    <h4>Starting From $999/Person</h4>
+                    <a href="#">KNOW MORE</a>
+                  </div>
+                  <div class="item">
+                    <h3>Sky High Dubai</h3>
+                    <h4>Starting From $399/Person</h4>
+                    <a href="#">KNOW MORE</a>
+                  </div>
                 </div>
+
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-8" style="padding-top: 5px;padding-bottom:10px;border: 1px solid white;border-radius: 10px;background:white;min-height:50px;margin-top:50px;">
+              <form>
+
+                <div class="clearfix"></div>
+                <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 col-sm-4 search-col-padding">
+                  <div class="input-group">
+                    <input type="text" style="background:transparent;" name="departure_city" class="destination form_depan form-control" required placeholder="Destination">
+                    <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
+                  </div>
+                </div>
+                <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 m-t-30 col-sm-3 search-col-padding">
+                  <div class="input-group">
+                    <input style="background:transparent;" type="text" name="departure_city" class="travelers form_depan form-control" required placeholder="Travelers">
+                    <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                  </div>
+                </div>
+                <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 m-t-30 col-sm-3 search-col-padding">
+                  <div class="input-group">
+                    <input style="background:transparent;" type="text" name="departure_city" class="duration form_depan form-control" required placeholder="Duration">
+                    <span class="input-group-addon"><i class="fa fa-clock-o fa-fw"></i></span>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-3 search-col-padding">
+                  <button type="button" style="padding:1px;border-radius:10px;" class="search-button btn btn-sm form-control transition-effect">GO</button>
+                </div>
+
+
+
+                <div class="clearfix"></div>
+              </form>
             </div>
 
         </div>
@@ -753,24 +770,24 @@
 </div>
 <!-- end modal small -->
 <!-- modal small -->
-<div class="modal fade" id="travelers" style="margin-top:200px;" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+<div class="modal fade" id="travelers" style="margin-top:200px;padding-bottom:50px;border-radius:10px;" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 
-      <div class="modal-body">
+      <div class="modal-body" style="padding-bottom:30px;">
         <form>
 
           <div class="col-md-4 col-sm-6 search-col-padding">
             <label>Adult</label><br>
-            <input id="adult_count" name="adult_count" value="1" class="form-control quantity-padding">
+            <input style="border-radius:10px;" id="adult_count" name="adult_count" value="1" class="form-control quantity-padding">
           </div>
           <div class="col-md-4 col-sm-6 search-col-padding">
             <label>Child</label><br>
-            <input type="text" id="child_count" name="child_count" value="0" class="form-control quantity-padding">
+            <input style="border-radius:10px;" type="text" id="child_count" name="child_count" value="0" class="form-control quantity-padding">
           </div>
           <div class="col-md-4 col-sm-6 search-col-padding">
             <label></label><br>
-            <button style="margin-top:5px;" class="form-control btn btn-primary btn-md pull-right" data-dismiss="modal">Done</button>
+            <button style="margin-top:5px;border-radius:10px;" class="form-control btn btn-primary btn-md pull-right" data-dismiss="modal">Done</button>
           </div>
           <div class="clearfix"></div>
 
