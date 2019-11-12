@@ -28,7 +28,7 @@
                 </div>
               </div>
               <div class="col-md-3 col-sm-3 search-col-padding">
-                <button type="submit" style="padding:1px;border-radius:10px;" class="search-button btn btn-sm form-control transition-effect">GO</button>
+                <button type="button" style="padding:1px;border-radius:10px;" class="search-button btn btn-sm form-control transition-effect">GO</button>
               </div>
 
 
@@ -505,6 +505,12 @@
     $(document).on("focus",".destination",function(){
       $("#destination").modal("toggle");
     })
+    $(document).on("focus",".travelers",function(){
+      $("#travelers").modal("toggle");
+    })
+    $(document).on("focus",".duration",function(){
+      $("#duration").modal("toggle");
+    })
   })
 </script>
 </body>
@@ -738,6 +744,112 @@
           </div>
 
         </div>
+      </div>
+      <div class="row modal-footer">
+        <button class="btn btn-primary btn-md pull-right" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal small -->
+<!-- modal small -->
+<div class="modal fade" id="travelers" style="margin-top:200px;" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <form>
+
+          <div class="col-md-4 col-sm-6 search-col-padding">
+            <label>Adult</label><br>
+            <input id="adult_count" name="adult_count" value="1" class="form-control quantity-padding">
+          </div>
+          <div class="col-md-4 col-sm-6 search-col-padding">
+            <label>Child</label><br>
+            <input type="text" id="child_count" name="child_count" value="0" class="form-control quantity-padding">
+          </div>
+          <div class="col-md-4 col-sm-6 search-col-padding">
+            <label></label><br>
+            <button style="margin-top:5px;" class="form-control btn btn-primary btn-md pull-right" data-dismiss="modal">Done</button>
+          </div>
+          <div class="clearfix"></div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- end modal small -->
+<!-- modal small -->
+<div class="modal fade" id="duration" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <form>
+          <div class="col-md-12 product-search-title">Book Flight Tickets</div>
+          <div class="col-md-12 search-col-padding">
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="One Way"> One Way
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Round Trip"> Round Trip
+            </label>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-md-6 col-sm-6 search-col-padding">
+            <label>Leaving From</label>
+            <div class="input-group">
+              <input type="text" name="departure_city" class="form-control" required placeholder="E.g. London">
+              <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 search-col-padding">
+            <label>Leaving To</label>
+            <div class="input-group">
+              <input type="text" name="destination_city" class="form-control" required placeholder="E.g. New York">
+              <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-md-6 col-sm-6 search-col-padding">
+            <label>Departure</label>
+            <div class="input-group">
+              <input type="text" id="departure_date" name="departure_date" class="form-control" placeholder="DD/MM/YYYY">
+              <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 search-col-padding">
+            <label>Return</label>
+            <div class="input-group">
+              <input type="text" id="return_date" class="form-control" name="return_date" placeholder="DD/MM/YYYY">
+              <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-md-4 col-sm-4 search-col-padding">
+            <label>Adult</label><br>
+            <input id="adult_count" name="adult_count" value="1" class="form-control quantity-padding">
+          </div>
+          <div class="col-md-4 col-sm-4 search-col-padding">
+            <label>Child</label><br>
+            <input type="text" id="child_count" name="child_count" value="1" class="form-control quantity-padding">
+          </div>
+          <div class="col-md-4 col-sm-4 search-col-padding">
+            <label>Class</label><br>
+            <select class="selectpicker">
+              <option>Business</option>
+              <option>Economy</option>
+            </select>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-md-12 search-col-padding">
+            <button type="submit" class="search-button btn transition-effect">Search Flights</button>
+          </div>
+          <div class="clearfix"></div>
+        </form>
+
       </div>
       <div class="row modal-footer">
         <button class="btn btn-primary btn-md pull-right" data-dismiss="modal">Done</button>
