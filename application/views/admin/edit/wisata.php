@@ -51,7 +51,7 @@
             <div class="row">
             <div class="form-group col-lg-6">
               <label class="form-control-label" for="exampleFormControlInput1">No Telp</label>
-              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="No Telp" name="noTelp" required="" >
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="No Telp" name="noTelp" required="" value="<?php echo $wisata->no_telp ?>">
             </div>
             <div class="form-group col-lg-6">
               <label class="form-control-label" for="exampleFormControlInput1">Rating</label>

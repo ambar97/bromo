@@ -64,9 +64,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(2)=='Gallery'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(2)=='Galery'): ?>
                 <?php echo 'active' ?>
-              <?php endif ?>" href="<?php echo base_url('admin/Gallery') ?>">
+              <?php endif ?>" href="<?php echo base_url('admin/Galery') ?>">
                 <i class="ni ni-single-copy-04 text-pink"></i>
                 <span class="nav-link-text">Gallery</span>
               </a>

@@ -68,7 +68,7 @@
                                 <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('Home') ?>"><i class="fa fa-home"></i> HOME</a>
                                 </li>
-                                <li class="<?php if ($this->uri->segment(1)== "Wisata"): ?>
+                                <li class="<?php if ($this->uri->segment(1)== "Wisata" || $this->uri->segment(1)== "PaketWisata"): ?>
                                     <?php echo "active" ?>
                                 <?php endif ?>">
                                     <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-map-marker"></i> TOUR <i class="fa fa-caret-down"></i></a>
@@ -82,13 +82,13 @@
                                 <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('Hotel') ?>"><i class="fa fa-bed"></i> HOTEL</a>
                                 </li>
-                                <li class="dropdown">
+                               <!--  <li class="dropdown">
                                     <a class="dropdown-toggle" href="<?php echo base_url('PaketWisata') ?>"><i class="fa fa-suitcase"></i> PAKET WISATA</a>
-                                </li>
+                                </li> -->
                                 <li class="<?php if ($this->uri->segment(1)== "Galery"): ?>
                                     <?php echo "active" ?>
                                 <?php endif ?>">
-                                    <a class="dropdown-toggle" href="#<?php echo base_url('Galery') ?>"><i class="fa fa-picture-o"></i> GALLERY</a>
+                                    <a class="dropdown-toggle" href="<?php echo base_url('Galery') ?>"><i class="fa fa-picture-o"></i> GALLERY</a>
                                 </li>
                                 <li class="<?php if ($this->uri->segment(1)== "ContactUs"): ?>
                                     <?php echo "active" ?>

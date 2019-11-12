@@ -30,7 +30,8 @@ class Destination extends CI_Controller {
 					'rating'=>$this->input->post('rating'),
 					'deskripsi_w'=>$this->input->post('deskrip'),
 					'harga'=>$this->input->post('harga'),
-					'no_telp'=>$this->input->post('noTelp'));
+					'no_telp'=>$this->input->post('noTelp'),
+					'lokasi'=>$this->input->post('lokasi'));
 				$data = $this->M_wisata->tambahData($data);
 				$tr=$this->db->insert_id();
 				$isifasil = $this->input->post('fasilitas');

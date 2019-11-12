@@ -56,6 +56,10 @@
               <input type="number" class="form-control" id="exampleFormControlInput1" max="5" placeholder="0" name="rating" required="">
             </div>
             </div>
+            <div class="form-group ">
+              <label class="form-control-label" for="exampleFormControlInput1">Lokasi</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" max="5" placeholder="0" name="lokasi" required="">
+            </div>
             <div class="form-group">
              <label class="form-control-label" for="exampleFormControlInput1">Deskripsi</label>
              <!-- <textarea data-toggle="quill" data-quill-placeholder="" class="form-control" ></textarea> -->

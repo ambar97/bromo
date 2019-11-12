@@ -65,11 +65,11 @@
                     <td><?php echo $no++ ?></td>
                     <td><a href="" class="btn-sm btn"><?php echo $barang->nama_wisata ?></a></td>
                     <td><?php echo $barang->rating ?></td>
-                    <td><?php echo $barang->harga ?></td>
+                    <td>Rp. <?php echo number_format($barang->harga) ?></td>
                     <td>
                       <!-- <a href="" class="btn-sm btn-success" title="Preview"><i class="fa fa-eye"></i></a> -->
                       <a href="<?php echo base_url('admin/Destination/ubahWisata/'.$barang->idwisata) ?>" class="btn-sm btn-warning" title="Edit"><i class="fa fa-brush"></i></a>
-                      <a href="<?php echo base_url('admin/Destination/hapusDataWisata/'.$barang->idwisata) ?>" class="btn-sm btn-danger" title="Hapus" onclick="javascript: return confirm('Anda Yakin Akan ingin memvalidasi pembayaran ?')"><i class="fa fa-trash"></i></a>
+                      <a href="<?php echo base_url('admin/Destination/hapusDataWisata/'.$barang->idwisata) ?>" class="btn-sm btn-danger" title="Hapus" onclick="javascript: return confirm('Anda Yakin Akan ingin menghapus data ?')"><i class="fa fa-trash"></i></a>
                     </td>
                   </tr>
                   <?php endforeach ?>
