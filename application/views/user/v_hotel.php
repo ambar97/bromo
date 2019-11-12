@@ -59,25 +59,25 @@
 	<div class="container">
 		<!-- START: FILTER AREA -->
 		<div class="col-md-3 clear-padding">
-			<div class="filter-head text-center">
+			<!-- <div class="filter-head text-center">
 				<h4>25 Result Found Matching Your Search.</h4>
-			</div>
+			</div> -->
 			<div class="filter-area">
-				<div class="price-filter filter">
+				<!-- <div class="price-filter filter">
 					<h5><i class="fa fa-usd"></i> Price</h5>
 					<p>
 						<label></label>
 						<input type="text" id="amount" readonly>
 					</p>
 					<div id="price-range"></div>
-				</div>
-				<div class="name-filter filter">
+				</div> -->
+				<!-- <div class="name-filter filter">
 					<h5><i class="fa fa-bed"></i> Hotel Name</h5>
 					<div class="input-group margin-bottom-sm">
 						<input type="text" name="destination_city" class="form-control" required placeholder="E.g. Shimla">
 						<span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
 					</div>
-				</div>
+				</div> -->
 				<div class="star-filter filter">
 					<h5><i class="fa fa-star"></i> Star</h5>
 					<ul>
@@ -173,14 +173,14 @@
   						<div class="col-md-6 col-sm-6 hotel-info">
   							<div>
   								<div class="hotel-header">
-  									<h5>asdasd <span><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star-o colored"></i></span></h5>
-  									<p><i class="fa fa-map-marker"></i>Mall Road, Shimla <i class="fa fa-phone"></i>(+91) 123456789</p>
+  									<h5><?php echo $h->nama_hotel; ?> <span><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star-o colored"></i></span></h5>
+  									<!-- <p><i class="fa fa-map-marker"></i>Mall Road, Shimla <i class="fa fa-phone"></i>(+91) 123456789</p> -->
   								</div>
-  								<div class="hotel-facility">
+  								<!-- <div class="hotel-facility">
   									<p><i class="fa fa-wifi" title="Free Wifi"></i><i class="fa fa-bed" title="Luxury Bedroom"></i><i class="fa fa-taxi" title="Transportation"></i><i class="fa fa-beer" title="Bar"></i><i class="fa fa-cutlery" title="Restaurant"></i></p>
-  								</div>
+  								</div> -->
   								<div class="hotel-desc">
-  									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+  									<p><?php echo $h->deskripsi; ?></p>
   								</div>
   							</div>
   						</div>
@@ -197,7 +197,7 @@
   							</div>
   							<div class="room-book-box">
   								<div class="price">
-  									<h5>$50 Avg/Night</h5>
+  									<h5>Rp. <?php echo number_format($h->harga) ; ?> Avg/Night</h5>
   								</div>
   								<div class="book">
   									<a href="#">BOOK</a>
@@ -211,7 +211,7 @@
 			</div>
 			<div class="clearfix"></div>
 			<!-- START: PAGINATION -->
-			<div class="bottom-pagination">
+			<!-- <div class="bottom-pagination">
 				<nav class="pull-right">
 					<ul class="pagination pagination-lg">
 						<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
@@ -224,7 +224,7 @@
 						<li><a href="#" aria-label="Previous"><span aria-hidden="true">&#187;</span></a></li>
 					</ul>
 				</nav>
-			</div>
+			</div> -->
 			<!-- END: PAGINATION -->
 		</div>
 		<!-- END: INDIVIDUAL LISTING AREA -->
@@ -244,13 +244,13 @@
 		  range: true,
 		  min: 0,
 		  max: 100,
-		  values: [ 3, 50 ],
+		  values: [ 100000, 1000000 ],
 		  slide: function( event, ui ) {
-			$( "#amount" ).val( "$ " + ui.values[ 0 ] + " - $ " + ui.values[ 1 ] );
+			$( "#amount" ).val( "Rp " + ui.values[ 0 ] + " - Rp " + ui.values[ 1 ] );
 		  }
 		});
-		$( "#amount" ).val( "$ " + $( "#price-range" ).slider( "values", 0 ) +
-		  " - $ " + $( "#price-range" ).slider( "values", 1 ) );
+		$( "#amount" ).val( "Rp " + $( "#price-range" ).slider( "values", 0 ) +
+		  " - Rp " + $( "#price-range" ).slider( "values", 1 ) );
 	  });
 </script>
 </body>
