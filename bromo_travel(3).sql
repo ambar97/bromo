@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2019 at 05:33 AM
+-- Generation Time: Nov 12, 2019 at 10:14 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -90,7 +90,7 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`idcontact`, `judul`, `isi`, `noWa`, `email`, `noTelp`, `idWchat`, `idLine`, `facebook`, `ig`, `redirectFb`, `redirectIg`, `alamat`) VALUES
-(9, 'Hubungi Kami', 'Hubungi kami bla bla', '08214561456', 'Asd@asd.com12121', '9778674353', 's343d', 'a4fvzx', 'adXA', 'CZCDAZ', '', '', 'adfsfs');
+(9, 'Hubungi Kami', 'Hubungi kami bla bla', '08214561456', 'Asd@asd.com', '9778674353', 's343d', 'a4fvzx', 'adXA', 'CZCDAZ', '', '', 'adfsfs');
 
 -- --------------------------------------------------------
 
@@ -174,7 +174,9 @@ CREATE TABLE `galery` (
 --
 
 INSERT INTO `galery` (`idgalery`, `gambar`, `deskripsi`, `tag`, `wisata_idwisata`, `hotel_idhotel`, `paket_idpaket`) VALUES
-(6, 'gallery/wisata/b1.jpg', NULL, NULL, 10, NULL, 0);
+(7, 'b2.jpg', NULL, NULL, NULL, 1, 0),
+(9, 'gallery/galeri/b1.jpg', 'Andsa ', NULL, NULL, NULL, 0),
+(11, 'gallery/galeri/b32.jpg', 'sdsd', NULL, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -192,6 +194,13 @@ CREATE TABLE `hotel` (
   `harga_eng` int(11) DEFAULT NULL,
   `deskripsi_eng` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hotel`
+--
+
+INSERT INTO `hotel` (`idhotel`, `nama_hotel`, `rating`, `deskripsi`, `harga`, `lokasi`, `harga_eng`, `deskripsi_eng`) VALUES
+(1, 'dsdsd', NULL, 'Csacsac', 1566, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -261,13 +270,6 @@ CREATE TABLE `wisata` (
   `harga_2` int(11) DEFAULT NULL,
   `no_telp` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `wisata`
---
-
-INSERT INTO `wisata` (`idwisata`, `nama_wisata`, `rating`, `deskripsi_w`, `harga`, `lokasi`, `deskripsi_eng`, `harga_2`, `no_telp`) VALUES
-(10, 'Bromo Mountain', '3.0', '<p>qwesscsf</p>', 50000, NULL, NULL, NULL, '086723322');
 
 --
 -- Indexes for dumped tables
@@ -385,13 +387,13 @@ ALTER TABLE `fasilitas`
 -- AUTO_INCREMENT for table `galery`
 --
 ALTER TABLE `galery`
-  MODIFY `idgalery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idgalery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `hotel`
 --
 ALTER TABLE `hotel`
-  MODIFY `idhotel` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idhotel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `message`
