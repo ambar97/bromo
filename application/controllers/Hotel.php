@@ -8,6 +8,6 @@ class Hotel extends CI_Controller {
 		$this->load->model('M_hotel');
 		$data['hotel'] = $this->M_model->select('hotel');
 		$data['gambar_hotel'] = $this->M_hotel->selectlimit('galery');
-		$this->load->view('user/v_hotel');
+		$this->load->view('user/v_hotel', $data);
 	}
 }
