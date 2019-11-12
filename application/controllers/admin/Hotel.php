@@ -12,7 +12,8 @@ class Hotel extends CI_Controller {
 	public function editHotel(){
 		$this->load->model('M_model');
 		$id = $this->uri->segment(4);
-		$data['hotel'] = $this->M_model->select('hotel', array('idhotel'=>$id));
+		$data['hotel'] = $this->M_model->selectwhere('hotel', array('idhotel'=>$id));
+		$data['gallery'] = $this->M_model->select('galery', array('hotel_idhotel'=>$id, 'wisata_idwisata'=>NULL));
 		$this->load->view('admin/edit/hotel', $data);
 	}
 
@@ -28,6 +29,7 @@ class Hotel extends CI_Controller {
 
 		$config['upload_path']          = 'gallery/hotel';
 		$config['allowed_types']        = 'gif|jpg|png';
+		$config['file_name']						= $id.$data['nama_hotel'];
 
 		$this->load->library('upload', $config);
 		if ( $this->upload->do_upload('gambar')){
@@ -39,6 +41,54 @@ class Hotel extends CI_Controller {
 		}
 		redirect(base_url('admin/Hotel/editHotel/'.$id));
 	}
+
+	public function prosesHapusHotel(){
+		$this->load->model('M_model');
+		$id = $this->uri->segment(4);
+		$deletebyidhotel = array('idhotel'=>$id);
+		$deletebyidgambar = array('hotel_idhotel'=>$id);
+		$this->M_model->delete($deletebyidgambar, 'galery');
+		$this->M_model->delete($deletebyidhotel, 'hotel');
+		return redirect(base_url('admin/Hotel'));
+	}
+
+	public function prosesHapusGambar(){
+		$this->load->model('M_model');
+		$id = $this->uri->segment(4);
+		$deletebyname = array('gambar'=>$id);
+		// unlink(base_url().'gallery/hotel/'.$deletebyname);
+		$this->M_model->delete($deletebyname, 'galery');
+		return redirect(base_url('admin/Hotel/'));
+	}
+
+	public function insertHotel(){
+		$this->load->view('admin/insert/hotel');
+	}
+
+	public function prosesInsertHotel(){
+		$this->load->model('M_model');
+		$data['idhotel']=$id;
+		$data['nama_hotel']=$this->input->post('nama_hotel');
+		$data['rating']=$this->input->post('rating');
+		$data['deskripsi']=$this->input->post('deskripsi');
+		$data['harga']=$this->input->post('harga');
+		$this->M_model->insert('hotel', $data);
+
+		$config['upload_path']          = 'gallery/hotel';
+		$config['allowed_types']        = 'gif|jpg|png';
+
+		$this->load->library('upload', $config);
+		if ( $this->upload->do_upload('gambar')){
+						$data = $this->upload->data();
+						$name_file=$data['file_name'];
+						$gambar_data['gambar'] = $name_file;
+						$id=$this->db->insert_id();
+						$gambar_data['hotel_idhotel'] = $id;
+						$this->M_model->insert('galery', $gambar_data);
+		}
+		redirect(base_url('admin/Hotel'));
+	}
+
 	public function coba(){
 		$this->load->view('admin/coba');
 	}

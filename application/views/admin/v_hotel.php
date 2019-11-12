@@ -30,7 +30,7 @@
           <div class="card">
             <div class="card-header card-header-primary">
               <h4 class="card-title ">Daftar Hotel</h4>
-              <button class="btn btn-primary">Tambah Hotel</button>
+              <a class="btn btn-primary text-white" href="<?php echo base_url('admin/Hotel/insertHotel'); ?>">Tambah Hotel</a>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -63,7 +63,7 @@
                         </td>
                         <td>
                           <a class="btn btn-warning" href="<?php echo base_url('admin/Hotel/editHotel/'.$h->idhotel); ?>">Edit</a>
-                          <button class="btn btn-danger">Hapus</button>
+                          <a class="btn btn-danger" href="<?php echo base_url('admin/Hotel/prosesHapusHotel/'.$h->idhotel); ?>"">Hapus</a>
                         </td>
                       </tr>
                     <?php endforeach; ?>
