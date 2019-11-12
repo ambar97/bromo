@@ -90,7 +90,7 @@
              </div>
              <div class="form-group">
                <div class="row">
-                 <div class="col-lg-12">
+                 <div class="col-lg-12 ml--5">
                    <button class="btn btn-icon btn-primary float-right" type="submit" name="btnSimpan">
                      <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
                      <span class="btn-inner--text">Simpan</span>
@@ -105,24 +105,41 @@
     </div>
     </div>
   <?php endforeach; ?>
-<div class="row">
-  <?php foreach ($gallery->result() as $g): ?>
-    <div class="col-md-3">
-      <div class="card">
-        <div class="card-header">
-          <?php echo $g->gambar; ?>
-        </div>
-        <div class="card-body" style="height:200px">
-          <img class="img-fluid" src="<?php echo base_url().'gallery/hotel/'.$g->gambar; ?>" alt="">
-        </div>
-        <div class="card-footer d-flex justify-content-center">
-          <input type="text" name="id_gambar" value="<?php echo $g->hotel_idhotel; ?>" hidden>
-          <a class="btn btn-danger text-white" href="<?php echo base_url('admin/Hotel/prosesHapusGambar/').$g->gambar; ?>">Hapus</a>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="card-header">
+              <b>Gambar Paket</b>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <div class="row">
+                  <?php foreach ($gallery->result() as $g): ?>
+                    <div class="col-md-3">
+                      <div class="card">
+                        <div class="card-header">
+                          <?php echo $g->gambar; ?>
+                        </div>
+                        <div class="card-body" style="height:200px">
+                          <img class="img-fluid" src="<?php echo base_url().'gallery/paket/'.$g->gambar; ?>" alt="">
+                        </div>
+                        <div class="card-footer d-flex justify-content-center">
+                          <input type="text" name="id_gambar" value="<?php echo $g->hotel_idhotel; ?>" hidden>
+                          <a class="btn btn-danger text-white" href="<?php echo base_url('admin/PaketWisata/prosesHapusGambar/').$g->gambar; ?>">Hapus</a>
+                        </div>
+                      </div>
+                    </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  <?php endforeach; ?>
-</div>
+  </div>
 </div>
 <?php $this->load->view('admin/side/footer') ?>
 <?php $this->load->view('admin/side/js') ?>
