@@ -1,7 +1,7 @@
 <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
 <!-- START: MODIFY SEARCH -->
-	<div class="row modify-search modify-hotel">
+	<!-- <div class="row modify-search modify-hotel">
 		<div class="container clear-padding">
 			<form >
 				<div class="col-md-4">
@@ -51,7 +51,7 @@
 				</div>
 			</form>
 		</div>
-	</div>
+	</div> -->
 <!-- END: MODIFY SEARCH -->
 
 <!-- START: LISTING AREA-->
@@ -112,7 +112,9 @@
           <div  class="hotel-list-view">
   					<div class="wrapper">
   						<div class="col-md-4 col-sm-6 switch-img clear-padding">
-  							<img src="<?php echo base_url() ?>master/client/assets/images/offer1.jpg" alt="cruise">
+                <?php foreach ($gambar->result() as $g): ?>
+                  <img src="<?php echo base_url()."gallery/paket/".$g->gambar; ?>" alt="">
+                <?php endforeach; ?>
   						</div>
   						<div class="col-md-6 col-sm-6 hotel-info">
   							<div>
@@ -124,12 +126,8 @@
   									<p><i class="fa fa-wifi" title="Free Wifi"></i><i class="fa fa-bed" title="Luxury Bedroom"></i><i class="fa fa-taxi" title="Transportation"></i><i class="fa fa-beer" title="Bar"></i><i class="fa fa-cutlery" title="Restaurant"></i></p>
   								</div> -->
   								<div class="hotel-desc">
-                    <h5>Keterangan</h5>
-  									<p><?php echo $h->keterangan; ?></p>
-                    <h5>Include</h5>
-                    <p><?php echo $h->include; ?></p>
-                    <h5>Exclude</h5>
-                    <p><?php echo $h->exclude; ?></p>
+                    <h5><b>Durasi</b></h5>
+                    <p><?php echo $h->durasi; ?></p>
   								</div>
   							</div>
   						</div>
@@ -142,8 +140,6 @@
   								<div class="user-rating">
   									<!-- <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
   									<span>128 Guest Reviews.</span> -->
-                    <h5><b>Durasi</b></h5>
-                    <p><?php echo $h->durasi; ?></p>
   								</div>
   							</div>
   							<div class="room-book-box">
@@ -151,7 +147,7 @@
   									<h5>Rp. <?php echo number_format($h->harga) ; ?> Avg/Night</h5>
   								</div>
   								<div class="book">
-  									<a href="#">BOOK</a>
+  									<a href="<?php echo base_url('PaketWisata/detailPaket/').$h->idpaket_wisata; ?>">BOOK</a>
   								</div>
   							</div>
   						</div>
