@@ -13,7 +13,7 @@ class PaketWisata extends CI_Controller {
 		$this->load->model('M_model');
 		$id = $this->uri->segment(4);
 		$data['paket'] = $this->M_model->selectwhere('paket_wisata', array('idpaket_wisata'=>$id));
-		$data['gallery'] = $this->M_model->select('galery', array('paket_idpaket'=>$id, 'hotel_idhotel'=>NULL, 'wisata_idwisata'=>NULL));
+		$data['gallery'] = $this->M_model->selectwhere('galery', array('paket_idpaket'=>$id, 'hotel_idhotel'=>NULL, 'wisata_idwisata'=>NULL));
 		$this->load->view('admin/edit/paketwisata', $data);
 	}
 

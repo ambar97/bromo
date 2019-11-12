@@ -1,7 +1,7 @@
 <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
 <!-- START: MODIFY SEARCH -->
-	<div class="row modify-search modify-hotel">
+	<!-- <div class="row modify-search modify-hotel">
 		<div class="container clear-padding">
 			<form >
 				<div class="col-md-4">
@@ -51,33 +51,33 @@
 				</div>
 			</form>
 		</div>
-	</div>
+	</div> -->
 <!-- END: MODIFY SEARCH -->
 
 <!-- START: LISTING AREA-->
 <div class="row" style="background-color: white">
 	<div class="container">
 		<!-- START: FILTER AREA -->
-		<div class="col-md-3 clear-padding">
-			<!-- <div class="filter-head text-center">
+		<!-- <div class="col-md-3 clear-padding">
+			<div class="filter-head text-center">
 				<h4>25 Result Found Matching Your Search.</h4>
-			</div> -->
+			</div>
 			<div class="filter-area">
-				<!-- <div class="price-filter filter">
+				<div class="price-filter filter">
 					<h5><i class="fa fa-usd"></i> Price</h5>
 					<p>
 						<label></label>
 						<input type="text" id="amount" readonly>
 					</p>
 					<div id="price-range"></div>
-				</div> -->
-				<!-- <div class="name-filter filter">
+				</div>
+				<div class="name-filter filter">
 					<h5><i class="fa fa-bed"></i> Hotel Name</h5>
 					<div class="input-group margin-bottom-sm">
 						<input type="text" name="destination_city" class="form-control" required placeholder="E.g. Shimla">
 						<span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
 					</div>
-				</div> -->
+				</div>
 				<div class="star-filter filter">
 					<h5><i class="fa fa-star"></i> Star</h5>
 					<ul>
@@ -112,11 +112,11 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- END: FILTER AREA -->
 
 		<!-- START: INDIVIDUAL LISTING AREA -->
-		<div class="col-md-9 hotel-listing">
+		<div class="col-md-12 hotel-listing">
 
 			<!-- START: SORT AREA -->
 			<div class="sort-area col-sm-10">
@@ -230,6 +230,7 @@
 		<!-- END: INDIVIDUAL LISTING AREA -->
 	</div>
 </div>
+<br>
 <!-- END: LISTING AREA -->
 <?php $this->load->view("user/side/footer"); ?>
 
