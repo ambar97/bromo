@@ -30,7 +30,7 @@
           <div class="card">
             <div class="card-header card-header-primary">
               <h4 class="card-title ">Daftar Paket</h4>
-              <a class="btn btn-primary text-white" href="<?php echo base_url('admin/Hotel/insertHotel'); ?>">Tambah Paket</a>
+              <a class="btn btn-primary text-white" href="<?php echo base_url('admin/PaketWisata/insertPaket'); ?>">Tambah Paket</a>
             </div>
             <div class="card-body">
               <div class="table-responsive">
