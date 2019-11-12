@@ -13,21 +13,21 @@ class PaketWisata extends CI_Controller {
 		$this->load->model('M_model');
 		$id = $this->uri->segment(4);
 		$data['paket'] = $this->M_model->selectwhere('paket_wisata', array('idpaket_wisata'=>$id));
-		// $data['gallery'] = $this->M_model->select('galery', array('wisata_idwisata'=>$id, 'hotel_idhotel'=>NULL));
+		$data['gallery'] = $this->M_model->select('galery', array('wisata_idwisata'=>$id, 'hotel_idhotel'=>NULL));
 		$this->load->view('admin/edit/paketwisata', $data);
 	}
 
 	public function prosesEditPaket(){
     $this->load->model('M_model');
 		$id = $this->input->post('idpaket_wisata');
-		$data['idPaket']=$id;
+		$data['idpaket_wisata']=$id;
 		$data['nama_paket']=$this->input->post('nama_paket');
 		$data['harga']=$this->input->post('harga');
 		$data['keterangan']=$this->input->post('keterangan');
 		$data['durasi']=$this->input->post('durasi');
 		$data['include']=$this->input->post('include');
 		$data['exclude']=$this->input->post('exclude');
-		$this->M_model->update('Paket', $data, array('idPaket'=>$id));
+		$this->M_model->update('paket_wisata', $data, array('idpaket_wisata'=>$id));
 
 		$config['upload_path']          = 'gallery/Paket';
 		$config['allowed_types']        = 'gif|jpg|png';
@@ -41,7 +41,7 @@ class PaketWisata extends CI_Controller {
 						$gambar_data['Paket_idPaket'] = $id;
 						$this->M_model->insert('galery', $gambar_data);
 		}
-		redirect(base_url('admin/Paket/editPaket/'.$id));
+		redirect(base_url('admin/PaketWisata/editPaket/'.$id));
 	}
 
 	public function prosesHapusPaket(){

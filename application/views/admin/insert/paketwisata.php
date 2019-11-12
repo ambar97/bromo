@@ -46,27 +46,37 @@
              </div>
            </div>
            <div class="row">
-           <div class="form-group col-lg-6">
-             <label class="form-control-label" for="exampleFormControlInput1">Keterangan</label>
-             <textarea data-toggle="quill" data-quill-placeholder="" class="form-control" name="keterangan" rows="8" cols="80"></textarea>
+             <div class="form-group col-lg-12">
+               <label class="form-control-label" for="exampleFormControlInput1">Durasi</label>
+               <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contoh 2 hari 1 malam" name="durasi" required="">
+             </div>
            </div>
-           <div class="form-group col-lg-6">
-             <label class="form-control-label" for="exampleFormControlInput1">Durasi</label>
-             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contoh 2 hari 1 malam" name="durasi" required="">
+           <div class="row">
+             <div class="form-group col-lg-12">
+               <label class="form-control-label" for="exampleFormControlInput1">Keterangan</label>
+               <textarea class="form-control" name="keterangan"></textarea>
+             </div>
            </div>
-           <div class="col-lg-6">
-             <label class="form-control-label" for="exampleFormControlInput1">Include</label>
-             <textarea data-toggle="quill" data-quill-placeholder="" class="form-control" name="include" rows="8" cols="80"></textarea>
+           <div class="row">
+             <div class="form-group col-lg-12">
+               <label class="form-control-label" for="exampleFormControlInput1">Include</label>
+               <textarea class="form-control" name="include"></textarea>
+             </div>
            </div>
-           <div class="col-lg-6">
-             <label class="form-control-label" for="exampleFormControlInput1">Exclude</label>
-             <textarea data-toggle="quill" data-quill-placeholder="" class="form-control" name="exclude" rows="8" cols="80"></textarea>
+           <div class="row">
+             <div class="form-group col-lg-12">
+               <label class="form-control-label" for="exampleFormControlInput1">Exclude</label>
+               <textarea class="form-control" name="exclude"></textarea>
+             </div>
            </div>
-           </div
-          <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
-          <input type="file" name="gambar" class="form-control">
+           <div class="row">
+             <div class="form-group col-lg-12">
+               <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
+               <input type="file" name="gambar" class="form-control">
+             </div>
+           </div>
          <hr>
-         <div>
+         <div class="row">
            <button class="btn btn-icon btn-primary float-right" type="submit" name="btnSimpan">
              <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
              <span class="btn-inner--text">Simpan</span>
