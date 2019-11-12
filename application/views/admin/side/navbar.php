@@ -48,9 +48,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(2)=='Package'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(2)=='PaketWisata'): ?>
                 <?php echo 'active' ?>
-              <?php endif ?>" href="<?php echo base_url('admin/Package')?>">
+              <?php endif ?>" href="<?php echo base_url('admin/PaketWisata')?>">
                 <i class="ni ni-cart text-info"></i>
                 <span class="nav-link-text">Package</span>
               </a>
