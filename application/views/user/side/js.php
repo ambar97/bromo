@@ -7,3 +7,17 @@
 <script src="<?php echo base_url() ?>master/client/assets/plugins/wow.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>master/client/assets/plugins/supersized.3.1.3.min.js"></script>
 <script src="<?php echo base_url() ?>master/client/assets/js/js.js"></script>
+<script src="<?php echo base_url() ?>master/client/assets/plugins/moment.min.js"></script>
+<script src="<?php echo base_url() ?>master/client/assets/plugins/daterangepicker.js"></script>
+<script>
+$(function() {
+  $('input[name="datetimes"]').daterangepicker({
+     timePicker: true,
+     startDate: moment().startOf('hour'),
+     endDate: moment().startOf('hour').add(32, 'hour'),
+     locale: {
+       format: 'DD/MM/YYYY'
+     }
+   });
+});
+</script>
