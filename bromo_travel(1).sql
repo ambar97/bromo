@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 12, 2019 at 10:14 AM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Host: localhost
+-- Generation Time: Nov 13, 2019 at 12:08 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -109,6 +109,32 @@ CREATE TABLE `customers` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `daftar_fasilitas`
+--
+
+CREATE TABLE `daftar_fasilitas` (
+  `id_fasilitas` int(12) NOT NULL,
+  `icon` text NOT NULL,
+  `nama_fasilitas` text NOT NULL,
+  `id_hotel` int(12) DEFAULT NULL,
+  `id_wisata` int(12) DEFAULT NULL,
+  `id_paket` int(12) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `daftar_fasilitas`
+--
+
+INSERT INTO `daftar_fasilitas` (`id_fasilitas`, `icon`, `nama_fasilitas`, `id_hotel`, `id_wisata`, `id_paket`) VALUES
+(1, 'fa fa-university', 'Gedung', 1, NULL, NULL),
+(2, 'fa fa-bed', 'Penginapan', 1, NULL, NULL),
+(3, 'fa fa-taxi', 'Transportasi', 1, NULL, NULL),
+(4, 'fa fa-cutlery', 'Restaurant', 1, NULL, NULL),
+(5, 'fa fa-user', 'Guide', 1, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `detail_booking`
 --
 
@@ -134,7 +160,7 @@ CREATE TABLE `fasilitas` (
   `icon` varchar(90) NOT NULL,
   `id_wisata` int(9) DEFAULT NULL,
   `id_hotel` int(9) DEFAULT NULL,
-  `id_paket` int(12) NOT NULL
+  `id_paket` int(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -142,16 +168,23 @@ CREATE TABLE `fasilitas` (
 --
 
 INSERT INTO `fasilitas` (`id_fasilitas`, `icon`, `id_wisata`, `id_hotel`, `id_paket`) VALUES
-(1, 'fa fa-bed', 5, NULL, 0),
-(2, 'fa fa-plane', 5, NULL, 0),
-(3, 'fa fa-user', 9, NULL, 0),
-(4, 'fa fa-bed', 9, NULL, 0),
-(5, 'fa fa-cutlery', 9, NULL, 0),
-(6, 'fa fa-university', 10, NULL, 0),
-(7, 'fa fa-bed', 10, NULL, 0),
-(8, 'fa fa-taxi', 10, NULL, 0),
-(9, 'fa fa-cutlery', 10, NULL, 0),
-(10, 'fa fa-user', 10, NULL, 0);
+(1, 'fa fa-bed', 5, NULL, NULL),
+(2, 'fa fa-plane', 5, NULL, NULL),
+(3, 'fa fa-user', 9, NULL, NULL),
+(4, 'fa fa-bed', 9, NULL, NULL),
+(5, 'fa fa-cutlery', 9, NULL, NULL),
+(6, 'fa fa-university', 10, NULL, NULL),
+(7, 'fa fa-bed', 10, NULL, NULL),
+(8, 'fa fa-taxi', 10, NULL, NULL),
+(9, 'fa fa-cutlery', 10, NULL, NULL),
+(10, 'fa fa-user', 10, NULL, NULL),
+(41, 'fa fa-bed', NULL, 7, NULL),
+(42, 'fa fa-taxi', NULL, 7, NULL),
+(43, 'fa fa-bed', NULL, 8, NULL),
+(44, 'fa fa-cutlery', NULL, 8, NULL),
+(45, 'fa fa-university', 1, NULL, NULL),
+(46, 'fa fa-bed', 1, NULL, NULL),
+(47, 'fa fa-taxi', 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -166,7 +199,7 @@ CREATE TABLE `galery` (
   `tag` text,
   `wisata_idwisata` int(11) DEFAULT NULL,
   `hotel_idhotel` int(11) DEFAULT NULL,
-  `paket_idpaket` int(12) NOT NULL
+  `paket_idpaket` int(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -174,9 +207,12 @@ CREATE TABLE `galery` (
 --
 
 INSERT INTO `galery` (`idgalery`, `gambar`, `deskripsi`, `tag`, `wisata_idwisata`, `hotel_idhotel`, `paket_idpaket`) VALUES
-(7, 'b2.jpg', NULL, NULL, NULL, 1, 0),
-(9, 'gallery/galeri/b1.jpg', 'Andsa ', NULL, NULL, NULL, 0),
-(11, 'gallery/galeri/b32.jpg', 'sdsd', NULL, NULL, NULL, 0);
+(19, '1Bromo_Tour_Program2.jpg', NULL, NULL, NULL, NULL, 1),
+(21, '7asd.jpg', NULL, NULL, NULL, 7, NULL),
+(22, 'bromo1.jpg', NULL, NULL, NULL, 8, NULL),
+(23, '7Red.jpg', NULL, NULL, NULL, 7, NULL),
+(24, '2Wow.jpg', NULL, NULL, NULL, NULL, 2),
+(25, 'gallery/wisata/bromo1.jpg', NULL, NULL, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -187,7 +223,7 @@ INSERT INTO `galery` (`idgalery`, `gambar`, `deskripsi`, `tag`, `wisata_idwisata
 CREATE TABLE `hotel` (
   `idhotel` int(11) NOT NULL,
   `nama_hotel` text,
-  `rating` text,
+  `rating` int(12) DEFAULT NULL,
   `deskripsi` text,
   `harga` int(11) DEFAULT NULL,
   `lokasi` text,
@@ -200,7 +236,8 @@ CREATE TABLE `hotel` (
 --
 
 INSERT INTO `hotel` (`idhotel`, `nama_hotel`, `rating`, `deskripsi`, `harga`, `lokasi`, `harga_eng`, `deskripsi_eng`) VALUES
-(1, 'dsdsd', NULL, 'Csacsac', 1566, NULL, NULL, NULL);
+(7, 'Red', 4, 'Untuk pelayanannya baik. Hanya saja satpam disana kurang tanggap. Untuk makanannya cukup enak. Kamarnya untuk hari pertama tidak ada masalah tetapi hari berikutnya tiba-tiba AC tidak dingin dan bocor. Kamar mandinya sedikit licin dibagian bawah shower. Untuk kolam renang, cukup bersih meskipun jacuzzi nya tidak menyala.', 1200000, NULL, NULL, NULL),
+(8, 'Blue', NULL, 'Tidak disediakan air mineral di dalam kamar. Harus ambil di luar kamar kurang suka rasanya dan malas kalau harus ambil di luar kamar pakai dispenser.', 2000000, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -239,6 +276,14 @@ CREATE TABLE `paket_wisata` (
   `exclude` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `paket_wisata`
+--
+
+INSERT INTO `paket_wisata` (`idpaket_wisata`, `nama_paket`, `harga`, `keterangan`, `durasi`, `include`, `exclude`) VALUES
+(1, 'Bromo Tour Program', 1200000, 'Day 1 = Surabaya or Malang - Cemara Lawang (Bromo area)\r\n    Picking up in Surabaya or Malang Airport or train station or hotel\r\n    Transport to Cemara Lawang, length of travel is about 4 hours and then check in to the hotel\r\n    Check in to the hotel at Bromo Permai or Cafe Lava or Cemara Indah (* Standard room with breakfast, hot and cold shower)\r\n    Relaxing program\r\n\r\nDay 2 = Bromo Tour - Surabaya or Malang\r\n\r\n    At 3:30 a.m., You have to get ready in the reception room or restaurant for Bromo tour\r\n    By using a hartop 4wd jeep, You will start the bromo tour from the hotel to Penanjakan Peak 1 in 1 hour driving, to see the sunrise and the scenery around Mount Bromo from the highest peak\r\n    You will enjoy this view until around 6 o\'clock in the morning\r\n    Afterwards, by using a 4wd jeep, You will visit the sea of ??sand and jeep will be parked in the parking lot of visitors to Mount Bromo crater\r\n    To go to The Bromo crater, You can walk to the up stair of Mount Bromo for 30 minutes, or can rent a horse\r\n    Then You use the down stairs to get to the edge of the crater of Mount Bromo\r\n    You can walk on the edge of Mount Bromo but please be careful\r\n    After that You go back to the jeep parking lot and travel back to the hotel\r\n    You have to take a bath in the private bathroom which has been provided by the hotel, so You are ready for breakfast\r\n    The breakfast program was finished around 9:30 a.m., and preparations to check out at 10 a.m.\r\n    Travel back to Surabaya or Malang for 4 hours\r\n    Tour is complete', '2 Days 1 Night (2D / 1N)', '    Transport accommodation for 2 days 1 night, including driver, fuel, toll fees, and parking 4wd Jeep for Bromo Tour\r\n    1 night stay at Bromo Permai or Cafe Lava or Cemara Indah Hotel (* Standard room with breakfast, hot shower and cold water)\r\n    Mineral water\r\n    1x breakfast (hotel)\r\n', '    Bromo entrance ticket\r\n    Lunch and dinner\r\n    Horse in Bromo\r\n    Travel insurance\r\n    Personal expenses\r\n'),
+(2, 'Wow', 1200000, 'asd', '3 hari 2 malam ', 'asd', 'asd');
+
 -- --------------------------------------------------------
 
 --
@@ -272,6 +317,13 @@ CREATE TABLE `wisata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `wisata`
+--
+
+INSERT INTO `wisata` (`idwisata`, `nama_wisata`, `rating`, `deskripsi_w`, `harga`, `lokasi`, `deskripsi_eng`, `harga_2`, `no_telp`) VALUES
+(1, 'asd', '4.0', '<p>asd</p>', 123123, 'asd', NULL, NULL, '123213');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -300,6 +352,12 @@ ALTER TABLE `contact`
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`idcustomers`);
+
+--
+-- Indexes for table `daftar_fasilitas`
+--
+ALTER TABLE `daftar_fasilitas`
+  ADD PRIMARY KEY (`id_fasilitas`);
 
 --
 -- Indexes for table `detail_booking`
@@ -372,6 +430,12 @@ ALTER TABLE `customers`
   MODIFY `idcustomers` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `daftar_fasilitas`
+--
+ALTER TABLE `daftar_fasilitas`
+  MODIFY `id_fasilitas` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `detail_booking`
 --
 ALTER TABLE `detail_booking`
@@ -381,31 +445,31 @@ ALTER TABLE `detail_booking`
 -- AUTO_INCREMENT for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
-  MODIFY `id_fasilitas` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_fasilitas` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `galery`
 --
 ALTER TABLE `galery`
-  MODIFY `idgalery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idgalery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `hotel`
 --
 ALTER TABLE `hotel`
-  MODIFY `idhotel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idhotel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `idMessage` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idMessage` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `paket_wisata`
 --
 ALTER TABLE `paket_wisata`
-  MODIFY `idpaket_wisata` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idpaket_wisata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -417,7 +481,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `wisata`
 --
 ALTER TABLE `wisata`
-  MODIFY `idwisata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idwisata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

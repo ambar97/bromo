@@ -41,7 +41,7 @@
                </div>
                <div class="col-lg-6">
                  <label class="form-control-label" for="exampleFormControlInput1">Rating</label>
-                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Rating" name="harga" required="">
+                 <input type="number" max="5" min="1" class="form-control" id="exampleFormControlInput1" placeholder="Minimal Rating = 1" name="harga" required="">
                </div>
              </div>
            </div>
@@ -54,9 +54,18 @@
              <label class="form-control-label" for="exampleFormControlInput1">Harga</label>
              <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Rp. 123xxx" name="harga" required="">
            </div>
-           </div
-          <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
-          <input type="file" name="gambar" class="form-control">
+         </div>
+         <div class="row">
+           <div class="form-group col-lg-6">
+            <label class="form-control-label" for="exampleFormControlInput1">Fasilitas</label><br>
+            <?php foreach ($daftar_fasilitas->result() as $df): ?>
+                <input class="" id="musholla" type="checkbox" value="<?php echo $df->icon; ?>" name="fasilitas[]"> <i class="<?php echo $df->icon; ?>"></i> <label><?php echo $df->nama_fasilitas; ?></label> <br>
+            <?php endforeach; ?>
+            </div>
+            <div class="form-group col-lg-6">
+              <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
+              <input type="file" name="gambar" class="form-control">
+            </div>
          <hr>
          <div>
            <button class="btn btn-icon btn-primary float-right" type="submit" name="btnSimpan">

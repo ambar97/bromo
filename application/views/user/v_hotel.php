@@ -1,3 +1,4 @@
+<?php $this->load->model('M_hotel'); ?>
 <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
 <!-- START: MODIFY SEARCH -->
@@ -168,7 +169,11 @@
           <div  class="hotel-list-view">
   					<div class="wrapper">
   						<div class="col-md-4 col-sm-6 switch-img clear-padding">
-  							<img src="<?php echo base_url() ?>master/client/assets/images/offer1.jpg" alt="cruise">
+                <?php $id = $h->idhotel; ?>
+                <?php $gambar = $this->M_hotel->selectlimit($id); ?>
+                  <?php foreach ($gambar->result() as $vb): ?>
+                    <img src="<?php echo base_url() ?>gallery/hotel/<?php echo $vb->gambar; ?>" alt="cruise">
+                  <?php endforeach; ?>
   						</div>
   						<div class="col-md-6 col-sm-6 hotel-info">
   							<div>

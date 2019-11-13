@@ -76,6 +76,7 @@ class PaketWisata extends CI_Controller {
 		$data['include']=$this->input->post('include');
 		$data['exclude']=$this->input->post('exclude');
 		$this->M_model->insert('paket_wisata', $data);
+		$id=$this->db->insert_id();
 
 		$config['upload_path']          = 'gallery/Paket';
 		$config['allowed_types']        = 'gif|jpg|png';
@@ -85,7 +86,6 @@ class PaketWisata extends CI_Controller {
 						$data = $this->upload->data();
 						$name_file=$data['file_name'];
 						$gambar_data['gambar'] = $name_file;
-						$id=$this->db->insert_id();
 						$gambar_data['Paket_idPaket'] = $id;
 						$this->M_model->insert('galery', $gambar_data);
 		}

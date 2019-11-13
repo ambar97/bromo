@@ -11,9 +11,12 @@ class Hotel extends CI_Controller {
 
 	public function editHotel(){
 		$this->load->model('M_model');
+		$this->load->model('M_hotel');
 		$id = $this->uri->segment(4);
 		$data['hotel'] = $this->M_model->selectwhere('hotel', array('idhotel'=>$id));
-		$data['gallery'] = $this->M_model->select('galery', array('hotel_idhotel'=>$id, 'wisata_idwisata'=>NULL));
+		$data['gallery'] = $this->M_model->selectwhere('galery', array('hotel_idhotel'=>$id, 'wisata_idwisata'=>NULL, 'paket_idpaket'=>NULL));
+		$data['fasilitas'] = $this->M_hotel->editFasilitas($id);
+		$data['daftar_fasilitas'] = $this->M_model->selectwhere('daftar_fasilitas', array('id_hotel'=>1, 'id_wisata'=>NULL, 'id_paket'=>NULL));
 		$this->load->view('admin/edit/hotel', $data);
 	}
 
@@ -42,6 +45,19 @@ class Hotel extends CI_Controller {
 		redirect(base_url('admin/Hotel/editHotel/'.$id));
 	}
 
+	public function prosesEditFasilitas(){
+		$this->load->model('M_model');
+		$id = $this->input->post('idhotel');
+		$this->M_model->delete(array('id_hotel'=>$id), 'fasilitas');
+		$isifasil = $this->input->post('fasilitas');
+		for ($i=0; $i <count($isifasil) ; $i++) {
+			$fasilitas = array('icon'=>$isifasil[$i],
+							'id_hotel'=>$id);
+			$this->M_model->insert('fasilitas',$fasilitas);
+		}
+		redirect(base_url('admin/Hotel/editHotel/'.$id));
+	}
+
 	public function prosesHapusHotel(){
 		$this->load->model('M_model');
 		$id = $this->uri->segment(4);
@@ -62,7 +78,8 @@ class Hotel extends CI_Controller {
 	}
 
 	public function insertHotel(){
-		$this->load->view('admin/insert/hotel');
+		$data['daftar_fasilitas'] = $this->M_model->selectwhere('daftar_fasilitas', array('id_hotel'=>1, 'id_wisata'=>NULL, 'id_paket'=>NULL));
+		$this->load->view('admin/insert/hotel', $data);
 	}
 
 	public function prosesInsertHotel(){
@@ -73,7 +90,13 @@ class Hotel extends CI_Controller {
 		$data['deskripsi']=$this->input->post('deskripsi');
 		$data['harga']=$this->input->post('harga');
 		$this->M_model->insert('hotel', $data);
-
+		$id = $this->db->insert_id();
+		$isifasil = $this->input->post('fasilitas');
+		for ($i=0; $i <count($isifasil) ; $i++) {
+			$fasilitas = array('icon'=>$isifasil[$i],
+							'id_hotel'=>$id);
+			$this->M_model->insert('fasilitas',$fasilitas);
+		}
 		$config['upload_path']          = 'gallery/hotel';
 		$config['allowed_types']        = 'gif|jpg|png';
 
@@ -82,7 +105,7 @@ class Hotel extends CI_Controller {
 						$data = $this->upload->data();
 						$name_file=$data['file_name'];
 						$gambar_data['gambar'] = $name_file;
-						$id=$this->db->insert_id();
+						// $id=$this->db->insert_id();
 						$gambar_data['hotel_idhotel'] = $id;
 						$this->M_model->insert('galery', $gambar_data);
 		}
