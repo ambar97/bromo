@@ -52,7 +52,7 @@
 <div class="container-fluid mt--6">
 	<div class="row card-wrapper">
 		<div class="row container-fluid">
-			<?php foreach ($gal->result() as $hj): ?>
+			<?php foreach ($slider->result() as $hj): ?>
 				<div class="col-lg-3">
 			<div class="card">
             <img class="card-img-top" src="<?php echo base_url().$hj->gambar?>" alt="Image placeholder" style=" padding: 5px; height: 200px; border-radius: 10px;" >

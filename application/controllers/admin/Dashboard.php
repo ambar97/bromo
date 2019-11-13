@@ -11,6 +11,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('admin/v_profile');
 	}
 	public function home(){
-		$this->load->view('admin/home');
+		$data['slider']=$this->M_model->selectwhere('galery',array('tipe'=>'slider'));
+		$this->load->view('admin/home',$data);
 	}
 }
