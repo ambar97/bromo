@@ -33,8 +33,7 @@ class Contact extends CI_Controller {
 	}
 	public function hapusPesan($id){
 		$where = array('idMessage'=>$id);
-		$this->M_model->delete('message',$where);
-
+		$this->M_model->delete($where,'message');
 		redirect(base_url('admin/Contact/pesan'));
 	}
 }

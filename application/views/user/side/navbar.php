@@ -28,7 +28,7 @@
                     </div>
                     <?php if ($this->session->userdata('status') == 'login'): ?>
                         <div class="col-md-6 col-xs-7 clear-padding user-logged">
-                        <a href="#" class="transition-effect">
+                        <a href="<?php echo base_url('Home/profile') ?>" class="transition-effect">
                             <img src="<?php echo base_url() ?>master/client/assets/images/user.jpg" alt="cruise">
                             Hi, Lenore
                         </a>
