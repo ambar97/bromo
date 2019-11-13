@@ -40,7 +40,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Rating</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Rating" name="rating" value="<?php echo $h->rating; ?>">
+                    <input type="number" min="1" max="5" class="form-control" id="exampleInputEmail1" placeholder="Enter Rating" name="rating" value="<?php echo $h->rating; ?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Deskripsi</label><br>
@@ -58,6 +58,15 @@
                       </div>
                     </div>
                   </div>
+                  <div class="form-group">
+                    <label class="form-control-label" for="exampleFormControlInput1">Fasilitas</label><br>
+                    <?php foreach ($fasilitas->result() as $f): ?>
+                      <i class="<?php echo $f->icon; ?>"></i> <?php echo $f->nama_fasilitas; ?><br>
+                    <?php endforeach; ?>
+                  </div>
+                  <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#myModal">
+                    Edit Fasilitas
+    							</button>
                   <?php endforeach; ?>
                 </div>
                 <!-- /.card-body -->
@@ -105,4 +114,24 @@
        });
      </script>
 </body>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+	<div class="modal-dialog">
+		<div class="modal-content">
+				<div class="modal-body">
+          <h2>Edit Fasilitas Hotel</h2>
+          <hr>
+          <form role="form" action="<?php echo base_url('admin/Hotel/prosesEditFasilitas'); ?>" method="post" enctype="multipart/form-data">
+            <?php foreach ($hotel->result() as $hf): ?>
+              <input type="text" name="idhotel" value="<?php echo $h->idhotel; ?>" hidden>
+            <?php endforeach; ?>
+            <?php foreach ($daftar_fasilitas->result() as $df): ?>
+                <input class="" id="musholla" type="checkbox" value="<?php echo $df->icon; ?>" name="fasilitas[]"> <i class="<?php echo $df->icon; ?>"></i> <label><?php echo $df->nama_fasilitas; ?></label> <br>
+            <?php endforeach; ?>
+            <br>
+            <button type="submit" class="btn btn-primary float-right">Simpan</button>
+          </form>
+				</div>
+		</div>
+	</div>
+</div>
 </html>

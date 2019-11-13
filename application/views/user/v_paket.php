@@ -1,3 +1,4 @@
+<?php $this->load->model('M_paket'); ?>
 <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
 <!-- START: MODIFY SEARCH -->
@@ -112,6 +113,8 @@
           <div  class="hotel-list-view">
   					<div class="wrapper">
   						<div class="col-md-4 col-sm-6 switch-img clear-padding">
+                <?php $id = $h->idpaket_wisata; ?>
+                <?php $gambar = $this->M_paket->selectlimit($id); ?>
                 <?php foreach ($gambar->result() as $g): ?>
                   <img src="<?php echo base_url()."gallery/paket/".$g->gambar; ?>" alt="">
                 <?php endforeach; ?>
