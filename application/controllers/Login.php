@@ -56,7 +56,7 @@ class Login extends CI_Controller {
 			$data_session = array(
 				'id' => $cek1->idusers,
 				'nama'=>$cek1->nama,
-				'status' => "login"
+				'status' => "loginUser"
 				);
  			
 			$this->session->set_userdata($data_session);

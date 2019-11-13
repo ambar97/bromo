@@ -10,4 +10,7 @@ class Dashboard extends CI_Controller {
 	public function profile(){
 		$this->load->view('admin/v_profile');
 	}
+	public function home(){
+		$this->load->view('admin/home');
+	}
 }

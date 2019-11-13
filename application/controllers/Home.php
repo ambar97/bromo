@@ -11,6 +11,7 @@ class Home extends CI_Controller {
 
 	public function index(){
 		$data['paket']=$this->M_model->select('paket_wisata')->result();
+		$data['wisata']=$this->M_model->select('wisata')->result();
 		$this->load->view('user/v_home',$data);
 	}
 	public function profile(){

@@ -26,7 +26,7 @@
                     <div class="col-md-6 col-xs-5 clear-padding">
                         <i class="fa fa-flag-ID"></i>
                     </div>
-                    <?php if ($this->session->userdata('status') == 'login'): ?>
+                    <?php if ($this->session->userdata('status') == 'loginUser'): ?>
                         <div class="col-md-6 col-xs-7 clear-padding user-logged">
                         <a href="<?php echo base_url('Home/profile') ?>" class="transition-effect">
                             <img src="<?php echo base_url() ?>master/client/assets/images/user.jpg" alt="cruise">
@@ -71,7 +71,7 @@
                         <!-- BEGIN: NAVIGATION -->
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="<?php if ($this->uri->segment(1)== "Home"): ?>
+                                <li class="<?php if ($this->uri->segment(1)== "Home" || $this->uri->segment(1)== ""): ?>
                                     <?php echo "active" ?>
                                 <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('Home') ?>"><i class="fa fa-home"></i> HOME</a>
@@ -101,7 +101,7 @@
                                 <li class="<?php if ($this->uri->segment(1)== "ContactUs"): ?>
                                     <?php echo "active" ?>
                                 <?php endif ?>">
-                                    <a class="dropdown-toggle" href="<?php echo base_url('ContactUs') ?>"><i class="fa fa-ship"></i> CONTACT </a>
+                                    <a class="dropdown-toggle" href="<?php echo base_url('ContactUs') ?>"><i class="fa fa-info"></i> CONTACT US</a>
                                 </li>
                                 <li class="">
                                     <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-flag"></i><small> Bahasa</small> <i class="fa fa-caret-down"></i></a>
@@ -109,6 +109,9 @@
                                         <li><a href=""> Indonesia</a></li>
                                         <li><a href=""> Jepang</a></li>
                                     </ul>
+                                </li>
+                                <li class="">
+                                    <a class="dropdown-toggle" href="#" ><i class="fa fa-shopping-cart"></i></i></a>
                                 </li>
                             </ul>
                         </div>

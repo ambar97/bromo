@@ -40,20 +40,22 @@
               </a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(2)=='Destination'): ?>
+              <a class="nav-link <?php if ($this->uri->segment(2)=='Destination' || $this->uri->segment(2)=='PaketWisata'): ?>
                 <?php echo 'active' ?>
-              <?php endif ?>" href="<?php echo base_url('admin/Destination') ?>">
-                <i class="ni ni-user-run text-orange"></i>
-                <span class="nav-link-text">Destination</span>
+              <?php endif ?>" href="#navbar-map" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">
+                <i class="ni ni-map-big text-primary"></i>
+                <span class="nav-link-text">Tour</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link <?php if ($this->uri->segment(2)=='PaketWisata'): ?>
-                <?php echo 'active' ?>
-              <?php endif ?>" href="<?php echo base_url('admin/PaketWisata')?>">
-                <i class="ni ni-cart text-info"></i>
-                <span class="nav-link-text">Package</span>
-              </a>
+              <div class="collapse" id="navbar-map">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="<?php echo base_url('admin/Destination') ?>" class="nav-link">Single Tour</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo base_url('admin/PaketWisata')?>" class="nav-link">Package Tour</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link <?php if ($this->uri->segment(2)=='Hotel'): ?>
@@ -81,10 +83,10 @@
               <div class="collapse" id="navbar-maps">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="../maps/google.html" class="nav-link">Home</a>
+                    <a href="<?php echo base_url('admin/Dashboard/home') ?>" class="nav-link">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?php echo base_url('admin/Contact') ?>" class="nav-link">ContactUs</a>
+                    <a href="<?php echo base_url('admin/Contact') ?>" class="nav-link">Contact Us</a>
                   </li>
                   <li class="nav-item">
                     <a href="<?php echo base_url('admin/Contact/pesan') ?>" class="nav-link">Message</a>

@@ -1,3 +1,4 @@
+ <?php $this->load->model('M_paket'); ?>
  <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
 
@@ -87,11 +88,15 @@
             <div class="radius owl-carousel" id="post-list">
                 <?php foreach ($paket as $aket): ?>   
                 <div class="radius room-grid-view wow slideInUp" data-wow-delay="0.1s">
-                    <img class="radius-img" style="min-height:250px;" src="<?php echo base_url() ?>gallery/paket/<?php echo $aket->gambar ?>" alt="cruise">
+                    <?php $id = $aket->idpaket_wisata; ?>
+                <?php $sd = $this->M_paket->selectlimit($id)->result(); ?>
+                <?php foreach ($sd as $huy): ?>
+                    <img class="radius-img" style="min-height:250px;" src="<?php echo base_url() ?>gallery/paket/<?php echo $huy->gambar ?>" alt="cruise">
+                <?php endforeach ?>
                     <div style="border-radius: 10px;" class="room-info">
                         <div style="border-radius: 10px;" class="post-title">
-                            <h5>Great Bromo Adventure</h5>
-                            <p><i class="fa fa-tag"></i> $220</p>
+                            <h5><?php echo $aket->nama_paket ?></h5>
+                            <p><i class="fa fa-price"></i> IDR <span style="font-weight: bold;"><?php echo number_format($aket->harga) ?></span></p>
                         </div>
                         <div style="border-radius: 10px;" class="room-book">
                             <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
@@ -105,96 +110,6 @@
                     </div>
                 </div>
                 <?php endforeach ?>
-                <div class="radius room-grid-view wow slideInUp" data-wow-delay="0.1s">
-                    <img class="radius-img" style="min-height:250px;" src="<?php echo base_url() ?>master/client/assets/images/bromo1.jpg" alt="cruise">
-                    <div style="border-radius: 10px;" class="room-info">
-                        <div style="border-radius: 10px;" class="post-title">
-                            <h5>Great Bromo Adventure</h5>
-                            <p><i class="fa fa-tag"></i> $220</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="room-book">
-                            <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
-                                <h5><i class="fa fa-star gold"></i> 2 <i class="fa fa-user"></i> 2</h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
-                <div class="radius room-grid-view wow slideInUp" data-wow-delay="0.1s">
-                    <img class="radius-img" style="min-height:250px;" src="<?php echo base_url() ?>master/client/assets/images/bromo1.jpg" alt="cruise">
-                    <div style="border-radius: 10px;" class="room-info">
-                        <div style="border-radius: 10px;" class="post-title">
-                            <h5>Great Bromo Adventure</h5>
-                            <p><i class="fa fa-tag"></i> $220</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="room-book">
-                            <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
-                                <h5><i class="fa fa-star gold"></i> 2 <i class="fa fa-user"></i> 2</h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
-                <div class="radius room-grid-view wow slideInUp" data-wow-delay="0.1s">
-                    <img class="radius-img" style="min-height:250px;" src="<?php echo base_url() ?>master/client/assets/images/bromo1.jpg" alt="cruise">
-                    <div style="border-radius: 10px;" class="room-info">
-                        <div style="border-radius: 10px;" class="post-title">
-                            <h5>Great Bromo Adventure</h5>
-                            <p><i class="fa fa-tag"></i> $220</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="room-book">
-                            <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
-                                <h5><i class="fa fa-star gold"></i> 2 <i class="fa fa-user"></i> 2</h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
-                <div class="radius room-grid-view wow slideInUp" data-wow-delay="0.1s">
-                    <img class="radius-img" style="min-height:250px;" src="<?php echo base_url() ?>master/client/assets/images/bromo1.jpg" alt="cruise">
-                    <div style="border-radius: 10px;" class="room-info">
-                        <div style="border-radius: 10px;" class="post-title">
-                            <h5>Great Bromo Adventure</h5>
-                            <p><i class="fa fa-tag"></i> $220</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="room-book">
-                            <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
-                                <h5><i class="fa fa-star gold"></i> 2 <i class="fa fa-user"></i> 2</h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
-                <div class="radius room-grid-view wow slideInUp" data-wow-delay="0.1s">
-                    <img class="radius-img" style="min-height:250px;" src="<?php echo base_url() ?>master/client/assets/images/bromo1.jpg" alt="cruise">
-                    <div style="border-radius: 10px;" class="room-info">
-                        <div style="border-radius: 10px;" class="post-title">
-                            <h5>Great Bromo Adventure</h5>
-                            <p><i class="fa fa-tag"></i> $220</p>
-                        </div>
-                        <div style="border-radius: 10px;" class="room-book">
-                            <div style="border-radius: 10px;" class="col-md-8 col-sm-6 col-xs-6 clear-padding post-alt">
-                                <h5><i class="fa fa-star gold"></i> 2 <i class="fa fa-user"></i> 2</h5>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a>
-                            </div>
-                        </div>
-                        <div style="border-radius: 10px;" class="clearfix"></div>
-                    </div>
-                </div>
 
             </div>
         </div>
