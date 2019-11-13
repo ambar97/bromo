@@ -74,10 +74,23 @@
             <li class="nav-item">
               <a class="nav-link <?php if ($this->uri->segment(2)=='Contact'): ?>
                 <?php echo 'active' ?>
-              <?php endif ?>" href="<?php echo base_url('admin/Contact') ?>">
-                <i class="ni ni-single-copy-04 text-pink"></i>
-                <span class="nav-link-text">Contact Us</span>
+              <?php endif ?>" href="#navbar-maps" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">
+                <i class="ni ni-map-big text-primary"></i>
+                <span class="nav-link-text">Menu Home</span>
               </a>
+              <div class="collapse" id="navbar-maps">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="../maps/google.html" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo base_url('admin/Contact') ?>" class="nav-link">ContactUs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo base_url('admin/Contact/pesan') ?>" class="nav-link">Message</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
           <!-- Divider -->

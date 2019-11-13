@@ -6,6 +6,10 @@ class M_model extends CI_Model {
     public function select($table){
     return $this->db->get($table);
   }
+  public function selectOrDes($field,$table){
+    $this->db->order_by($field,'DESC') ;
+    return $this->db->get($table) ;
+  }
   public function selectlimit($table){
       $this->db->order_by('id_berita','DESC') ;
      $this->db->limit(6) ;

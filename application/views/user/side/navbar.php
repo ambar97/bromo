@@ -26,15 +26,23 @@
                     <div class="col-md-6 col-xs-5 clear-padding">
                         <i class="fa fa-flag-ID"></i>
                     </div>
-                    <div class="col-md-6 col-xs-7 clear-padding user-logged">
+                    <?php if ($this->session->userdata('status') == 'login'): ?>
+                        <div class="col-md-6 col-xs-7 clear-padding user-logged">
                         <a href="#" class="transition-effect">
                             <img src="<?php echo base_url() ?>master/client/assets/images/user.jpg" alt="cruise">
                             Hi, Lenore
                         </a>
-                        <a href="#" class="transition-effect">
+                        <a href="<?php echo base_url('Login/logoutUser') ?>" class="transition-effect">
                             <i class="fa fa-sign-out"></i>Sign Out
                         </a>
                     </div>
+                    <?php else: ?>
+                        <div class="col-md-6 col-xs-7 clear-padding user-logged">
+                        <a href="<?php echo base_url('Login/loginUser') ?>" class="transition-effect">
+                            <i class="fa fa-sign-in"></i>Sign In / Register
+                        </a>
+                    </div>
+                    <?php endif ?>
                 </div>
             </div>
         </div>
@@ -94,6 +102,13 @@
                                     <?php echo "active" ?>
                                 <?php endif ?>">
                                     <a class="dropdown-toggle" href="<?php echo base_url('ContactUs') ?>"><i class="fa fa-ship"></i> CONTACT </a>
+                                </li>
+                                <li class="">
+                                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-flag"></i><small> Bahasa</small> <i class="fa fa-caret-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href=""> Indonesia</a></li>
+                                        <li><a href=""> Jepang</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
