@@ -26,4 +26,14 @@ class Contact extends CI_Controller {
 		$this->M_model->update('contact',$data,$where);
 		redirect(base_url('admin/Contact'));
 	}
+
+	public function pesan(){
+		$data['pesan'] = $this->M_model->selectOrDes('idMessage','message');
+		$this->load->view('admin/pesan',$data);
+	}
+	public function hapusPesan($id){
+		$where = array('idMessage'=>$id);
+		$this->M_model->delete($where,'message');
+		redirect(base_url('admin/Contact/pesan'));
+	}
 }

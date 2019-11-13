@@ -74,40 +74,41 @@
             <li class="nav-item">
               <a class="nav-link <?php if ($this->uri->segment(2)=='Contact'): ?>
                 <?php echo 'active' ?>
-              <?php endif ?>" href="<?php echo base_url('admin/Contact') ?>">
-                <i class="ni ni-single-copy-04 text-pink"></i>
-                <span class="nav-link-text">Contact Us</span>
+              <?php endif ?>" href="#navbar-maps" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">
+                <i class="ni ni-map-big text-primary"></i>
+                <span class="nav-link-text">Menu Home</span>
               </a>
+              <div class="collapse" id="navbar-maps">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="../maps/google.html" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo base_url('admin/Contact') ?>" class="nav-link">ContactUs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?php echo base_url('admin/Contact/pesan') ?>" class="nav-link">Message</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
           <!-- Divider -->
           <hr class="my-3">
           <!-- Heading -->
-          <h6 class="navbar-heading p-0 text-muted">Documentation</h6>
+          <h6 class="navbar-heading p-0 text-muted">Payment and Booking</h6>
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
               <a class="nav-link" href="../../docs/getting-started/overview.html" target="_blank">
                 <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Getting started</span>
+                <span class="nav-link-text">Booking</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../docs/foundation/colors.html" target="_blank">
-                <i class="ni ni-palette"></i>
-                <span class="nav-link-text">Foundation</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../docs/components/alerts.html" target="_blank">
-                <i class="ni ni-ui-04"></i>
-                <span class="nav-link-text">Components</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../docs/plugins/charts.html" target="_blank">
-                <i class="ni ni-chart-pie-35"></i>
-                <span class="nav-link-text">Plugins</span>
+              <a class="nav-link" href="../../docs/getting-started/overview.html" target="_blank">
+                <i class="ni ni-spaceship"></i>
+                <span class="nav-link-text">Payment</span>
               </a>
             </li>
           </ul>
