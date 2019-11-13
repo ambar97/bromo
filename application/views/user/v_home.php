@@ -85,8 +85,9 @@
                 <h2 style="margin-bottom:50px">Popular Tour Packages</h2>
             </div>
             <div class="radius owl-carousel" id="post-list">
+                <?php foreach ($paket as $aket): ?>   
                 <div class="radius room-grid-view wow slideInUp" data-wow-delay="0.1s">
-                    <img class="radius-img" style="min-height:250px;" src="<?php echo base_url() ?>master/client/assets/images/bromo1.jpg" alt="cruise">
+                    <img class="radius-img" style="min-height:250px;" src="<?php echo base_url() ?>gallery/paket/<?php echo $aket->gambar ?>" alt="cruise">
                     <div style="border-radius: 10px;" class="room-info">
                         <div style="border-radius: 10px;" class="post-title">
                             <h5>Great Bromo Adventure</h5>
@@ -103,6 +104,7 @@
                         <div style="border-radius: 10px;" class="clearfix"></div>
                     </div>
                 </div>
+                <?php endforeach ?>
                 <div class="radius room-grid-view wow slideInUp" data-wow-delay="0.1s">
                     <img class="radius-img" style="min-height:250px;" src="<?php echo base_url() ?>master/client/assets/images/bromo1.jpg" alt="cruise">
                     <div style="border-radius: 10px;" class="room-info">
