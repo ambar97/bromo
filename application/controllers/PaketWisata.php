@@ -24,7 +24,9 @@ class PaketWisata extends CI_Controller {
 		$this->load->view('user/v_detailpaket', $data);
 	}
 	public function bookingP(){
-		$this->load->view('user/booking/paket');
+		$id = $this->uri->segment(3);
+		$data['detail'] = $this->M_model->selectwhere('paket_wisata',array('idpaket_wisata'=>$id));
+		$this->load->view('user/booking/paket',$data);
 	}
 
 	public function gagal(){
