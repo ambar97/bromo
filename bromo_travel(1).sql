@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 13, 2019 at 12:08 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Generation Time: Nov 14, 2019 at 03:56 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `idadmin` int(11) NOT NULL,
-  `nama` text,
-  `username` text,
-  `password` text,
+  `nama` text DEFAULT NULL,
+  `username` text DEFAULT NULL,
+  `password` text DEFAULT NULL,
   `level` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -57,7 +57,7 @@ CREATE TABLE `booking` (
   `total_harga` int(11) DEFAULT NULL,
   `customers_idcustomers` int(11) NOT NULL,
   `status_booking` int(11) DEFAULT NULL,
-  `bukti_pembayaran` text,
+  `bukti_pembayaran` text DEFAULT NULL,
   `admin_idadmin` int(11) DEFAULT NULL,
   `tanggal_upload` datetime DEFAULT NULL,
   `tanggal_verifikasi` datetime DEFAULT NULL
@@ -101,10 +101,17 @@ INSERT INTO `contact` (`idcontact`, `judul`, `isi`, `noWa`, `email`, `noTelp`, `
 CREATE TABLE `customers` (
   `idcustomers` int(11) NOT NULL,
   `nama` varchar(255) DEFAULT NULL,
-  `alamat` text,
-  `email` text,
+  `alamat` text DEFAULT NULL,
+  `email` text DEFAULT NULL,
   `no_telp` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`idcustomers`, `nama`, `alamat`, `email`, `no_telp`) VALUES
+(1, 'Anas', 'gbhjk', 'Anas@mai.com', '4567890');
 
 -- --------------------------------------------------------
 
@@ -115,22 +122,19 @@ CREATE TABLE `customers` (
 CREATE TABLE `daftar_fasilitas` (
   `id_fasilitas` int(12) NOT NULL,
   `icon` text NOT NULL,
-  `nama_fasilitas` text NOT NULL,
-  `id_hotel` int(12) DEFAULT NULL,
-  `id_wisata` int(12) DEFAULT NULL,
-  `id_paket` int(12) DEFAULT NULL
+  `nama_fasilitas` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `daftar_fasilitas`
 --
 
-INSERT INTO `daftar_fasilitas` (`id_fasilitas`, `icon`, `nama_fasilitas`, `id_hotel`, `id_wisata`, `id_paket`) VALUES
-(1, 'fa fa-university', 'Gedung', 1, NULL, NULL),
-(2, 'fa fa-bed', 'Penginapan', 1, NULL, NULL),
-(3, 'fa fa-taxi', 'Transportasi', 1, NULL, NULL),
-(4, 'fa fa-cutlery', 'Restaurant', 1, NULL, NULL),
-(5, 'fa fa-user', 'Guide', 1, NULL, NULL);
+INSERT INTO `daftar_fasilitas` (`id_fasilitas`, `icon`, `nama_fasilitas`) VALUES
+(1, 'fa fa-university', 'Gedung'),
+(2, 'fa fa-bed', 'Penginapan'),
+(3, 'fa fa-taxi', 'Transportasi'),
+(4, 'fa fa-cutlery', 'Restaurant'),
+(5, 'fa fa-user', 'Guide');
 
 -- --------------------------------------------------------
 
@@ -140,7 +144,7 @@ INSERT INTO `daftar_fasilitas` (`id_fasilitas`, `icon`, `nama_fasilitas`, `id_ho
 
 CREATE TABLE `detail_booking` (
   `iddetail_booking` int(11) NOT NULL,
-  `paket_wisata` text,
+  `paket_wisata` text DEFAULT NULL,
   `jml_dewasa` int(11) DEFAULT NULL,
   `jml_anak` int(11) DEFAULT NULL,
   `harga` int(11) DEFAULT NULL,
@@ -194,25 +198,31 @@ INSERT INTO `fasilitas` (`id_fasilitas`, `icon`, `id_wisata`, `id_hotel`, `id_pa
 
 CREATE TABLE `galery` (
   `idgalery` int(11) NOT NULL,
-  `gambar` text,
-  `deskripsi` text,
-  `tag` text,
+  `gambar` text DEFAULT NULL,
+  `deskripsi` text DEFAULT NULL,
+  `tag` text DEFAULT NULL,
   `wisata_idwisata` int(11) DEFAULT NULL,
   `hotel_idhotel` int(11) DEFAULT NULL,
-  `paket_idpaket` int(12) DEFAULT NULL
+  `paket_idpaket` int(12) DEFAULT NULL,
+  `tipe` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `galery`
 --
 
-INSERT INTO `galery` (`idgalery`, `gambar`, `deskripsi`, `tag`, `wisata_idwisata`, `hotel_idhotel`, `paket_idpaket`) VALUES
-(19, '1Bromo_Tour_Program2.jpg', NULL, NULL, NULL, NULL, 1),
-(21, '7asd.jpg', NULL, NULL, NULL, 7, NULL),
-(22, 'bromo1.jpg', NULL, NULL, NULL, 8, NULL),
-(23, '7Red.jpg', NULL, NULL, NULL, 7, NULL),
-(24, '2Wow.jpg', NULL, NULL, NULL, NULL, 2),
-(25, 'gallery/wisata/bromo1.jpg', NULL, NULL, 1, NULL, NULL);
+INSERT INTO `galery` (`idgalery`, `gambar`, `deskripsi`, `tag`, `wisata_idwisata`, `hotel_idhotel`, `paket_idpaket`, `tipe`) VALUES
+(21, '7asd.jpg', NULL, NULL, NULL, 7, NULL, ''),
+(22, 'bromo1.jpg', NULL, NULL, NULL, 8, NULL, ''),
+(23, '7Red.jpg', NULL, NULL, NULL, 7, NULL, ''),
+(25, 'gallery/wisata/bromo1.jpg', NULL, NULL, 1, NULL, NULL, ''),
+(26, 'gallery/galeri/Bukti_Transfer.jpeg', 'ghjkmk', NULL, NULL, NULL, NULL, NULL),
+(27, 'gallery/galeri/IMG-20170819-WA0005.jpg', 'Asdbnm,', NULL, NULL, NULL, NULL, NULL),
+(30, 'gallery/slider/bg-mobile-fallback.jpg', 'hbjnk', 'vgbhnjmkl;', NULL, NULL, NULL, 'slider'),
+(31, 'gallery/slider/b3.jpg', 'Broo Mountain', 'Perjalan baik dan menyenangkan', NULL, NULL, NULL, 'slider'),
+(32, '1Bromo_Tour_Program3.jpg', NULL, NULL, NULL, NULL, 1, NULL),
+(33, '2Wow1.jpg', NULL, NULL, NULL, NULL, 2, NULL),
+(34, '1asd.jpg', NULL, NULL, 1, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -222,13 +232,13 @@ INSERT INTO `galery` (`idgalery`, `gambar`, `deskripsi`, `tag`, `wisata_idwisata
 
 CREATE TABLE `hotel` (
   `idhotel` int(11) NOT NULL,
-  `nama_hotel` text,
+  `nama_hotel` text DEFAULT NULL,
   `rating` int(12) DEFAULT NULL,
-  `deskripsi` text,
+  `deskripsi` text DEFAULT NULL,
   `harga` int(11) DEFAULT NULL,
-  `lokasi` text,
+  `lokasi` text DEFAULT NULL,
   `harga_eng` int(11) DEFAULT NULL,
-  `deskripsi_eng` text
+  `deskripsi_eng` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -268,12 +278,12 @@ INSERT INTO `message` (`idMessage`, `nama`, `email`, `title`, `isi`) VALUES
 
 CREATE TABLE `paket_wisata` (
   `idpaket_wisata` int(11) NOT NULL,
-  `nama_paket` text,
+  `nama_paket` text DEFAULT NULL,
   `harga` int(11) DEFAULT NULL,
-  `keterangan` text,
-  `durasi` text,
-  `include` text,
-  `exclude` text
+  `keterangan` text DEFAULT NULL,
+  `durasi` text DEFAULT NULL,
+  `include` text DEFAULT NULL,
+  `exclude` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -291,12 +301,19 @@ INSERT INTO `paket_wisata` (`idpaket_wisata`, `nama_paket`, `harga`, `keterangan
 --
 
 CREATE TABLE `users` (
-  `idusers` int(11) NOT NULL,
-  `username` text,
-  `password` text,
+  `idusers` int(11) UNSIGNED ZEROFILL NOT NULL,
+  `username` text DEFAULT NULL,
+  `password` text DEFAULT NULL,
   `status_verifikasi` int(11) DEFAULT NULL,
   `customers_idcustomers` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`idusers`, `username`, `password`, `status_verifikasi`, `customers_idcustomers`) VALUES
+(00000000001, 'anas', '76eb649c047cbecad7c36e71374bc9a5', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -306,12 +323,12 @@ CREATE TABLE `users` (
 
 CREATE TABLE `wisata` (
   `idwisata` int(11) NOT NULL,
-  `nama_wisata` text,
+  `nama_wisata` text DEFAULT NULL,
   `rating` decimal(2,1) DEFAULT NULL,
-  `deskripsi_w` text,
+  `deskripsi_w` text DEFAULT NULL,
   `harga` int(11) DEFAULT NULL,
-  `lokasi` text,
-  `deskripsi_eng` text,
+  `lokasi` text DEFAULT NULL,
+  `deskripsi_eng` text DEFAULT NULL,
   `harga_2` int(11) DEFAULT NULL,
   `no_telp` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -427,7 +444,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `idcustomers` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idcustomers` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `daftar_fasilitas`
@@ -451,7 +468,7 @@ ALTER TABLE `fasilitas`
 -- AUTO_INCREMENT for table `galery`
 --
 ALTER TABLE `galery`
-  MODIFY `idgalery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `idgalery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `hotel`
@@ -475,7 +492,7 @@ ALTER TABLE `paket_wisata`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `idusers` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idusers` int(11) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `wisata`
