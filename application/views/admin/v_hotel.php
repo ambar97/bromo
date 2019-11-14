@@ -32,8 +32,10 @@
               <h4 class="card-title ">Daftar Hotel</h4>
               <p class="text-sm mb-0">
                 Klik <i>tombol Tambah Hotel</i> untuk menambah data baru.
+                Klik <i>tombol Kelola Daftar Fasilitas</i> untuk mengatur daftar fasilitas.
               </p>
               <a class="btn btn-primary text-white" href="<?php echo base_url('admin/Hotel/insertHotel'); ?>">Tambah Hotel</a>
+              <a href="<?php echo base_url('admin/Hotel/editFasilitas') ?>" class="btn btn-primary">Kelola Daftar Fasilitas</a>
             </div>
             <div class="card-body">
               <div class="table-responsive">

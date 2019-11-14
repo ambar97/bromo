@@ -20,7 +20,7 @@ class Hotel extends CI_Controller {
 		$data['hotel'] = $this->M_model->selectwhere('hotel', array('idhotel'=>$id));
 		$data['gallery'] = $this->M_model->selectwhere('galery', array('hotel_idhotel'=>$id, 'wisata_idwisata'=>NULL, 'paket_idpaket'=>NULL));
 		$data['fasilitas'] = $this->M_hotel->editFasilitas($id);
-		$data['daftar_fasilitas'] = $this->M_model->selectwhere('daftar_fasilitas', array('id_hotel'=>1, 'id_wisata'=>NULL, 'id_paket'=>NULL));
+		$data['daftar_fasilitas'] = $this->M_model->select('daftar_fasilitas');
 		$this->load->view('admin/edit/hotel', $data);
 	}
 
@@ -46,6 +46,24 @@ class Hotel extends CI_Controller {
 						$this->M_model->insert('galery', $gambar_data);
 		}
 		redirect(base_url('admin/Hotel/editHotel/'.$id));
+	}
+
+	public function editFasilitas(){
+		$data['fasilitas'] = $this->M_model->select('daftar_fasilitas');
+		$this->load->view('admin/edit/editFasilitasHotel', $data);
+	}
+
+	public function prosesTambahFasilitas(){
+		$data['icon'] = $this->input->post('icon');
+		$data['nama_fasilitas'] = $this->input->post('nama_fasilitas');
+		$this->M_model->insert('daftar_fasilitas', $data);
+		return redirect(base_url('admin/Hotel/editFasilitas'));
+	}
+
+	public function  prosesHapusFasilitas(){
+		$id = $this->uri->segment(4);
+		$this->M_model->delete(array('id_fasilitas'=>$id), 'daftar_fasilitas');
+		return redirect(base_url('admin/Hotel/editFasilitas'));
 	}
 
 	public function prosesEditFasilitas(){
@@ -79,7 +97,7 @@ class Hotel extends CI_Controller {
 	}
 
 	public function insertHotel(){
-		$data['daftar_fasilitas'] = $this->M_model->selectwhere('daftar_fasilitas', array('id_hotel'=>1, 'id_wisata'=>NULL, 'id_paket'=>NULL));
+		$data['daftar_fasilitas'] = $this->M_model->select('daftar_fasilitas');
 		$this->load->view('admin/insert/hotel', $data);
 	}
 
