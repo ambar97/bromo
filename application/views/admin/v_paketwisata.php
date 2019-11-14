@@ -30,7 +30,10 @@
           <div class="card">
             <div class="card-header card-header-primary">
               <h4 class="card-title ">List Tour Package</h4>
-              <a class="btn btn-primary text-white" href="<?php echo base_url('admin/PaketWisata/insertPaket'); ?>">Tambah Paket</a>
+              <p class="text-sm mb-0">
+                Klik <i>tombol Tambah Package Tour</i> untuk menambah data baru.
+              </p>
+              <a class="btn btn-primary text-white" href="<?php echo base_url('admin/PaketWisata/insertPaket'); ?>">Tambah package Tour</a>
             </div>
             <div class="card-body">
               <div class="table-responsive">

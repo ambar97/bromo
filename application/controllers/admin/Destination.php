@@ -62,12 +62,8 @@ class Destination extends CI_Controller {
 		redirect(base_url('admin/Destination/ubahWisata/'.$id));
 	}
 
-	public function prosesHapusGambar(){
-		$this->load->model('M_model');
-		$id = $this->uri->segment(4);
-		$deletebyname = array('gambar'=>$id);
-		// unlink(base_url().'gallery/hotel/'.$deletebyname);
-		$this->M_model->delete($deletebyname, 'galery');
+	public function prosesHapusGambar($id){
+		$this->M_wisata->hapusGalery(array('wisata_idwisata'=>$id));
 		return redirect(base_url('admin/Destination/'));
 	}
 

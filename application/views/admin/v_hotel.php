@@ -30,6 +30,9 @@
           <div class="card">
             <div class="card-header card-header-primary">
               <h4 class="card-title ">Daftar Hotel</h4>
+              <p class="text-sm mb-0">
+                Klik <i>tombol Tambah Hotel</i> untuk menambah data baru.
+              </p>
               <a class="btn btn-primary text-white" href="<?php echo base_url('admin/Hotel/insertHotel'); ?>">Tambah Hotel</a>
             </div>
             <div class="card-body">

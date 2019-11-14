@@ -18,10 +18,6 @@
                 </ol>
               </nav>
             </div>
-            <div class="col-lg-6 col-5 text-right">
-              <a href="<?php echo base_url('admin/Destination/tambahWisata') ?>" class="btn btn-sm btn-neutral">New</a>
-              <!-- <a href="#" class="btn btn-sm btn-neutral">Filters</a> -->
-            </div>
           </div>
         </div>
       </div>
@@ -35,9 +31,10 @@
             <!-- Card header -->
             <div class="card-header">
               <h3 class="mb-0">Data Single Tour</h3>
-              <p class="text-sm mb-0"> 
-                Klik <i>tombol new</i> untuk menambah data baru.
+              <p class="text-sm mb-0">
+                Klik <i>tombol Tambah Single Tour</i> untuk menambah data baru.
               </p>
+              <a href="<?php echo base_url('admin/Destination/tambahWisata') ?>" class="btn btn-primary">Tambah Single Tour</a>
             </div>
             <div class="table-responsive py-4">
               <table class="table table-flush" id="datatable-basic">
@@ -94,7 +91,7 @@
   <!-- Argon JS -->
 <script src="<?php echo base_url()?>master/assets/js/argon.min9f1e.js?v=1.1.0"></script>
 <?php if ($this->session->flashdata()) { ?>
-<?php echo $this->session->flashdata('Pesan'); ?>                   
+<?php echo $this->session->flashdata('Pesan'); ?>
 <?php } ?>
 </body>
 </html>

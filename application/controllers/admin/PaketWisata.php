@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class PaketWisata extends CI_Controller {
 
+	function __construct(){
+		parent::__construct();
+		$this->load->library('upload');
+	}
+
 	public function index(){
 		$this->load->model('M_model');
 		$data['paket']=$this->M_model->select('paket_wisata');
@@ -32,8 +37,7 @@ class PaketWisata extends CI_Controller {
 		$config['upload_path']          = 'gallery/paket';
 		$config['allowed_types']        = 'gif|jpg|png';
 		$config['file_name']						= $id.$data['nama_paket'];
-
-		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
 		if ( $this->upload->do_upload('gambar')){
 						$data = $this->upload->data();
 						$name_file=$data['file_name'];
@@ -81,7 +85,7 @@ class PaketWisata extends CI_Controller {
 		$config['upload_path']          = 'gallery/Paket';
 		$config['allowed_types']        = 'gif|jpg|png';
 
-		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
 		if ($this->upload->do_upload('gambar')){
 						$data = $this->upload->data();
 						$name_file=$data['file_name'];

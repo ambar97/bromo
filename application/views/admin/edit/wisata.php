@@ -99,7 +99,7 @@
         </div>
         <div class="card-footer d-flex justify-content-center">
           <!-- <input type="text" name="id_gambar" value="<?php// echo $g->hotel_idhotel; ?>" hidden> -->
-          <a class="btn btn-danger text-white" href="<?php echo base_url('admin/Destination/prosesHapusGambar/').$g->gambar; ?>">Hapus</a>
+          <a class="btn btn-danger text-white" href="<?php echo base_url('admin/Destination/prosesHapusGambar/'.$g->gambar );?>">Hapus</a>
         </div>
       </div>
     </div>

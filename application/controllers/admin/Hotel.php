@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Hotel extends CI_Controller {
 
+	function __construct(){
+		parent::__construct();
+		$this->load->library('upload');
+	}
+
 	public function index(){
 		$this->load->model('M_model');
 		$data['hotel']=$this->M_model->select('hotel');
@@ -34,7 +39,7 @@ class Hotel extends CI_Controller {
 		$config['allowed_types']        = 'gif|jpg|png';
 		$config['file_name']						= $id.$data['nama_hotel'];
 
-		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
 		if ( $this->upload->do_upload('gambar')){
 						$data = $this->upload->data();
 						$name_file=$data['file_name'];
@@ -100,7 +105,7 @@ class Hotel extends CI_Controller {
 		$config['upload_path']          = 'gallery/hotel';
 		$config['allowed_types']        = 'gif|jpg|png';
 
-		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
 		if ( $this->upload->do_upload('gambar')){
 						$data = $this->upload->data();
 						$name_file=$data['file_name'];

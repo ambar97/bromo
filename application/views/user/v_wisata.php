@@ -81,28 +81,21 @@
 			<!-- START: HOTEL LIST VIEW -->
 			<div class="switchable col-md-12 clear-padding">
 				<?php foreach ($destinasi as $des): ?>
-				<div  class="hotel-list-view" style="border-radius: 10px; min-height: 100px;">
+				<div  class="hotel-list-view " style="border-radius: 10px; max-height:200px;" >
 					<div class="wrapper">
 						<div class="col-md-4 col-sm-6 switch-img clear-padding" style="border-radius: 10px; ">
               <?php $id = $des->idwisata; ?>
               <?php $gambar = $this->M_wisata->selectlimit($id); ?>
               <?php foreach ($gambar->result() as $g): ?>
-                <img src="<?php echo base_url().'gallery/wisata/'.$des->gambar; ?>" style="border-radius: 30px; min-height: 250px;" alt="cruise">
+                <img src="<?php echo base_url().'gallery/wisata/'.$des->gambar; ?>" style="border-radius: 30px; min-height: 200px;" alt="cruise">
               <?php endforeach; ?>
 						</div>
 						<div class="col-md-6 col-sm-6 hotel-info" >
 							<div>
 								<div class="hotel-header" >
 									<h5><?php echo $des->nama_wisata ?> <span>
-										<?php  $jum = 5-$des->rating; ?>
-										<?php  for ($i=0; $i < $des->rating ; $i++) { ?>
-										<i class="fa fa-star colored"></i>
-										<?php } ?>
-										<?php  for ($i=0; $i <$jum ; $i++) { ?>
-											<i class="fa fa-star-o colored"></i>
-										<?php } ?>
 										</span></h5>
-									<p><i class="fa fa-map-marker"></i><?php echo $des->lokasi ?> <i class="fa fa-phone"></i><?php echo $des->no_telp ?></p>
+									<p><i class="fa fa-map-marker"></i><?php echo $des->lokasi ?></p>
 								</div>
 								<div class="hotel-facility">
 									<?php $rt= $this->db->get_where('fasilitas', array('id_wisata'=>$des->idwisata))->result(); ?>
@@ -113,7 +106,7 @@
 										</p>
 								</div>
 								<div class="hotel-desc">
-									<p><?php echo substr($des->deskripsi_w, 0, 200) ?> ...</p>
+									<p><?php echo substr($des->deskripsi_w, 0, 170) ?> ...</p>
 								</div>
 							</div>
 						</div>
@@ -124,7 +117,13 @@
 									<img src="<?php echo base_url() ?>master/client/assets/images/tripadvisor.png" alt="cruise"><span>4.5/5.0</span>
 								</div>
 								<div class="user-rating">
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                  <?php  $jum = 5-$des->rating; ?>
+                  <?php  for ($i=0; $i < $des->rating ; $i++) { ?>
+                  <i class="fa fa-star colored"></i>
+                  <?php } ?>
+                  <?php  for ($i=0; $i <$jum ; $i++) { ?>
+                    <i class="fa fa-star-o colored"></i>
+                  <?php } ?>
 									<span>Rp. <?php echo number_format($des->harga) ?></span>
 								</div>
 							</div>
