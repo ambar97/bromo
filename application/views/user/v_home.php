@@ -43,7 +43,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 col-sm-3 search-col-padding">
-                  <button type="button" style="padding:1px;border-radius:10px;" class="search-button btn btn-sm form-control transition-effect">LETS GO</button>
+                  <button type="button" style="padding:1px;border-radius:10px;" class="search-button btn btn-sm form-control transition-effect">Let's Go</button>
                 </div>
 
 
@@ -211,7 +211,7 @@
                     autoplay                :   1,      //Slideshow starts playing automatically
                     start_slide             :   1,      //Start slide (0 is random)
                     random                  :   0,      //Randomize slide order (Ignores start slide)
-                    slide_interval          :   10000,  //Length between transitions
+                    slide_interval          :   5000,  //Length between transitions
                     transition              :   1,      //0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
                     transition_speed        :   500,    //Speed of transition
                     new_window              :   1,      //Image links open in new window/tab
