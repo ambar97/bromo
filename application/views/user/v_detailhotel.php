@@ -33,7 +33,7 @@
 						<ul class="slides">
               <?php foreach ($gambar->result() as $g): ?>
                 <li>
-  								<img src="<?php echo base_url().'gallery/paket/'.$g->gambar; ?>" alt="cruise" />
+  								<img src="<?php echo base_url().'gallery/hotel/'.$g->gambar; ?>" alt="cruise" />
   							</li>
               <?php endforeach; ?>
 						</ul>
@@ -42,7 +42,7 @@
 						<ul class="slides">
               <?php foreach ($gambar->result() as $g): ?>
                 <li>
-  								<img src="<?php echo base_url().'gallery/paket/'.$g->gambar; ?>" alt="cruise" />
+  								<img src="<?php echo base_url().'gallery/hotel/'.$g->gambar; ?>" alt="cruise" />
   							</li>
               <?php endforeach; ?>
 						</ul>
