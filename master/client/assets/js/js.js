@@ -13,6 +13,47 @@ $(window).load(function() {
 	$("#loader").fadeOut("slow");
 });
 
+$(document).on("mouseover",".hd",function(){
+	// alert("dhajda");
+	var no = $(this).attr("no");
+	var status = $(".idwis_"+no).val();
+	if (status==0) {
+		$(".detail-wisata").css("opacity","1");
+	}else{
+		$	(".holiday-select").css("opacity","1");
+	}
+})
+$(document).on("mouseleave",".hd",function(){
+	// alert("dhajda");
+	var no = $(this).attr("no");
+	var status = $(".idwis_"+no).val();
+	if (status==1) {
+
+		$(".holiday-select").css("opacity","1");
+	}else{
+		$(".detail-wisata").css("opacity","0");
+
+	}
+})
+
+$(document).on("click",".hd",function(){
+		var no=$(this).attr("no");
+		var status = $(".idwis_"+no).val();
+		if (status==0) {
+			$(".idwis_"+no).val(1);
+			$(".holiday-select").css("opacity","1");
+			$(".detail-wisata").css("opacity","0");
+		}else{
+			$(".idwis_"+no).val(0);
+			$(".holiday-select").css("opacity","0");
+			$(".detail-wisata").css("opacity","1");
+
+		}
+})
+// $(document).on("click",".add_wisata",function(){
+// 	alert("lalal");
+// })
+
 /**********************************************************
 		BEGIN: OWL CAROUSELS
 **********************************************************/

@@ -264,226 +264,35 @@
 
       <div class="modal-body">
         <div class="row col-md-12">
-          <div class="col-md-4" >
-            <div class="holiday-grid-view radius">
-      					<div class="holiday-header-wrapper">
-      						<div class="holiday-header">
-      							<div class="holiday-img">
-      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
-      							</div>
-      							<div class="detail">
-      								<a href="#"><i class="fa fa-plus"></i></a>
-      							</div>
-      							<div class="holiday-price">
-      								<h4>$499</h4>
-      								<h5>7 Days</h5>
-      							</div>
-      							<div class="holiday-title">
-      								<h3>Step Into Heaven</h3>
-      								<h5>Asia &#187; Nepal</h5>
-      							</div>
-      						</div>
-      					</div>
-      			</div>
-          </div>
-          <div class="col-md-4" style="border-radius:10px">
-            <div class="holiday-grid-view" style="border-radius:10px">
-      					<div class="holiday-header-wrapper">
-      						<div class="holiday-header">
-      							<div class="holiday-img">
-      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
-      							</div>
-      							<div class="detail">
-      								<a href="#"><i class="fa fa-plus"></i></a>
-      							</div>
-      							<div class="holiday-price">
-      								<h4>$499</h4>
-      								<h5>7 Days</h5>
-      							</div>
-      							<div class="holiday-title">
-      								<h3>Step Into Heaven</h3>
-      								<h5>Asia &#187; Nepal</h5>
-      							</div>
-      						</div>
-      					</div>
-      			</div>
-          </div>
-          <div class="col-md-4" style="border-radius:10px">
-            <div class="holiday-grid-view" style="border-radius:10px">
-      					<div class="holiday-header-wrapper">
-      						<div class="holiday-header">
-      							<div class="holiday-img">
-      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
-      							</div>
-      							<div class="detail">
-      								<a href="#"><i class="fa fa-plus"></i></a>
-      							</div>
-      							<div class="holiday-price">
-      								<h4>$499</h4>
-      								<h5>7 Days</h5>
-      							</div>
-      							<div class="holiday-title">
-      								<h3>Step Into Heaven</h3>
-      								<h5>Asia &#187; Nepal</h5>
-      							</div>
-      						</div>
-      					</div>
-      			</div>
-          </div>
-          <div class="col-md-4" style="border-radius:10px">
-            <div class="holiday-grid-view" style="border-radius:10px">
-      					<div class="holiday-header-wrapper">
-      						<div class="holiday-header">
-      							<div class="holiday-img">
-      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
-      							</div>
-      							<div class="detail">
-      								<a href="#"><i class="fa fa-plus"></i></a>
-      							</div>
-      							<div class="holiday-price">
-      								<h4>$499</h4>
-      								<h5>7 Days</h5>
-      							</div>
-      							<div class="holiday-title">
-      								<h3>Step Into Heaven</h3>
-      								<h5>Asia &#187; Nepal</h5>
-      							</div>
-      						</div>
-      					</div>
-      			</div>
-          </div>
-          <div class="col-md-4" style="border-radius:10px">
-            <div class="holiday-grid-view" style="border-radius:10px">
-      					<div class="holiday-header-wrapper">
-      						<div class="holiday-header">
-      							<div class="holiday-img">
-      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
-      							</div>
-      							<div class="detail">
-      								<a href="#"><i class="fa fa-plus"></i></a>
-      							</div>
-      							<div class="holiday-price">
-      								<h4>$499</h4>
-      								<h5>7 Days</h5>
-      							</div>
-      							<div class="holiday-title">
-      								<h3>Step Into Heaven</h3>
-      								<h5>Asia &#187; Nepal</h5>
-      							</div>
-      						</div>
-      					</div>
-      			</div>
-          </div>
-          <div class="col-md-4" style="border-radius:10px">
-            <div class="holiday-grid-view" style="border-radius:10px">
-      					<div class="holiday-header-wrapper">
-      						<div class="holiday-header">
-      							<div class="holiday-img">
-      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
-      							</div>
-      							<div class="detail">
-      								<a href="#"><i class="fa fa-plus"></i></a>
-      							</div>
-      							<div class="holiday-price">
-      								<h4>$499</h4>
-      								<h5>7 Days</h5>
-      							</div>
-      							<div class="holiday-title">
-      								<h3>Step Into Heaven</h3>
-      								<h5>Asia &#187; Nepal</h5>
-      							</div>
-      						</div>
-      					</div>
-      			</div>
-          </div>
-          <div class="col-md-4" style="border-radius:10px">
-            <div class="holiday-grid-view" style="border-radius:10px">
-      					<div class="holiday-header-wrapper">
-      						<div class="holiday-header">
-      							<div class="holiday-img">
-      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
-      							</div>
-      							<div class="detail">
-      								<a href="#"><i class="fa fa-plus"></i></a>
-      							</div>
-      							<div class="holiday-price">
-      								<h4>$499</h4>
-      								<h5>7 Days</h5>
-      							</div>
-      							<div class="holiday-title">
-      								<h3>Step Into Heaven</h3>
-      								<h5>Asia &#187; Nepal</h5>
-      							</div>
-      						</div>
-      					</div>
-      			</div>
-          </div>
-          <div class="col-md-4" style="border-radius:10px">
-            <div class="holiday-grid-view" style="border-radius:10px">
-      					<div class="holiday-header-wrapper">
-      						<div class="holiday-header">
-      							<div class="holiday-img">
-      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
-      							</div>
-      							<div class="detail">
-      								<a href="#"><i class="fa fa-plus"></i></a>
-      							</div>
-      							<div class="holiday-price">
-      								<h4>$499</h4>
-      								<h5>7 Days</h5>
-      							</div>
-      							<div class="holiday-title">
-      								<h3>Step Into Heaven</h3>
-      								<h5>Asia &#187; Nepal</h5>
-      							</div>
-      						</div>
-      					</div>
-      			</div>
-          </div>
-          <div class="col-md-4" style="border-radius:10px">
-            <div class="holiday-grid-view" style="border-radius:10px">
-      					<div class="holiday-header-wrapper">
-      						<div class="holiday-header">
-      							<div class="holiday-img">
-      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
-      							</div>
-      							<div class="detail">
-      								<a href="#"><i class="fa fa-plus"></i></a>
-      							</div>
-      							<div class="holiday-price">
-      								<h4>$499</h4>
-      								<h5>7 Days</h5>
-      							</div>
-      							<div class="holiday-title">
-      								<h3>Step Into Heaven</h3>
-      								<h5>Asia &#187; Nepal</h5>
-      							</div>
-      						</div>
-      					</div>
-      			</div>
-          </div>
-          <div class="col-md-4" style="border-radius:10px">
-            <div class="holiday-grid-view" style="border-radius:10px">
-      					<div class="holiday-header-wrapper">
-      						<div class="holiday-header">
-      							<div class="holiday-img">
-      								<img src="<?php echo base_url()?>master/client/assets/images/tour1.jpg" alt="cruise">
-      							</div>
-      							<div class="detail">
-      								<a href="#"><i class="fa fa-plus"></i></a>
-      							</div>
-      							<div class="holiday-price">
-      								<h4>$499</h4>
-      								<h5>7 Days</h5>
-      							</div>
-      							<div class="holiday-title">
-      								<h3>Step Into Heaven</h3>
-      								<h5>Asia &#187; Nepal</h5>
-      							</div>
-      						</div>
-      					</div>
-      			</div>
-          </div>
+          <?php foreach ($wisata as $value): ?>
+            <div class="col-md-4" >
+              <div class="holiday-grid-view radius" style="min-height:200px">
+
+                  <div class="holiday-header-wrapper hd" no="<?php echo $value->idwisata?>">
+                    <div class="holiday-header">
+                      <div class="holiday-img">
+                        <img src="<?php echo base_url().$value->gambar?>" alt="cruise" width="100%" style="min-height:200px">
+                      </div>
+                      <div class="detail detail-wisata">
+                        <a href="#" class="sss" no="<?php echo $value->idwisata?>"><i class="add_wisata fa fa-plus"></i></a>
+                      </div>
+                      <div class="holiday-select">
+                        <a href="#" ><i class="remove_wisata fa fa-check"></i></a>
+                      </div>
+                      <div class="holiday-price">
+                        <h4>$<?php echo $value->harga?></h4>
+                        <!-- <h5>7 Days</h5> -->
+                      </div>
+                      <div class="holiday-title">
+                        <h3><?php echo $value->nama_wisata?></h3>
+                        <h5>Indonesian &#187; Probolinggo</h5>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <input type="hidden" class="idwis_<?php echo $value->idwisata?>" value="0">
+          <?php endforeach; ?>
 
         </div>
       </div>
