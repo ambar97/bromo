@@ -58,6 +58,16 @@
             <h3>Informasi</h3>
               <div class="booking-form">
                 <?php foreach ($hotel->result() as $p): ?>
+									<h4><i>Rating</i></h4>
+	                <div class="user-rating">
+	                  <?php  $jum = 5-$p->rating; ?>
+	                  <?php  for ($i=0; $i < $p->rating ; $i++) { ?>
+	                  <i class="fa fa-star colored"></i>
+	                  <?php } ?>
+	                  <?php  for ($i=0; $i <$jum ; $i++) { ?>
+	                    <i class="fa fa-star-o colored"></i>
+	                  <?php } ?>
+	                </div><hr>
                   <h4><i class="fa fa-money"></i> Harga</h4>
                     <p>Rp. <?php echo $p->harga; ?></p><hr>
                   <h4><i class="fa fa-info"></i> Keterangan</h4>

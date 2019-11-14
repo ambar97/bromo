@@ -5,10 +5,6 @@ class Destination extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-<<<<<<< HEAD
-		// $this->load->model('M_model');
-=======
->>>>>>> 8f21529f5beeea83349002145afc35b8e00beec7
 		$this->load->model('M_wisata');
 		$this->load->library('upload');
 	}

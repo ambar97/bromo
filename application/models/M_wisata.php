@@ -21,7 +21,7 @@ public $tabel ="wisata";
 	public function tambahDataGambar($data){
 		$this->db->insert('galery',$data);
 	}
-	
+
 	public function perbarui($data,$where){
 		$this->db->update('wisata',$data,$where);
 	}
