@@ -61,11 +61,11 @@
 		<!-- START: FILTER AREA -->
 		<div class="col-md-3 clear-padding">
 			<div class="filter-head text-center">
-				<h4>Filter Search</h4>
+				<h4>Filter by Facilities</h4>
 			</div>
-			<div class="filter-area">
+			<div class="filter-area" style="height:500px;">
 				<div class="facilities-filter filter">
-					<h5><i class="fa fa-list"></i> Hotel Facilities</h5>
+					<h5><i class="fa fa-list"></i> Include</h5>
 					<ul>
 						<li><input type="checkbox"> <i class="fa fa-wifi"></i> Wifi</li>
 						<li><input type="checkbox"> <i class="fa fa-beer"></i> Bar</li>
@@ -203,24 +203,6 @@
 <?php $this->load->view("user/side/footer"); ?>
 
  <?php $this->load->view("user/side/js"); ?>
- <script>
 
-	/* Price Range Slider */
-
-	$(function() {
-		"use strict";
-		$( "#price-range" ).slider({
-		  range: true,
-		  min: 0,
-		  max: 100,
-		  values: [ 100000, 1000000 ],
-		  slide: function( event, ui ) {
-			$( "#amount" ).val( "Rp " + ui.values[ 0 ] + " - Rp " + ui.values[ 1 ] );
-		  }
-		});
-		$( "#amount" ).val( "Rp " + $( "#price-range" ).slider( "values", 0 ) +
-		  " - Rp " + $( "#price-range" ).slider( "values", 1 ) );
-	  });
-</script>
 </body>
 </html>

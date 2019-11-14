@@ -6,17 +6,9 @@
 		<!-- START: FILTER AREA -->
 		<div class="col-md-3 clear-padding">
 			<div class="filter-head text-center">
-				<h4>xx Result Found Matching Your Search.</h4>
+				<h4>Filter by Facilities.</h4>
 			</div>
-			<div class="filter-area">
-				<div class="price-filter filter">
-					<h5><i class="fa fa-usd"></i> Price</h5>
-					<p>
-						<label></label>
-						<input type="text" id="amount" readonly>
-					</p>
-					<div id="price-range"></div>
-				</div>
+			<div class="filter-area" style="height:500px;">
 				<div class="facilities-filter filter">
 					<h5><i class="fa fa-list"></i> Inclusion</h5>
 					<ul>
@@ -164,24 +156,5 @@
 <?php $this->load->view("user/side/footer"); ?>
 
  <?php $this->load->view("user/side/js"); ?>
- <script>
-
-	/* Price Range Slider */
-
-	$(function() {
-		"use strict";
-		$( "#price-range" ).slider({
-		  range: true,
-		  min: 0,
-		  max: 100,
-		  values: [ 3, 50 ],
-		  slide: function( event, ui ) {
-			$( "#amount" ).val( "$ " + ui.values[ 0 ] + " - $ " + ui.values[ 1 ] );
-		  }
-		});
-		$( "#amount" ).val( "$ " + $( "#price-range" ).slider( "values", 0 ) +
-		  " - $ " + $( "#price-range" ).slider( "values", 1 ) );
-	  });
-</script>
 </body>
 </html>
