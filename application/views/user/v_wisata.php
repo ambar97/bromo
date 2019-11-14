@@ -1,3 +1,4 @@
+<?php $this->load->model('M_wisata'); ?>
 <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
 <div class="row" style="background-color: white;">
@@ -13,7 +14,7 @@
 					<p>
 						<label></label>
 						<input type="text" id="amount" readonly>
-					</p> 
+					</p>
 					<div id="price-range"></div>
 				</div>
 				<div class="facilities-filter filter">
@@ -29,10 +30,10 @@
 			</div>
 		</div>
 		<!-- END: FILTER AREA -->
-		
+
 		<!-- START: INDIVIDUAL LISTING AREA -->
 		<div class="col-md-9 hotel-listing">
-			
+
 			<!-- START: SORT AREA -->
 			<div class="sort-area col-sm-10">
 				<div class="col-md-3 col-sm-3 col-xs-6 sort">
@@ -80,20 +81,22 @@
 			<!-- START: HOTEL LIST VIEW -->
 			<div class="switchable col-md-12 clear-padding">
 				<?php foreach ($destinasi as $des): ?>
-					
-				
 				<div  class="hotel-list-view" style="border-radius: 10px; min-height: 100px;">
 					<div class="wrapper">
 						<div class="col-md-4 col-sm-6 switch-img clear-padding" style="border-radius: 10px; ">
-							<img src="<?php echo base_url().$des->gambar ?>" style="border-radius: 30px; min-height: 250px;" alt="cruise">
+              <?php $id = $des->idwisata; ?>
+              <?php $gambar = $this->M_wisata->selectlimit($id); ?>
+              <?php foreach ($gambar->result() as $g): ?>
+                <img src="<?php echo base_url().'gallery/wisata/'.$des->gambar; ?>" style="border-radius: 30px; min-height: 250px;" alt="cruise">
+              <?php endforeach; ?>
 						</div>
 						<div class="col-md-6 col-sm-6 hotel-info" >
 							<div>
 								<div class="hotel-header" >
 									<h5><?php echo $des->nama_wisata ?> <span>
 										<?php  $jum = 5-$des->rating; ?>
-										<?php  for ($i=0; $i < $des->rating ; $i++) { ?> 
-										<i class="fa fa-star colored"></i>	
+										<?php  for ($i=0; $i < $des->rating ; $i++) { ?>
+										<i class="fa fa-star colored"></i>
 										<?php } ?>
 										<?php  for ($i=0; $i <$jum ; $i++) { ?>
 											<i class="fa fa-star-o colored"></i>
@@ -105,12 +108,12 @@
 									<?php $rt= $this->db->get_where('fasilitas', array('id_wisata'=>$des->idwisata))->result(); ?>
 									<p>
 										<?php foreach ($rt as $v): ?>
-										<i class="<?php echo $v->icon ?>"></i>	
+										<i class="<?php echo $v->icon ?>"></i>
 										<?php endforeach ?>
 										</p>
 								</div>
 								<div class="hotel-desc">
-									<p><?php echo $des->deskripsi_w ?></p>
+									<p><?php echo substr($des->deskripsi_w, 0, 200) ?> ...</p>
 								</div>
 							</div>
 						</div>
@@ -136,7 +139,7 @@
 						</div>
 					</div>
 				</div>
-				<?php endforeach ?>			
+				<?php endforeach ?>
 				<!-- END: HOTEL LIST VIEW -->
 			</div>
 			<div class="clearfix"></div>
@@ -165,7 +168,7 @@
  <script>
 
 	/* Price Range Slider */
-	  
+
 	$(function() {
 		"use strict";
 		$( "#price-range" ).slider({

@@ -122,7 +122,7 @@
           <hr>
           <form role="form" action="<?php echo base_url('admin/Hotel/prosesEditFasilitas'); ?>" method="post" enctype="multipart/form-data">
             <?php foreach ($hotel->result() as $hf): ?>
-              <input type="text" name="idhotel" value="<?php echo $h->idhotel; ?>" hidden>
+              <input type="text" name="idhotel" value="<?php echo $hf->idhotel; ?>" hidden>
             <?php endforeach; ?>
             <?php foreach ($daftar_fasilitas->result() as $df): ?>
                 <input class="" id="musholla" type="checkbox" value="<?php echo $df->icon; ?>" name="fasilitas[]"> <i class="<?php echo $df->icon; ?>"></i> <label><?php echo $df->nama_fasilitas; ?></label> <br>
