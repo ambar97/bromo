@@ -1,11 +1,5 @@
 <?php $this->load->view("user/side/head"); ?>
 <?php $this->load->view("user/side/navbar"); ?>
-<div class="row page-title">
-	<div class="container clear-padding text-center flight-title">
-		<h3>GALLERY</h3>
-		<!-- <h4 class="thank">3 Columns</h4> -->
-	</div>
-</div>
 <div class="row gallery-row" style="background-color: white">
 	<div class="container clear-padding">
 		<div class="image-set">

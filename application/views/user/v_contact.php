@@ -1,11 +1,5 @@
 <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
-<div class="row page-title">
-	<div class="container clear-padding text-center flight-title">
-		<h3>CONTACT US</h3>
-		<h4 class="thank">Let's Get Connected</h4>
-	</div>
-</div>
 	<!-- <div class="row"> -->
 	<div class="row about-intro">
 		<div class="container clear-padding">
@@ -15,16 +9,16 @@
 				<div class="row">
 					<?php foreach ($contact->result() as $h): ?>
 					<div class="col-md-6">
-						<p class="thank"><i class="fa fa-envelope-o"></i><a href="" style="color: black"> <?php echo $h->email ?></a></p>
-						<p class="thank"><i class="fa fa-phone"> </i><a href="" style="color: black"><?php echo $h->noTelp ?></a></p>
-						<p class="thank"><i class="fa fa-whatsapp"> </i><a href="" style="color: black"><?php echo $h->noWa ?></a></p>
+						<p class="thank"><i class="fa fa-envelope-o" style="background: red;"></i><a href="" style="color: black"> <small> e-mail :</small>  <?php echo $h->email ?></a></p>
+						<p class="thank"><i class="fa fa-phone" style="background: brown"> </i><a href="" style="color: black"><small> Telp :</small> <?php echo $h->noTelp ?></a></p>
+						<p class="thank"><i class="fa fa-whatsapp" style="background: green"> </i><a href="" style="color: black"><small> WhatsApp :</small> <?php echo $h->noWa ?></a></p>
 						<p class="thank"><i class="fa fa-map-marker"></i><a href="" style="color: black">  <?php echo $h->alamat ?></a></p>
 
 					</div>
 					<div class="col-md-6">
-						<p class="thank"><i class="fa fa-instagram"> </i><a href="" style="color: black">  <?php echo $h->ig ?></a></p>
-						<p class="thank"><i class="fa fa-facebook"> </i><a href="" style="color: black"> <?php echo $h->facebook ?></a></p>
-						<p class="thank"><i class="fa fa-phone"> </i><a href="" style="color: black">  <?php echo $h->idLine ?></a></p>
+						<p class="thank"><i class="fa fa-instagram" style="background: orange"> </i><a href="" style="color: black"> <small> Instagram :</small> <?php echo $h->ig ?></a></p>
+						<p class="thank"><i class="fa fa-facebook" style="background: blue"> </i><a href="" style="color: black"><small> Facebook :</small> <?php echo $h->facebook ?></a></p>
+						<p class="thank"><i class="fa fa-phone" style="background: green"> </i><a href="" style="color: black"> <small> line :</small> <?php echo $h->idLine ?></a></p>
 						
 					</div>
 					<hr>
@@ -63,9 +57,9 @@
 	<!-- END: CONTACT-US -->
 	<!-- START: MAP & CONTACT FORM -->
 	<div class="row" style="background-color: white">
-		<div class="container clear-padding">
+		<div class="">
 			<div class="col-md-12 col-sm-12">
-				<iframe class="contact-map" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJG1usnet4BTkRzQqb_Ys-JOg&amp;key=AIzaSyB6hgZM-ruUqTPVUjXGUR-vv7WRqc4MXjY"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.3128206512242!2d113.22528136614838!3d-7.756609238691254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDUnMjMuOCJTIDExM8KwMTMnMzYuNiJF!5e0!3m2!1sid!2sid!4v1573670566979!5m2!1sid!2sid"  height="450" frameborder="0" width="100%" style="border:0;" allowfullscreen=""></iframe>
 			</div>
 			
 		</div>

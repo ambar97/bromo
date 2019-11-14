@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="LimpidThemes">
 
-    <title>Cruise - Responsive Travel Agency Template</title>
+    <title>SunsetView</title>
 
     <!-- STYLES -->
     <link href="<?php echo base_url() ?>master/client/assets/css/animate.min.css" rel="stylesheet">

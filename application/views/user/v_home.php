@@ -5,39 +5,19 @@
 <section>
     <div class="row full-width-search ">
         <div class="container clear-padding">
-
-
-
             <div class="offer-slider">
-
                 <div class="owl-carousel col-md-12 text-center" id="offer1" >
+                <?php foreach ($slider->result() as $slidere): ?>
                   <div class="item">
-                    <h3>Hong Kong Fun</h3>
-                    <h4>Starting From $599/Person</h4>
-                    <a href="#">KNOW MORE</a>
+                    <h3><?php echo $slidere->deskripsi ?></h3>
+                    <h4><?php echo $slidere->tag ?></h4>
                   </div>
-                  <div class="item">
-                    <h3>Romantic Paris</h3>
-                    <h4>Starting From $999/Person</h4>
-                    <a href="#">KNOW MORE</a>
-                  </div>
-                  <div class="item">
-                    <h3>Sky High Dubai</h3>
-                    <h4>Starting From $399/Person</h4>
-                    <a href="#">KNOW MORE</a>
-                  </div>
-                  <div class="item">
-                    <h3>Sky High Dubai</h3>
-                    <h4>Starting From $399/Person</h4>
-                    <a href="#">KNOW MORE</a>
-                  </div>
-                  <div class="item">
-                    <h3>Sky High Dubai</h3>
-                    <h4>Starting From $399/Person</h4>
-                    <a href="#">KNOW MORE</a>
+                <?php endforeach ?>
+                <div class="item">
+                    <h3>Wes Goblok</h3>
+                    <h4>Ngepush</h4>
                   </div>
                 </div>
-
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-8" style="padding-top: 5px;padding-bottom:10px;border: 1px solid white;border-radius: 10px;background:white;min-height:50px;margin-top:50px;">
@@ -254,9 +234,9 @@
                     slide_counter           :   1,      //Display slide numbers
                     slide_captions          :   1,      //Slide caption (Pull from "title" in slides array)
                     slides                  :   [       //Slideshow Images
-                                                        {image : '<?php echo base_url() ?>master/client/assets/images/bromo1.jpg', title : 'Slide 1'},
-                                                        {image : '<?php echo base_url() ?>master/client/assets/images/bromo2.jpg', title : 'Slide 2'},
-                                                        {image : '<?php echo base_url() ?>master/client/assets/images/bromo0.jpg', title : 'Slide 3'},
+                                                        <?php foreach ($slider->result() as $slidere) { ?>
+                                                        {image : '<?php echo base_url().$slidere->gambar ?>', title : 'Slide 1'},
+                                                        <?php } ?>
                                                 ]
 
                 });

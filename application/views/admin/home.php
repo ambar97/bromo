@@ -5,11 +5,11 @@
 		<div class="header-body">
 			<div class="row align-items-center py-4">
 				<div class="col-lg-6 col-7">
-					<h6 class="h2 text-white d-inline-block mb-0">Gallery</h6>
+					<h6 class="h2 text-white d-inline-block mb-0">Home</h6>
 					<nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
 						<ol class="breadcrumb breadcrumb-links breadcrumb-dark">
 							<li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-							<li class="breadcrumb-item"><a href="#">Gallery</a></li>
+							<li class="breadcrumb-item"><a href="#">Slider</a></li>
 						</ol>
 					</nav>
 				</div>
@@ -19,20 +19,24 @@
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h4 class="modal-title">Modal title</h4>
+									<h4 class="modal-title">New Slider</h4>
 									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 										<i class="fa fa-close"></i>
 									</button>
 								</div>
-								<form action="<?php echo base_url('admin/Galery/tamfoto') ?>" method="post" enctype="multipart/form-data">
+								<form action="<?php echo base_url('admin/Dashboard/insertSlider') ?>" method="post" enctype="multipart/form-data">
 									<div class="modal-body">
 										<div class="form-grup">
-											<label>Deskripsi Galery</label>
-											<textarea class="form-control" name="desk"></textarea>
+											<label>Judul Slider</label>
+											<input type="text" name="judul" class="form-control" required="">
+										</div><br>
+										<div class="form-grup">
+											<label>Deskripsi slider</label>
+											<textarea class="form-control" name="isi" required=""></textarea>
 										</div><br>
 										<div class="form-grup">
 											<label>Foto</label>
-											<input type="file" name="ght" class="form-control">
+											<input type="file" name="ght" class="form-control" required="">
 										</div>
 									</div>
 									<div class="modal-footer">
@@ -58,9 +62,9 @@
             <img class="card-img-top" src="<?php echo base_url().$hj->gambar?>" alt="Image placeholder" style=" padding: 5px; height: 200px; border-radius: 10px;" >
             <div class="card-body">
               <h5 class="card-title mb-0"><?php echo $hj->deskripsi ?></h5>
-              <!-- <small class="text-muted">by John Snow on Oct 29th at 10:23 AM</small> -->
+              <small class="text-muted"><?php echo $hj->tag ?></small>
               <p></p>
-              <a href="<?php echo base_url('admin/Galery/hapusGambar/'.$hj->idgalery) ?>" type="button" onclick="javascript: return confirm('Anda Yakin Akan ingin memvalidasi pembayaran ?')" class="btn  btn-danger">Hapus</a>
+              <a href="<?php echo base_url('admin/Dashboard/hapusGal/'.$hj->idgalery) ?>" type="button" onclick="javascript: return confirm('Anda Yakin Akan ingin memvalidasi pembayaran ?')" class="btn  btn-danger">Hapus</a>
             </div>
           </div>
 				</div>
@@ -68,6 +72,8 @@
 		</div>
 	</div>
 </div>
+<hr>
+<div></div>
 <?php $this->load->view('admin/side/footer') ?>
 <?php $this->load->view('admin/side/js') ?>
 <!-- Argon JS -->
