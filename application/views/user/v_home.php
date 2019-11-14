@@ -14,8 +14,8 @@
                   </div>
                 <?php endforeach ?>
                 <div class="item">
-                    <h3>Wes Goblok</h3>
-                    <h4>Ngepush</h4>
+                    <h3>SunsetView</h3>
+                    <h4>Jasa Untuk Perjalan Wisata Anda</h4>
                   </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                   </div>
                 </div>
                 <div class="col-md-3 col-sm-3 search-col-padding">
-                  <button type="button" style="padding:1px;border-radius:10px;" class="search-button btn btn-sm form-control transition-effect">GO</button>
+                  <button type="button" style="padding:1px;border-radius:10px;" class="search-button btn btn-sm form-control transition-effect">LETS GO</button>
                 </div>
 
 

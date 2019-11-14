@@ -47,10 +47,10 @@
               </div>
             </div>
             <div class="row">
-            <div class="form-group col-lg-6">
+            <!-- <div class="form-group col-lg-6">
               <label class="form-control-label" for="exampleFormControlInput1">No Telp</label>
               <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="No Telp" name="noTelp" required="">
-            </div>
+            </div> -->
             <div class="form-group col-lg-6">
               <label class="form-control-label" for="exampleFormControlInput1">Rating</label>
               <input type="number" class="form-control" id="exampleFormControlInput1" max="5" placeholder="0" name="rating" required="">
