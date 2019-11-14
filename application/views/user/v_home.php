@@ -66,7 +66,7 @@
                 <h2 style="margin-bottom:50px">Popular Tour Packages</h2>
             </div>
             <div class="radius owl-carousel" id="post-list">
-                <?php foreach ($paket as $aket): ?>   
+                <?php foreach ($paket as $aket): ?>
                 <div class="radius room-grid-view wow slideInUp" data-wow-delay="0.1s">
                     <?php $id = $aket->idpaket_wisata; ?>
                 <?php $sd = $this->M_paket->selectlimit($id)->result(); ?>
