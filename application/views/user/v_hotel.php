@@ -59,48 +59,11 @@
 <div class="row" style="background-color: white">
 	<div class="container">
 		<!-- START: FILTER AREA -->
-		<!-- <div class="col-md-3 clear-padding">
+		<div class="col-md-3 clear-padding">
 			<div class="filter-head text-center">
-				<h4>25 Result Found Matching Your Search.</h4>
+				<h4>Filter Search</h4>
 			</div>
 			<div class="filter-area">
-				<div class="price-filter filter">
-					<h5><i class="fa fa-usd"></i> Price</h5>
-					<p>
-						<label></label>
-						<input type="text" id="amount" readonly>
-					</p>
-					<div id="price-range"></div>
-				</div>
-				<div class="name-filter filter">
-					<h5><i class="fa fa-bed"></i> Hotel Name</h5>
-					<div class="input-group margin-bottom-sm">
-						<input type="text" name="destination_city" class="form-control" required placeholder="E.g. Shimla">
-						<span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
-					</div>
-				</div>
-				<div class="star-filter filter">
-					<h5><i class="fa fa-star"></i> Star</h5>
-					<ul>
-						<li><input type="checkbox"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></li>
-						<li><input type="checkbox"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></li>
-						<li><input type="checkbox"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></li>
-						<li><input type="checkbox"> <i class="fa fa-star"></i><i class="fa fa-star"></i></li>
-						<li><input type="checkbox"> <i class="fa fa-star"></i></li>
-						<li><input type="checkbox"> <i class="fa fa-star"></i> Any</li>
-					</ul>
-				</div>
-				<div class="location-filter filter">
-					<h5><i class="fa fa-map-marker"></i> Location</h5>
-					<ul>
-						<li><input type="checkbox"> Sanjoli</li>
-						<li><input type="checkbox"> Shimla</li>
-						<li><input type="checkbox"> Mall Road</li>
-						<li><input type="checkbox"> New Shimla</li>
-						<li><input type="checkbox"> Summer Hill</li>
-						<li><input type="checkbox"> Shimla</li>
-					</ul>
-				</div>
 				<div class="facilities-filter filter">
 					<h5><i class="fa fa-list"></i> Hotel Facilities</h5>
 					<ul>
@@ -113,11 +76,11 @@
 					</ul>
 				</div>
 			</div>
-		</div> -->
+		</div>
 		<!-- END: FILTER AREA -->
 
 		<!-- START: INDIVIDUAL LISTING AREA -->
-		<div class="col-md-12 hotel-listing">
+		<div class="col-md-9 hotel-listing">
 
 			<!-- START: SORT AREA -->
 			<div class="sort-area col-sm-10">
@@ -172,7 +135,7 @@
                 <?php $id = $h->idhotel; ?>
                 <?php $gambar = $this->M_hotel->selectlimit($id); ?>
                   <?php foreach ($gambar->result() as $vb): ?>
-                    <img src="<?php echo base_url() ?>gallery/hotel/<?php echo $vb->gambar; ?>" alt="cruise">
+                    <img src="<?php echo base_url(); ?>gallery/hotel/<?php echo $vb->gambar; ?>" alt="cruise">
                   <?php endforeach; ?>
   						</div>
   						<div class="col-md-6 col-sm-6 hotel-info">
@@ -205,7 +168,7 @@
   									<h5>Rp. <?php echo number_format($h->harga) ; ?> Avg/Night</h5>
   								</div>
   								<div class="book">
-  									<a href="#">BOOK</a>
+  									<a href="<?php echo base_url('Hotel/detailHotel/'.$h->idhotel); ?>">BOOK</a>
   								</div>
   							</div>
   						</div>

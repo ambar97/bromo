@@ -38,7 +38,7 @@
               <div class="row">
                 <div class="col-lg-6">
                   <label class="form-control-label" for="exampleFormControlInput1">Nama Destination</label>
-                  <input type="hidden" name="idN" value="<?php echo $wisata->idwisata ?>">
+                  <input type="hidden" name="idN" value="<?php echo $wisata->idwisata; ?>">
                   <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama Destination" name="nama" required="" value="<?php echo $wisata->nama_wisata; ?>">
                   <?php $id = $wisata->idwisata; ?>
                 </div>

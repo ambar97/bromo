@@ -5,6 +5,7 @@ class Hotel extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
+		$this->load->model('M_hotel');
 		$this->load->library('upload');
 	}
 
@@ -15,8 +16,6 @@ class Hotel extends CI_Controller {
 	}
 
 	public function editHotel(){
-		$this->load->model('M_model');
-		$this->load->model('M_hotel');
 		$id = $this->uri->segment(4);
 		$data['hotel'] = $this->M_model->selectwhere('hotel', array('idhotel'=>$id));
 		$data['gallery'] = $this->M_model->selectwhere('galery', array('hotel_idhotel'=>$id, 'wisata_idwisata'=>NULL, 'paket_idpaket'=>NULL));
@@ -26,7 +25,6 @@ class Hotel extends CI_Controller {
 	}
 
 	public function prosesEditHotel(){
-    $this->load->model('M_model');
 		$id = $this->input->post('idhotel');
 		$data['idhotel']=$id;
 		$data['nama_hotel']=$this->input->post('nama_hotel');
@@ -51,7 +49,6 @@ class Hotel extends CI_Controller {
 	}
 
 	public function prosesEditFasilitas(){
-		$this->load->model('M_model');
 		$id = $this->input->post('idhotel');
 		$this->M_model->delete(array('id_hotel'=>$id), 'fasilitas');
 		$isifasil = $this->input->post('fasilitas');
@@ -64,7 +61,6 @@ class Hotel extends CI_Controller {
 	}
 
 	public function prosesHapusHotel(){
-		$this->load->model('M_model');
 		$id = $this->uri->segment(4);
 		$deletebyidhotel = array('idhotel'=>$id);
 		$deletebyidgambar = array('hotel_idhotel'=>$id);
@@ -74,12 +70,12 @@ class Hotel extends CI_Controller {
 	}
 
 	public function prosesHapusGambar(){
-		$this->load->model('M_model');
 		$id = $this->uri->segment(4);
 		$deletebyname = array('gambar'=>$id);
+		$idEdit = substr($id, 0, 1);
 		// unlink(base_url().'gallery/hotel/'.$deletebyname);
 		$this->M_model->delete($deletebyname, 'galery');
-		return redirect(base_url('admin/Hotel/'));
+		return redirect(base_url('admin/Hotel/').$idEdit);
 	}
 
 	public function insertHotel(){
@@ -88,7 +84,6 @@ class Hotel extends CI_Controller {
 	}
 
 	public function prosesInsertHotel(){
-		$this->load->model('M_model');
 		$data['idhotel']=$id;
 		$data['nama_hotel']=$this->input->post('nama_hotel');
 		$data['rating']=$this->input->post('rating');
@@ -104,6 +99,7 @@ class Hotel extends CI_Controller {
 		}
 		$config['upload_path']          = 'gallery/hotel';
 		$config['allowed_types']        = 'gif|jpg|png';
+		$config['file_name']						= $id.$data['nama_hotel'];
 
 		$this->upload->initialize($config);
 		if ( $this->upload->do_upload('gambar')){

@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class PaketWisata extends CI_Controller {
 
+	function __construct(){
+		parent::__construct();
+		$this->load->model('M_hotel');
+		$this->load->library('upload');
+	}
+
 	public function index(){
 		$this->load->model('M_model');
 		$data['paket'] = $this->M_model->select('paket_wisata');
