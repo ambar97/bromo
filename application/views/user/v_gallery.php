@@ -1,7 +1,7 @@
 <?php $this->load->view("user/side/head"); ?>
 <?php $this->load->view("user/side/navbar"); ?>
 <div class="contact-form">
-	
+
 <h2 class="text-center">GALLERY OF SUNSETVIEW</h2>
 </div>
 <div class="row gallery-row" style="background-color: white">
@@ -30,23 +30,21 @@
 </body>
 </html>
 <?php foreach ($lery->result() as $ler): ?>
-<div class="modal fade" id="myModal<?php echo $ler->idgalery ?>" tabindex="-1" role="dialog" style="margin-top: 100px; border-radius: 50px;" aria-labelledby="myModalLabel" aria-hidden="true" >
-	<div class="modal-dialog">
+<div class="modal fade bd-example-modal-lg" id="myModal<?php echo $ler->idgalery ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
-				<div class="modal-body" style="height: 400px; ">
+				<div class="modal-body">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 					<i class="fa fa-close"></i>
 					</button>
-					<div class="row" style="margin-top: 10px">
-						<div class="col-sm-12">
-					<img src="<?php echo base_url().$ler->gambar ?>" alt="Cruise" style="border-radius: 20px; height: 250px; width: 100%;">
-							
+					<div class="row">
+						<div class="col-sm-9">
+					<img class="img-responsive" src="<?php echo base_url().$ler->gambar ?>" alt="Cruise">
 						</div>
-						
+						<div class="col-sm-3">
+								<blockquote><small><?php echo $ler->deskripsi ?></small></blockquote>
+						</div>
 					</div>
-					<div class="col-sm-12" style="margin-top: 20px;">
-							<blockquote><small><?php echo $ler->deskripsi ?></small></blockquote>
-						</div>
 				</div>
 		</div>
 	</div>
