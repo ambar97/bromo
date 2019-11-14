@@ -14,10 +14,6 @@
 	}
 </style>
 <?php $this->load->view("user/side/navbar"); ?>
-<!-- START: PAGE TITLE -->
-<!-- END: PAGE TITLE -->
-
-<!-- START: BOOKING TAB -->
 <div class="row booking-tab">
 	<div class="container clear-padding">
 		<ul class="nav nav-tabs">

@@ -55,7 +55,7 @@ class Login extends CI_Controller {
 		if($cek > 0){
 			$data_session = array(
 				'id' => $cek1->idusers,
-				'nama'=>$cek1->nama,
+				'namauser'=>$cek1->nama,
 				'status' => "loginUser"
 				);
  			
