@@ -15,6 +15,7 @@ class Home extends CI_Controller {
 		$this->load->view('user/v_home',$data);
 	}
 	public function profile(){
+		
 		$this->load->view('user/profile');
 	}
 
