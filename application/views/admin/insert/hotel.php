@@ -41,7 +41,7 @@
                </div>
                <div class="col-lg-6">
                  <label class="form-control-label" for="exampleFormControlInput1">Rating</label>
-                 <input type="number" max="5" min="1" class="form-control" id="exampleFormControlInput1" placeholder="Minimal Rating = 1" name="harga" required="">
+                 <input type="number" max="5" min="1" class="form-control" id="exampleFormControlInput1" placeholder="Minimal Rating = 1" name="rating" required="">
                </div>
              </div>
            </div>

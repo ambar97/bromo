@@ -80,14 +80,14 @@
 			<div class="clearfix"></div>
 			<!-- START: HOTEL LIST VIEW -->
 			<div class="switchable col-md-12 clear-padding">
-				<?php foreach ($destinasi as $des): ?>
+				<?php foreach ($destinasi->result() as $des): ?>
 				<div  class="hotel-list-view " style="border-radius: 10px; max-height:200px;" >
 					<div class="wrapper">
 						<div class="col-md-4 col-sm-6 switch-img clear-padding" style="border-radius: 10px; ">
               <?php $id = $des->idwisata; ?>
               <?php $gambar = $this->M_wisata->selectlimit($id); ?>
               <?php foreach ($gambar->result() as $g): ?>
-                <img src="<?php echo base_url().'gallery/wisata/'.$des->gambar; ?>" style="border-radius: 30px; min-height: 200px;" alt="cruise">
+                <img src="<?php echo base_url().'gallery/wisata/'.$g->gambar; ?>" style="border-radius: 30px; min-height: 200px;" alt="cruise">
               <?php endforeach; ?>
 						</div>
 						<div class="col-md-6 col-sm-6 hotel-info" >
@@ -132,7 +132,7 @@
 									<h5>Rp. <?php echo number_format($des->harga) ?>/Person</h5>
 								</div> -->
 								<div class="book">
-									<a href="#" style="border-radius: 10px;">BOOK</a>
+									<a href="<?php echo base_url('Wisata/detailWisata/').$des->idwisata; ?>" style="border-radius: 10px;">BOOK</a>
 								</div>
 							</div>
 						</div>
