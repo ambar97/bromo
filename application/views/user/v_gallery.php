@@ -38,15 +38,15 @@
 					<i class="fa fa-close"></i>
 					</button>
 					<div class="row" style="margin-top: 10px">
-						<div class="col-sm-12">
+						<div class="col-sm-6">
 					<img src="<?php echo base_url().$ler->gambar ?>" alt="Cruise" style="border-radius: 20px; height: 250px; width: 100%;">
 							
 						</div>
 						
-					</div>
-					<div class="col-sm-12" style="margin-top: 20px;">
+					<div class="col-sm-6" style="margin-top: 20px;">
 							<blockquote><small><?php echo $ler->deskripsi ?></small></blockquote>
 						</div>
+					</div>
 				</div>
 		</div>
 	</div>

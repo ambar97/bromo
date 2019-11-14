@@ -20,9 +20,7 @@ function __construct(){
 	}
 
 	public function bookingW(){
-		$id = $this->uri->segment(3);
-		$data = $this->M_model->selectwhere('desBook',array('iduser'=>$id));
-		$this->load->view('user/booking/single',$data);
+		$this->load->view('user/booking/single');
 	}
 	public function bookingST(){
 
