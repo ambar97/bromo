@@ -273,11 +273,11 @@
                       <div class="holiday-img">
                         <img src="<?php echo base_url().$value->gambar?>" alt="cruise" width="100%" style="min-height:200px">
                       </div>
-                      <div class="detail detail-wisata">
+                      <div class="detail detail-wisata_<?php echo $value->idwisata?>">
                         <a href="#" class="sss" no="<?php echo $value->idwisata?>"><i class="add_wisata fa fa-plus"></i></a>
                       </div>
-                      <div class="holiday-select">
-                        <a href="#" ><i class="remove_wisata fa fa-check"></i></a>
+                      <div class="holiday-select holiday-select_<?php echo $value->idwisata?>">
+                        <a href="#" ><i class="remove_wisata?> fa fa-check"></i></a>
                       </div>
                       <div class="holiday-price">
                         <h4>$<?php echo $value->harga?></h4>
