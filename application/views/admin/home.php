@@ -10,6 +10,7 @@
 						<ol class="breadcrumb breadcrumb-links breadcrumb-dark">
 							<li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
 							<li class="breadcrumb-item"><a href="#">Slider</a></li>
+							<small style="color: white">Gambar Slider minimal harus ada 2, jika tidak maka slider di home tidak akan keluar</small>
 						</ol>
 					</nav>
 				</div>
