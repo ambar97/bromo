@@ -15,7 +15,7 @@ class Destination extends CI_Controller {
 	}
 
 	public function tambahWisata(){
-		$data['daftar_fasilitas'] = $this->M_model->selectwhere('daftar_fasilitas', array('id_wisata'=>1));
+		$data['daftar_fasilitas'] = $this->M_model->select('daftar_fasilitas');
 		$this->load->view('admin/insert/wisata', $data);
 	}
 
@@ -49,8 +49,25 @@ class Destination extends CI_Controller {
 		redirect(base_url('admin/Destination'));
 	}
 
+	public function editFasilitas(){
+		$data['fasilitas'] = $this->M_model->select('daftar_fasilitas');
+		$this->load->view('admin/edit/editFasilitas', $data);
+	}
+
+	public function prosesTambahFasilitas(){
+		$data['icon'] = $this->input->post('icon');
+		$data['nama_fasilitas'] = $this->input->post('nama_fasilitas');
+		$this->M_model->insert('daftar_fasilitas', $data);
+		return redirect(base_url('admin/Destination/editFasilitas'));
+	}
+
+	public function  prosesHapusFasilitas(){
+		$id = $this->uri->segment(4);
+		$this->M_model->delete(array('id_fasilitas'=>$id), 'daftar_fasilitas');
+		return redirect(base_url('admin/Destination/editFasilitas'));
+	}
+
 	public function prosesEditFasilitas(){
-		$this->load->model('M_model');
 		$id = $this->input->post('idwisata');
 		$this->M_model->delete(array('id_wisata'=>$id), 'fasilitas');
 		$isifasil = $this->input->post('fasilitas');
@@ -85,7 +102,7 @@ class Destination extends CI_Controller {
 		$data['wisata']=$this->M_model->selectwhere('wisata', array('idwisata'=>$id));
 		$data['gallery'] = $this->M_model->selectwhere('galery', array('wisata_idwisata'=>$id, 'hotel_idhotel'=>NULL, 'paket_idpaket'=>NULL));
 		$data['fasilitas'] = $this->M_wisata->editFasilitas($id);
-		$data['daftar_fasilitas'] = $this->M_model->selectwhere('daftar_fasilitas', array('id_wisata'=>1));
+		$data['daftar_fasilitas'] = $this->M_model->select('daftar_fasilitas');
 		$this->load->view('admin/edit/wisata',$data);
 	}
 	// public function update(){

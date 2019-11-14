@@ -33,8 +33,10 @@
               <h3 class="mb-0">Data Single Tour</h3>
               <p class="text-sm mb-0">
                 Klik <i>tombol Tambah Single Tour</i> untuk menambah data baru.
+                Klik <i>tombol Kelola Daftar Fasilitas</i> untuk mengatur daftar fasilitas.
               </p>
               <a href="<?php echo base_url('admin/Destination/tambahWisata') ?>" class="btn btn-primary">Tambah Single Tour</a>
+              <a href="<?php echo base_url('admin/Destination/editFasilitas') ?>" class="btn btn-primary">Kelola Daftar Fasilitas</a>
             </div>
             <div class="table-responsive py-4">
               <table class="table table-flush" id="datatable-basic">
