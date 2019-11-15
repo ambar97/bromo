@@ -36,9 +36,9 @@
               <a class="btn btn-primary text-white" href="<?php echo base_url('admin/PaketWisata/insertPaket'); ?>">Tambah package Tour</a>
             </div>
             <div class="card-body">
-              <div class="table-responsive">
-                <table class="table">
-                  <thead class=" text-primary">
+              <div class="table-responsive py-4">
+              <table class="table table-flush" id="datatable-basic">
+                <thead class="thead-light">
                     <th>
                       ID
                     </th>
@@ -65,8 +65,8 @@
                           <?php echo number_format($h->harga); ?>
                         </td>
                         <td>
-                          <a class="btn btn-warning" href="<?php echo base_url('admin/PaketWisata/editPaket/'.$h->idpaket_wisata); ?>">Edit</a>
-                          <a class="btn btn-danger" href="<?php echo base_url('admin/PaketWisata/prosesHapusPaket/'.$h->idpaket_wisata); ?>">Hapus</a>
+                          <a class="btn btn-warning btn-sm" title="Edit" href="<?php echo base_url('admin/PaketWisata/editPaket/'.$h->idpaket_wisata); ?>"><i class="fa fa-brush"></i></a>
+                          <a class="btn btn-danger btn-sm" title="Hapus" href="<?php echo base_url('admin/PaketWisata/prosesHapusPaket/'.$h->idpaket_wisata); ?>" ><i class="fa fa-trash"></i></a>
                         </td>
                       </tr>
                     <?php endforeach; ?>
@@ -82,7 +82,15 @@
 
  <?php $this->load->view('admin/side/footer') ?>
  <?php $this->load->view('admin/side/js') ?>
- <!-- Argon JS -->
- <script src="<?php echo base_url()?>master/assets/js/argon.min9f1e.js?v=1.1.0"></script>
+   <script src="<?php echo base_url()?>master/assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-buttons/js/buttons.html5.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-buttons/js/buttons.flash.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-buttons/js/buttons.print.min.js"></script>
+  <script src="<?php echo base_url()?>master/assets/vendor/datatables.net-select/js/dataTables.select.min.js"></script>
+  <!-- Argon JS -->
+<script src="<?php echo base_url()?>master/assets/js/argon.min9f1e.js?v=1.1.0"></script>
 </body>
 </html>

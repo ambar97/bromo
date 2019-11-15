@@ -7,13 +7,14 @@ class Home extends CI_Controller {
 	{
 	    parent::__construct();
 			$this->load->model("M_home");
-			$this->load->library("cart");
+			$this->load->model("M_wisata");
 	}
 
 	public function index(){
 		$data['paket']=$this->M_model->select('paket_wisata')->result();
 		$data['wisata']=$this->M_home->get_wisata();
 		$data['slider']=$this->M_model->selectwhere('galery',array('tipe'=>'slider'));
+		$data['limitwisata']=$this->M_wisata->showlimit()->result();
 		$this->load->view('user/v_home',$data);
 	}
 	public function hapusGal(){

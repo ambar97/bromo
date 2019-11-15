@@ -1,4 +1,5 @@
  <?php $this->load->model('M_paket'); ?>
+ <?php $this->load->model('M_wisata'); ?>
  <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
 
@@ -89,7 +90,7 @@
                                 <h5><i class="fa fa-star gold"></i> 2 <i class="fa fa-user"></i> 2</h5>
                             </div>
                             <div class="col-md-4 col-sm-6 col-xs-6 clear-padding">
-                                <a href="#" class="text-center">MORE</a>
+                                <a href="<?php echo base_url('PaketWisata/detailPaket/'.$aket->idpaket_wisata) ?>" class="text-center">DETAIL</a>
                             </div>
                         </div>
                         <div style="border-radius: 10px;" class="clearfix"></div>
@@ -156,41 +157,19 @@
                     <div style="border-radius: 10px;" role="tabpanel" class="tab-pane active fade in" id="tab1">
 
                         <div style="border-radius: 10px;" class="col-md-12 hot-deal-grid wow slideInRight">
+                          <?php foreach ($limitwisata as $limit): ?>
                             <div style="border-radius: 10px;" class="col-sm-4 item">
                                 <div  style="border-radius: 10px;" class="wrapper">
-                                    <img style="min-height:300px;width:100%" src="<?php echo base_url() ?>master/client/assets/images/tour1.jpg" alt="Cruise">
-                                    <h5>Paris </h5>
-                                    <a href="#">DETAILS</a>
+                                  <?php $id = $limit->idwisata; ?>
+                <?php $sd = $this->M_wisata->selectlimit($id)->result(); ?>
+                <?php foreach ($sd as $huy): ?>
+                                    <img style="min-height:300px;width:100%" src="<?php echo base_url().'gallery/wisata/'.$huy->gambar ?>" alt="Cruise">
+                                  <? endforeach ?>
+                                    <h5><?php echo $limit->nama_wisata ?></h5>
+                                    <a href="<?php echo base_url('Wisata/detailWisata/'.$limit->idwisata) ?>">DETAILS</a>
                                 </div>
                             </div>
-                            <div style="border-radius: 10px;" class="col-sm-4 item">
-                                <div style="border-radius: 10px;" class="wrapper">
-                                    <img style="min-height:300px;width:100%" class="radius" src="<?php echo base_url() ?>master/client/assets/images/tour2.jpg" alt="Cruise">
-                                    <h5>Bangkok </h5>
-                                    <a href="#">DETAILS</a>
-                                </div>
-                            </div>
-                            <div style="border-radius: 10px;" class="col-sm-4 item">
-                                <div style="border-radius: 10px;" class="wrapper">
-                                    <img  style="min-height:300px;width: 100%" src="<?php echo base_url() ?>master/client/assets/images/tour3.jpg" alt="Cruise">
-                                    <h5>Dubai </h5>
-                                    <a href="#">DETAILS</a>
-                                </div>
-                            </div>
-                            <div style="border-radius: 10px;" class="col-sm-4 item">
-                                <div style="border-radius: 10px;" class="wrapper">
-                                    <img style="min-height:300px;width:100%" src="<?php echo base_url() ?>master/client/assets/images/tour4.jpg" alt="Cruise">
-                                    <h5>Italy </h5>
-                                    <a href="#">DETAILS</a>
-                                </div>
-                            </div>
-                            <div style="border-radius: 10px;" class="col-sm-4 item">
-                                <div style="border-radius: 10px; " class="wrapper">
-                                    <img style="min-height:300px" src="<?php echo base_url() ?>master/client/assets/images/bromo0.jpg" alt="Cruise">
-                                    <h5>Bromo </h5>
-                                    <a href="#">DETAILS</a>
-                                </div>
-                            </div>
+                          <?php endforeach ?>
                         </div>
                     </div>
 
@@ -267,7 +246,6 @@
 <div class="modal fade" id="destination" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-
       <div class="modal-body">
         <div class="row col-md-12">
           <?php foreach ($wisata as $value): ?>

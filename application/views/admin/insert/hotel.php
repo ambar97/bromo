@@ -1,6 +1,6 @@
 <?php $this->load->view("admin/side/head"); ?>
 <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/select2/dist/css/select2.min.css">
-<link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/quill/dist/quill.core.css">
+<link href="<?php echo base_url('master/summernote/summernote.css'); ?>" rel="stylesheet">
 <?php $this->load->view("admin/side/navbar"); ?>
 <div class="header bg-primary pb-6">
  <div class="container-fluid">
@@ -46,26 +46,31 @@
              </div>
            </div>
            <div class="row">
-           <div class="form-group col-lg-6">
-             <label class="form-control-label" for="exampleFormControlInput1">Deskripsi</label>
-             <textarea data-toggle="quill" data-quill-placeholder="" class="form-control" name="deskripsi" rows="8" cols="80"></textarea>
+             <div class="form-group col-lg-6">
+               <label class="form-control-label" for="exampleFormControlInput1">Harga</label>
+               <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Rp. 123xxx" name="harga" required="">
+             </div>
            </div>
-           <div class="form-group col-lg-6">
-             <label class="form-control-label" for="exampleFormControlInput1">Harga</label>
-             <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Rp. 123xxx" name="harga" required="">
+           <div class="row">
+           <div class="form-group col-lg-12">
+             <label class="form-control-label" for="exampleFormControlInput1">Deskripsi</label>
+             <textarea id="summernote" name="deskripsi"></textarea>
            </div>
          </div>
          <div class="row">
-           <div class="form-group col-lg-6">
+           <div class="form-group col-lg-12">
             <label class="form-control-label" for="exampleFormControlInput1">Fasilitas</label><br>
             <?php foreach ($daftar_fasilitas->result() as $df): ?>
                 <input class="" id="musholla" type="checkbox" value="<?php echo $df->icon; ?>" name="fasilitas[]"> <i class="<?php echo $df->icon; ?>"></i> <label><?php echo $df->nama_fasilitas; ?></label> <br>
             <?php endforeach; ?>
             </div>
+          </div>
+          <div class="row">
             <div class="form-group col-lg-6">
               <label class="form-control-label" for="exampleFormControlInput1">Foto</label>
               <input type="file" name="gambar" class="form-control">
             </div>
+          </div>
          <hr>
          <div>
            <button class="btn btn-icon btn-primary float-right" type="submit" name="btnSimpan">
@@ -86,7 +91,14 @@
 <script src="<?php echo base_url()?>master/assets/vendor/select2/dist/js/select2.min.js"></script>
 <script src="<?php echo base_url()?>master/assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
 <script src="<?php echo base_url()?>master/assets/js/argon.min9f1e.js?v=1.1.0"></script>
-
+<script src="<?php echo base_url('master/summernote/summernote.js'); ?>"></script>
+<script>
+	$('#summernote').summernote({
+		placeholder: 'Edit di sini',
+		tabsize: 2,
+		height: 500
+	});
+</script>
 <?php if ($this->session->flashdata()) { ?>
  <?php echo $this->session->flashdata('Pesan'); ?>
 <?php } ?>

@@ -79,7 +79,7 @@
               <?php $id = $des->idwisata; ?>
               <?php $gambar = $this->M_wisata->selectlimit($id); ?>
               <?php foreach ($gambar->result() as $g): ?>
-                <img src="<?php echo base_url().'gallery/wisata/'.$g->gambar; ?>" style="border-radius: 30px; min-height: 200px;" alt="cruise">
+                <img class="img-responsive" src="<?php echo base_url().'gallery/wisata/'.$g->gambar; ?>" style="border-radius: 30px;" alt="cruise">
               <?php endforeach; ?>
 						</div>
 						<div class="col-md-6 col-sm-6 hotel-info" >
@@ -135,7 +135,7 @@
 			</div>
 			<div class="clearfix"></div>
 			<!-- START: PAGINATION -->
-			<div class="bottom-pagination">
+			<!-- <div class="bottom-pagination">
 				<nav class="pull-right">
 					<ul class="pagination pagination-lg">
 						<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
@@ -148,7 +148,7 @@
 						<li><a href="#" aria-label="Previous"><span aria-hidden="true">&#187;</span></a></li>
 					</ul>
 				</nav>
-			</div>
+			</div> -->
 			<!-- END: PAGINATION -->
 		</div>
 	</div>

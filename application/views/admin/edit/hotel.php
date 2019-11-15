@@ -1,6 +1,6 @@
 <?php $this->load->view("admin/side/head"); ?>
 <?php $this->load->view("admin/side/navbar");?>
-
+<link href="<?php echo base_url('master/summernote/summernote.css'); ?>" rel="stylesheet">
 
 <div class="header bg-primary pb-6">
  <div class="container-fluid">
@@ -44,7 +44,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Deskripsi</label><br>
-                    <textarea name="deskripsi" data-toggle="quill" data-quill-placeholder="" class="form-control" ><?php echo $h->deskripsi; ?></textarea>
+                    <textarea name="deskripsi" id="summernote"><?php echo $h->deskripsi; ?></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Harga</label>
@@ -106,13 +106,6 @@
  <?php $this->load->view('admin/side/js') ?>
  <!-- Argon JS -->
  <script src="<?php echo base_url()?>master/assets/js/argon.min9f1e.js?v=1.1.0"></script>
- <script>
-       $('#summernote').summernote({
-         placeholder: 'Hello stand alone ui',
-         tabsize: 2,
-         height: 100
-       });
-     </script>
 </body>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 	<div class="modal-dialog">
@@ -134,4 +127,12 @@
 		</div>
 	</div>
 </div>
+<script src="<?php echo base_url('master/summernote/summernote.js'); ?>"></script>
+<script>
+	$('#summernote').summernote({
+		placeholder: 'Edit keterangan',
+		tabsize: 2,
+		height: 500
+	});
+</script>
 </html>

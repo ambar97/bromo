@@ -1,6 +1,6 @@
 <?php $this->load->view("admin/side/head"); ?>
 <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/select2/dist/css/select2.min.css">
-<link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/quill/dist/quill.core.css">
+<link href="<?php echo base_url('master/summernote/summernote.css'); ?>" rel="stylesheet">
 <?php $this->load->view("admin/side/navbar"); ?>
 <div class="header bg-primary pb-6">
  <div class="container-fluid">
@@ -49,14 +49,6 @@
                </div>
                <div class="form-group">
                  <div class="row">
-                  <div class="col-lg-12">
-                    <label class="form-control-label" for="exampleFormControlInput1">Keterangan</label>
-                    <textarea class="form-control" name="keterangan"><?php echo $p->keterangan; ?></textarea>
-                  </div>
-                 </div>
-               </div>
-               <div class="form-group">
-                 <div class="row">
                    <div class="col-lg-12">
                      <label class="form-control-label" for="exampleFormControlInput1">Durasi</label>
                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contoh 2 hari 1 malam" name="durasi" required="" value="<?php echo $p->durasi; ?>">
@@ -65,9 +57,17 @@
                </div>
                <div class="form-group">
                  <div class="row">
+                  <div class="col-lg-12">
+                    <label class="form-control-label" for="exampleFormControlInput1">Keterangan</label>
+                    <textarea id="summernote1" name="keterangan"><?php echo $p->keterangan; ?></textarea>
+                  </div>
+                 </div>
+               </div>
+               <div class="form-group">
+                 <div class="row">
                     <div class="col-lg-12">
                       <label class="form-control-label" for="exampleFormControlInput1">Include</label>
-                      <textarea class="form-control" name="include"><?php echo $p->include; ?></textarea>
+                      <textarea id="summernote2" name="include"><?php echo $p->include; ?></textarea>
                     </div>
                   </div>
                </div>
@@ -75,7 +75,7 @@
                  <div class="row">
                    <div class="col-lg-12">
                      <label class="form-control-label" for="exampleFormControlInput1">Exclude</label>
-                     <textarea class="form-control" name="exclude"><?php echo $p->exclude; ?></textarea>
+                     <textarea id="summernote3" name="exclude"><?php echo $p->exclude; ?></textarea>
                    </div>
                  </div>
                </div>
@@ -147,7 +147,28 @@
 <script src="<?php echo base_url()?>master/assets/vendor/select2/dist/js/select2.min.js"></script>
 <script src="<?php echo base_url()?>master/assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
 <script src="<?php echo base_url()?>master/assets/js/argon.min9f1e.js?v=1.1.0"></script>
-
+<script src="<?php echo base_url('master/summernote/summernote.js'); ?>"></script>
+<script>
+	$('#summernote1').summernote({
+		placeholder: 'Edit keterangan',
+		tabsize: 2,
+		height: 500
+	});
+</script>
+<script>
+	$('#summernote2').summernote({
+		placeholder: 'Edit di sini',
+		tabsize: 2,
+		height: 500
+	});
+</script>
+<script>
+	$('#summernote3').summernote({
+		placeholder: 'Edit di sini',
+		tabsize: 2,
+		height: 500
+	});
+</script>
 <?php if ($this->session->flashdata()) { ?>
   <?php echo $this->session->flashdata('Pesan'); ?>
 <?php } ?>

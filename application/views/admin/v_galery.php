@@ -33,6 +33,10 @@
 							<form action="<?php echo base_url('admin/Galery/tamfoto') ?>" method="post" enctype="multipart/form-data">
 								<div class="modal-body">
 									<div class="form-grup">
+										<label>Judul Galery</label>
+										<input type="text" name="judul" class="form-control">
+									</div>
+									<div class="form-grup">
 										<label>Deskripsi Galery</label>
 										<textarea class="form-control" name="desk"></textarea>
 									</div><br>
@@ -62,8 +66,8 @@
 			<div class="card">
             <img class="card-img-top" src="<?php echo base_url().$hj->gambar?>" alt="Image placeholder" style=" padding: 5px; height: 200px; border-radius: 10px;" >
             <div class="card-body">
-              <h5 class="card-title mb-0"><?php echo $hj->deskripsi ?></h5>
-              <!-- <small class="text-muted">by John Snow on Oct 29th at 10:23 AM</small> -->
+              <h5 class="card-title mb-0"><?php echo $hj->tag ?></h5>
+              <small class="text-muted"><?php echo $hj->deskripsi ?></small>
               <p></p>
               <a href="<?php echo base_url('admin/Galery/hapusGambar/'.$hj->idgalery) ?>" type="button" onclick="javascript: return confirm('Anda Yakin Akan ingin memvalidasi pembayaran ?')" class="btn  btn-danger">Hapus</a>
             </div>

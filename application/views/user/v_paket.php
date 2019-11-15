@@ -116,13 +116,13 @@
                 <?php $id = $h->idpaket_wisata; ?>
                 <?php $gambar = $this->M_paket->selectlimit($id); ?>
                 <?php foreach ($gambar->result() as $g): ?>
-                  <img src="<?php echo base_url()."gallery/paket/".$g->gambar; ?>" alt="">
+                  <img class="img-responsive" src="<?php echo base_url()."gallery/paket/".$g->gambar; ?>" alt="">
                 <?php endforeach; ?>
   						</div>
   						<div class="col-md-6 col-sm-6 hotel-info">
   							<div>
   								<div class="hotel-header">
-  									<h5><?php echo $h->nama_paket; ?> <span><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star-o colored"></i></span></h5>
+  									<h5><?php echo $h->nama_paket; ?></h5>
   									<!-- <p><i class="fa fa-map-marker"></i>Mall Road, Shimla <i class="fa fa-phone"></i>(+91) 123456789</p> -->
   								</div>
   								<!-- <div class="hotel-facility">
@@ -137,17 +137,21 @@
   						<div class="clearfix visible-sm-block"></div>
   						<div class="col-md-2 rating-price-box text-center clear-padding">
   							<div class="rating-box">
-  								<div class="tripadvisor-rating">
+  								<!-- <div class="tripadvisor-rating">
   									<img src="<?php echo base_url() ?>master/client/assets/images/tripadvisor.png" alt="cruise"><span>4.5/5.0</span>
-  								</div>
-  								<div class="user-rating">
-  									<!-- <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-  									<span>128 Guest Reviews.</span> -->
+  								</div> -->
+  								<!-- <div class="user-rating">
+  									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+  									<span>IDR. <?php echo number_format($h->harga); ?></span>
+  								</div> -->
+                  <div class="price">
+                    <h4><b>Price</b></h4>
+  									<h5>IDR. <?php echo number_format($h->harga) ; ?></h5>
   								</div>
   							</div>
   							<div class="room-book-box">
   								<div class="price">
-  									<h5>Rp. <?php echo number_format($h->harga) ; ?> Avg/Night</h5>
+  									<h5>Interested?</h5>
   								</div>
   								<div class="book">
   									<a href="<?php echo base_url('PaketWisata/detailPaket/').$h->idpaket_wisata; ?>">BOOK</a>
@@ -159,9 +163,9 @@
         <?php endforeach; ?>
 				<!-- END: HOTEL LIST VIEW -->
 			</div>
-			<div class="clearfix"></div>
+			<div class="clearfix"></div><br>
 			<!-- START: PAGINATION -->
-			<div class="bottom-pagination">
+			<!-- <div class="bottom-pagination">
 				<nav class="pull-right">
 					<ul class="pagination pagination-lg">
 						<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
@@ -174,7 +178,7 @@
 						<li><a href="#" aria-label="Previous"><span aria-hidden="true">&#187;</span></a></li>
 					</ul>
 				</nav>
-			</div>
+			</div> -->
 			<!-- END: PAGINATION -->
 		</div>
 		<!-- END: INDIVIDUAL LISTING AREA -->

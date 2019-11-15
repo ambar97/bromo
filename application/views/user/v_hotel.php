@@ -135,7 +135,7 @@
                 <?php $id = $h->idhotel; ?>
                 <?php $gambar = $this->M_hotel->selectlimit($id); ?>
                   <?php foreach ($gambar->result() as $vb): ?>
-                    <img src="<?php echo base_url(); ?>gallery/hotel/<?php echo $vb->gambar; ?>" alt="cruise">
+                    <img class="img-responsive" src="<?php echo base_url(); ?>gallery/hotel/<?php echo $vb->gambar; ?>" alt="cruise">
                   <?php endforeach; ?>
   						</div>
   						<div class="col-md-6 col-sm-6 hotel-info">
