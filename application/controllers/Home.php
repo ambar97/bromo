@@ -68,8 +68,9 @@ class Home extends CI_Controller {
 			);
 
 			$this->cart->insert($data);
-
+			$this->cart->destroy();
 			var_dump($this->cart->contents());
 	}
 
 }
+?>

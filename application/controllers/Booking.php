@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Booking extends CI_Controller {
 function __construct(){
-	
+
 		parent::__construct();
 	}
 public function bookingW(){
@@ -12,9 +12,13 @@ public function bookingW(){
 	}
 	public function bookingST(){
 
-		$data = array('idwisata'=>$this->input->post('idwis'),
-						'namaW'=>$this->input->post('nama'),
-						'harga'=>$this->input->post('harga'));
+		$data = array(
+				'id'      => $this->input->post("idwis"),
+				'qty'     => 1,
+				'price'   => 39.,
+				'name'    => $this->input->post("nama"),
+			);
+
 		// die(var_dump($data));
 		$this->cart->insert($data);
 		die(var_dump($this->cart->contents()));
