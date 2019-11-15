@@ -18,7 +18,7 @@ class Login extends CI_Controller {
 				'nama'=>$cek1->nama,
 				'status' => "login"
 				);
- 			
+
 			$this->session->set_userdata($data_session);
 			redirect(base_url("admin/Destination"));
 		}else{
@@ -58,7 +58,7 @@ class Login extends CI_Controller {
 				'namauser'=>$cek1->nama,
 				'status' => "loginUser"
 				);
- 			
+
 			$this->session->set_userdata($data_session);
 			redirect(base_url("Home"));
 		}else{
@@ -67,7 +67,7 @@ class Login extends CI_Controller {
 	}
 	public function logoutUser(){
 		$this->session->sess_destroy();
-		redirect(base_url('Login/loginUser'));
+		redirect(base_url());
 	}
 
 }

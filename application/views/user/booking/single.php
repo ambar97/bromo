@@ -262,18 +262,21 @@
 <div class="modal fade" id="modalku" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">What Do You Wat to Order ?</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <i class="fa fa-close"></i>
+        </button>
+      </div>
       <div class="modal-body">
         <div class="row">
           <div class="col-md-6">
-            bhnjmk
+            <a href="<?php echo base_url('Hotel') ?>"> <img style="height: 180px; padding: 0px; border-radius:10px;"   src="<?php echo base_url() ?>gallery/icon/hotel.jpg" alt="" class="img-responsive "></a>
           </div>
           <div class="col-md-6">
-            bhjnjmk,l
+            <a href="<?php echo base_url('Wisata') ?>"> <img style="height: 180px;  border-radius:10px;" src="<?php echo base_url() ?>gallery/icon/tour.jpg" alt="" class="img-responsive"></a>
           </div>
         </div>
-      </div>
-      <div class="row modal-footer">
-        <button class="btn btn-primary btn-md pull-right" data-dismiss="modal" id="done_destination">Done</button>
       </div>
     </div>
   </div>
