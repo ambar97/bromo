@@ -14,7 +14,7 @@
 						<!-- <p class="thank"><i class="fa fa-phone" style="background: brown"> </i><a href="" style="color: black"><small> Telp :</small> <?php //echo $h->noTelp ?></a></p> -->
             <p><img src="<?php echo base_url().'gallery/icon/telepon.png'; ?>" style="max-width:40px; max-height:40px;" alt=""><a href="" style="color: black"><small> Telp :</small> <?php echo $h->noTelp ?></a></p>
 						<!-- <p class="thank"><i class="fa fa-whatsapp" style="background: green"> </i><a href="" style="color: black"><small> WhatsApp :</small> <?php// echo $h->noWa ?></a></p> -->
-            <p><img src="<?php echo base_url().'gallery/icon/whatsapp.png'; ?>" style="max-width:40px; max-height:40px;" alt=""><a href="" style="color: black"><small> WhatsApp :</small> <?php echo $h->noWa ?></a></p>
+            <p><img src="<?php echo base_url().'gallery/icon/whatsapp.png'; ?>" style="max-width:40px; max-height:40px;" alt=""><a href="https://wa.me/<?php echo $h->noWa ?>" style="color: black"><small> WhatsApp :</small> <?php echo $h->noWa ?></a></p>
 						<!-- <p class="thank"><i class="fa fa-map-marker"></i><a href="" style="color: black">  <?php //echo $h->alamat ?></a></p> -->
             <p><img src="<?php echo base_url().'gallery/icon/location.png'; ?>" style="max-width:40px; max-height:40px;" alt=""><a href="" style="color: black">  <?php echo $h->alamat ?></a></p>
 
