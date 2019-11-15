@@ -13,6 +13,8 @@ $(window).load(function() {
 	$("#loader").fadeOut("slow");
 });
 
+
+
 $(document).on("mouseover",".hd",function(){
 	// alert("dhajda");
 	var no = $(this).attr("no");
@@ -36,6 +38,32 @@ $(document).on("mouseleave",".hd",function(){
 	}
 })
 
+$(document).on("click","#done_destination",function(){
+	var total=0;
+	var wisata = "";
+	var id_wisata ="";
+	var harga ="";
+	// alert("dad");
+	$(".wisata_dipilih").each(function(){
+		var sts = parseInt($(this).val());
+		var wis = $(this).attr("nama");
+		var id = $(this).attr("id_w");
+		var hrg = $(this).attr("harga");
+
+		total += sts;
+		if (sts==1) {
+			wisata += wis+",";
+			id_wisata += id+",";
+			harga += hrg+",";
+		}
+	})
+	// alert(wisata)
+	$("#destinations").val(wisata);
+	$("#id_destinations").val(id_wisata);
+	$("#hrg_destinations").val(harga);
+	$("#dst").val(total+" Destination");
+})
+
 $(document).on("click",".hd",function(){
 		var no=$(this).attr("no");
 		var status = $(".idwis_"+no).val();
@@ -49,6 +77,10 @@ $(document).on("click",".hd",function(){
 			$(".detail-wisata_"+no).css("opacity","1");
 
 		}
+})
+
+$(document).on("click","#lets_go",function(){
+
 })
 // $(document).on("click",".add_wisata",function(){
 // 	alert("lalal");

@@ -21,12 +21,12 @@
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-8" style="padding-top: 5px;padding-bottom:10px;border: 1px solid white;border-radius: 10px;background:white;min-height:50px;margin-top:50px;">
-              <form>
+              <?php echo form_open(base_url()."Booking/booking")?>
 
                 <div class="clearfix"></div>
                 <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 col-sm-4 search-col-padding">
                   <div class="input-group">
-                    <input type="text" style="background:transparent;" name="departure_city" class="destination form_depan form-control" required placeholder="Destination">
+                    <input type="text" style="background:transparent;" name="destination" id="dst" class="destination form_depan form-control" required placeholder="Destination">
                     <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
                   </div>
                 </div>
@@ -38,18 +38,24 @@
                 </div>
                 <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 m-t-30 col-sm-3 search-col-padding">
                   <div class="input-group">
-                    <input style="background:transparent;" type="text" name="departure_city" class="duration form_depan form-control" required placeholder="Duration">
+                    <input style="background:transparent;" type="text" name="drtn" id="drtn" class="duration form_depan form-control" required placeholder="Duration">
                     <span class="input-group-addon"><i class="fa fa-clock-o fa-fw"></i></span>
                   </div>
                 </div>
                 <div class="col-md-3 col-sm-3 search-col-padding">
-                  <button type="button" style="padding:1px;border-radius:10px;" class="search-button btn btn-sm form-control transition-effect">Let's Go</button>
+                  <button type="button" style="padding:1px;border-radius:10px;" id="lets_go" class="search-button btn btn-sm form-control transition-effect">Let's Go</button>
                 </div>
 
 
 
                 <div class="clearfix"></div>
                 <input type="hidden" name="travelers" id="travelers">
+                <input type="hidden" name="destinations" id="destinations">
+                <input type="hidden" name="id_destinations" id="id_destinations">
+                <input type="hidden" name="hrg_destinations" id="hrg_destinations">
+                <input type="hidden" name="durations" id="durations">
+                <input type="hidden" name="days" id="days">
+
               </form>
             </div>
 
@@ -258,7 +264,7 @@
 </body>
 </html>
 <!-- modal small -->
-<div class="modal fade" id="destination" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+<div class="modal fade" id="destination" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 
@@ -291,20 +297,20 @@
                   </div>
               </div>
             </div>
-            <input type="hidden" class="idwis_<?php echo $value->idwisata?>" value="0">
+            <input type="hidden" nama="<?php echo $value->nama_wisata?>" harga="<?php echo $value->harga?>" id_w="<?php echo $value->idwisata?>" class="wisata_dipilih  idwis_<?php echo $value->idwisata?>" value="0">
           <?php endforeach; ?>
 
         </div>
       </div>
       <div class="row modal-footer">
-        <button class="btn btn-primary btn-md pull-right" data-dismiss="modal">Done</button>
+        <button class="btn btn-primary btn-md pull-right" data-dismiss="modal" id="done_destination">Done</button>
       </div>
     </div>
   </div>
 </div>
 <!-- end modal small -->
 <!-- modal small -->
-<div class="modal fade" id="travelers_modal" style="margin-top:200px;padding-bottom:50px;border-radius:10px;" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+<div class="modal fade" id="travelers_modal" style="margin-top:200px;padding-bottom:50px;border-radius:10px;" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 
@@ -333,7 +339,7 @@
 </div>
 <!-- end modal small -->
 <!-- modal small -->
-<div class="modal fade" id="duration" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+<div class="modal fade" id="duration" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 

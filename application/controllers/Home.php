@@ -7,6 +7,7 @@ class Home extends CI_Controller {
 	{
 	    parent::__construct();
 			$this->load->model("M_home");
+			$this->load->library("cart");
 	}
 
 	public function index(){
@@ -54,6 +55,20 @@ class Home extends CI_Controller {
 		// mengambil teks hasil terjemahan dari data JSON
 		// $translate = $hasil["data"]["translations"][0]["translatedText"];
 
+	}
+
+	public function coba(){
+		$data = array(
+        'id'      => 'sku_123ABC',
+        'qty'     => 1,
+        'price'   => 39.95,
+        'name'    => 'T-Shirt',
+        'options' => array('Size' => 'L', 'Color' => 'Red')
+			);
+
+			$this->cart->insert($data);
+
+			var_dump($this->cart->contents());
 	}
 
 }
