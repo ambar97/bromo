@@ -1,6 +1,5 @@
  <?php $this->load->view("admin/side/head"); ?>
- <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/select2/dist/css/select2.min.css">
- <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/quill/dist/quill.core.css">
+ <link href="<?php echo base_url('master/summernote/summernote.css'); ?>" rel="stylesheet">
  <?php $this->load->view("admin/side/navbar"); ?>
  <div class="header bg-primary pb-6">
   <div class="container-fluid">
@@ -57,7 +56,7 @@
             </div>
             <div class="form-group">
              <label class="form-control-label" for="exampleFormControlInput1">Deskripsi</label>
-             <textarea class="form-control" name="deskrip"><?php echo $wisata->deskripsi_w; ?></textarea>
+             <textarea id="summernote" name="deskrip"><?php echo $wisata->deskripsi_w; ?></textarea>
              <!-- <div data-toggle="quill" data-quill-placeholder="" name="deskrip"></div> -->
            </div>
            <div class="form-group">
@@ -135,4 +134,12 @@
 		</div>
 	</div>
 </div>
+<script src="<?php echo base_url('master/summernote/summernote.js'); ?>"></script>
+<script>
+	$('#summernote').summernote({
+		placeholder: 'Edit di sini',
+		tabsize: 2,
+		height: 500
+	});
+</script>
 </html>

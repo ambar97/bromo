@@ -1,6 +1,5 @@
  <?php $this->load->view("admin/side/head"); ?>
- <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/select2/dist/css/select2.min.css">
- <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/quill/dist/quill.core.css">
+ <link href="<?php echo base_url('master/summernote/summernote.css'); ?>" rel="stylesheet">
  <?php $this->load->view("admin/side/navbar"); ?>
  <div class="header bg-primary pb-6">
   <div class="container-fluid">
@@ -63,7 +62,7 @@
             <div class="form-group">
              <label class="form-control-label" for="exampleFormControlInput1">Deskripsi</label>
              <!-- <textarea data-toggle="quill" data-quill-placeholder="" class="form-control" ></textarea> -->
-             <div data-toggle="quill" data-quill-placeholder="" name="deskrip" id="divv"></div>
+             <textarea id="summernote" name="deskrip"></textarea>
              <input type="hidden" name="deskrip" id="deskripsi">
            </div>
            <div class="form-group col-lg-6">
@@ -77,7 +76,7 @@
            <input type="file" name="pilih" class="form-control">
           <hr>
           <div>
-            <button class="btn btn-icon btn-primary float-right" type="button" id="btnSimpan" name="btnSimpan" >
+            <button class="btn btn-icon btn-primary float-right" type="submit" id="btnSimpan" name="btnSimpan" >
               <span class="btn-inner--icon"><i class="ni ni-check-bold"></i></span>
               <span class="btn-inner--text">Simpan</span>
             </button>
@@ -95,14 +94,13 @@
 <script src="<?php echo base_url()?>master/assets/vendor/select2/dist/js/select2.min.js"></script>
 <script src="<?php echo base_url()?>master/assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
 <script src="<?php echo base_url()?>master/assets/js/argon.min9f1e.js?v=1.1.0"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $(document).on("click","#btnSimpan",function(){
-      var desk=document.querySelector(".ql-editor").innerHTML;
-      $("#deskripsi").val(desk);
-      $("#simpann").submit();
-    });
-  });
+<script src="<?php echo base_url('master/summernote/summernote.js'); ?>"></script>
+<script>
+	$('#summernote').summernote({
+		placeholder: 'Edit di sini',
+		tabsize: 2,
+		height: 500
+	});
 </script>
 <?php if ($this->session->flashdata()) { ?>
   <?php echo $this->session->flashdata('Pesan'); ?>
