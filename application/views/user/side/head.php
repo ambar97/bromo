@@ -39,5 +39,22 @@
         color: #f39c12;
         background: transparent;
       }
+      .holiday-select{
+        position: absolute;
+      	opacity: 0;
+      	top:0;
+      	left:0;
+        background: rgba(10, 49, 82, 0.8);
+      	height: 100%;
+      	width: 100%;
+      }
+      .holiday-select a {
+      	color: #2ecc71;
+      	font-size: 30px;
+      	margin-top: 33%;
+      	margin-left: 45%;
+      	display: inline-block;
+      }
+
     </style>
 </head>
