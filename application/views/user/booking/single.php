@@ -25,6 +25,9 @@
 			<div class="tab-content">
 				<div id="review-booking" class="tab-pane fade in active">
 					<div class="col-md-8 col-sm-8">
+						<?php foreach ($this->cart->contents() as $items): ?>
+							<?php if ($this->cart->has_options($items['idwisata']) == TRUE): ?>
+
 						<div class="booking-summary-v2">
 							<div class="col-md-4 col-sm-6 clear-padding">
 								<img src="assets/images/tour2.jpg" alt="cruise">
@@ -48,6 +51,8 @@
 								<a href="#">CHANGE</a>
 							</div>
 						</div>
+							<?php endif ?>
+						<?php endforeach ?>
 						<button class="btn btn-danger" style="background-color: #f2676b; margin-top: 10px; color: white"> <i class="fa fa-plus"> Add Other</i></button>
 						<div class="login-box" >
 						<h3>Trip Detail</h3>

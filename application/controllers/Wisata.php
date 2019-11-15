@@ -18,18 +18,4 @@ function __construct(){
 		$data['wisata'] = $this->M_model->selectwhere('wisata', array('idwisata'=>$id));
 		$this->load->view('user/v_detailwisata', $data);
 	}
-
-	public function bookingW(){
-		$this->load->view('user/booking/single');
-	}
-	public function bookingST(){
-
-		$data = array('idwisata'=>$this->input->post('idwis'),
-						'harga'=>$this->input->post('harga'),
-						'iduser'=>$this->input->post('iduser'),
-						'status'=>1);
-		$this->M_model->insert('desBook',$data);
-		$tr = $this->input->post('iduser');
-		redirect(base_url('Wisata/bookingW/'.$tr));
-	}
 }

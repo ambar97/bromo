@@ -67,14 +67,18 @@
         <div class="col-md-4 col-sm-4 booking-sidebar">
           <div class="sidebar-item booking-summary">
             <h4><i class="fa fa-bookmark"></i>Anda Tertarik?</h4>
+            <form class="" action="<?php if ($this->session->userdata('status')== 'loginUser'): ?>
+              <?php echo base_url('Booking/bookingST') ?>
+            <?php else: ?>
+              <?php echo base_url('PaketWisata/gagal/'.$p->idwisata) ?>
+            <?php endif; ?>" method="post">
             <div class="sidebar-body text-center">
-              <a class="btn btn-primary" href="
-              <?php if ($this->session->userdata('status') == !'LoginUser'): ?>
-                <?php echo base_url('PaketWisata/gagal/'.$p->idwisata) ?>
-                <?php else: ?>
-                    <?php echo base_url('Wisata/bookingW/'.$p->idwisata) ?>
-              <?php endif ?>">Book Now</a>
+              <input type="text" name="idwis" value="<?php echo $p->idwisata ?>">
+              <input type="text" name="nama" value="<?php echo $p->nama_wisata ?>">
+              <input type="text" name="harga" value="<?php echo $p->harga ?>">
+              <button class="btn btn-primary" type="submit">Book Now</button>
             </div>
+            </form>
           </div>
         </div>
       </div>
