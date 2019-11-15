@@ -1,4 +1,3 @@
-
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -38,9 +37,5 @@ public function bookingW(){
 									$this->cart->insert($data);
 									redirect(base_url('Booking/bookingW/'));
 		}
-
-
-
-
 	}
 }

@@ -1,7 +1,7 @@
 <?php $this->load->view("user/side/head"); ?>
 <?php $this->load->view("user/side/navbar"); ?>
 <div class="contact-form">
-	
+
 <h2 class="text-center">GALLERY OF SUNSETVIEW</h2>
 </div>
 <div class="row gallery-row" style="background-color: white">
@@ -39,10 +39,10 @@
 					</button>
 					<div class="row" style="margin-top: 10px">
 						<div class="col-sm-6">
-					<img src="<?php echo base_url().$ler->gambar ?>" alt="Cruise" style="border-radius: 20px; margin-top: 30px; width: 100%;">
-							
+					<img src="<?php echo base_url().$ler->gambar ?>" alt="Cruise" style="border-radius: 20px; margin-top: 30px; height: 280px; width: 100%;">
+
 						</div>
-						
+
 					<div class="col-sm-6" style="margin-top: 20px; padding-left: 20px;">
 							<p style="font-weight: bold;"><?php echo $ler->tag ?></p>
 							<blockquote><small><?php echo $ler->deskripsi ?></small></blockquote>

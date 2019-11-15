@@ -75,7 +75,7 @@
 				<?php foreach ($destinasi->result() as $des): ?>
 				<div  class="hotel-list-view " style="border-radius: 10px; max-height:200px;" >
 					<div class="wrapper">
-						<div class="col-md-4 col-sm-6 switch-img clear-padding" style="border-radius: 10px; ">
+						<div class="col-md-4 col-sm-6 switch-img clear-padding" style="border-radius: 10px;">
               <?php $id = $des->idwisata; ?>
               <?php $gambar = $this->M_wisata->selectlimit($id); ?>
               <?php foreach ($gambar->result() as $g): ?>
