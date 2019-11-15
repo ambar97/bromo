@@ -63,7 +63,6 @@
              <label class="form-control-label" for="exampleFormControlInput1">Deskripsi</label>
              <!-- <textarea data-toggle="quill" data-quill-placeholder="" class="form-control" ></textarea> -->
              <textarea id="summernote" name="deskrip"></textarea>
-             <input type="hidden" name="deskrip" id="deskripsi">
            </div>
            <div class="form-group col-lg-6">
             <label class="form-control-label" for="exampleFormControlInput1">Fasilitas</label><br>
