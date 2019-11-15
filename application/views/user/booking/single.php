@@ -32,7 +32,7 @@
 								<img src="<?php echo base_url().'gallery/wisata/'.$items['gambar']; ?>" alt="cruise">
 							</div>
 							<div class="col-md-6 col-sm-6">
-								<h4><?php echo $items['name'] ?></h4>
+								<h4><?php echo $items['rowid'] ?></h4>
 								<div class="col-md-6 col-sm-6 col-xs-6 clear-padding">
 									<p>START</p>
 									<p><i class="fa fa-calendar"></i> SAT, 22 AUG</p>
@@ -47,7 +47,7 @@
 							</div>
 							<div class="clearfix visible-sm-block"></div>
 							<div class="col-md-2 text-center">
-								<a href="<?php echo base_url('Booking/hapusCart/'.$items['id']) ?>">CHANGE</a>
+								<a href="<?php echo base_url('Booking/hapusCart/'.$items['rowid']) ?>">CHANGE</a>
 							</div>
 						</div>
 						<?php endforeach ?>
