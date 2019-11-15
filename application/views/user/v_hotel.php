@@ -144,9 +144,14 @@
   									<h5><?php echo $h->nama_hotel; ?> <span><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star-o colored"></i></span></h5>
   									<!-- <p><i class="fa fa-map-marker"></i>Mall Road, Shimla <i class="fa fa-phone"></i>(+91) 123456789</p> -->
   								</div>
-  								<!-- <div class="hotel-facility">
-  									<p><i class="fa fa-wifi" title="Free Wifi"></i><i class="fa fa-bed" title="Luxury Bedroom"></i><i class="fa fa-taxi" title="Transportation"></i><i class="fa fa-beer" title="Bar"></i><i class="fa fa-cutlery" title="Restaurant"></i></p>
-  								</div> -->
+                  <div class="hotel-facility">
+  									<?php $rt= $this->db->get_where('fasilitas', array('id_hotel'=>$h->idhotel))->result(); ?>
+  									<p>
+  										<?php foreach ($rt as $v): ?>
+  										<i class="<?php echo $v->icon ?>"></i>
+  										<?php endforeach ?>
+  										</p>
+  								</div>
   								<div class="hotel-desc">
   									<p><?php echo $h->deskripsi; ?></p>
   								</div>
