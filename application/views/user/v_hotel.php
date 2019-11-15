@@ -129,13 +129,13 @@
 			<!-- START: HOTEL LIST VIEW -->
 			<div class="switchable col-md-12 clear-padding">
         <?php foreach ($hotel->result() as $h): ?>
-          <div  class="hotel-list-view">
+          <div  class="hotel-list-view" style="border-radius:10px;">
   					<div class="wrapper">
   						<div class="col-md-4 col-sm-6 switch-img clear-padding">
                 <?php $id = $h->idhotel; ?>
                 <?php $gambar = $this->M_hotel->selectlimit($id); ?>
                   <?php foreach ($gambar->result() as $vb): ?>
-                    <img class="img-responsive" src="<?php echo base_url(); ?>gallery/hotel/<?php echo $vb->gambar; ?>" alt="cruise">
+                    <img class="img-responsive" src="<?php echo base_url(); ?>gallery/hotel/<?php echo $vb->gambar; ?>" style="border-radius: 30px;" alt="cruise">
                   <?php endforeach; ?>
   						</div>
   						<div class="col-md-6 col-sm-6 hotel-info">

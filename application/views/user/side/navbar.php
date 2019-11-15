@@ -104,11 +104,7 @@
                                     <a class="dropdown-toggle" href="<?php echo base_url('ContactUs') ?>"><i class="fa fa-info"></i> CONTACT US</a>
                                 </li>
                                 <li class="">
-                                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-flag"></i><small> Bahasa</small> <i class="fa fa-caret-down"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href=""> Indonesia</a></li>
-                                        <li><a href=""> Jepang</a></li>
-                                    </ul>
+                                    <a class="dropdown-toggle" href="#"><img style="max-width:30px; max-height:30px;" src="<?php echo base_url('gallery/icon/england.png'); ?>" alt=""><small> English</small></a>
                                 </li>
                                 <li class="">
                                     <a class="dropdown-toggle" href="#" ><i class="fa fa-shopping-cart"></i></i></a>

@@ -51,7 +51,7 @@
 							</div>
 						</div>
 						<?php endforeach ?>
-						<button data-toggle="modal" data-target="#modalku" class="btn btn-danger" style="background-color: #f2676b; margin-top: 10px; color: white"> <i class="fa fa-plus"> Add Other</i></button>
+						<button data-toggle="modal" data-target="#myModal" class="btn btn-danger" style="background-color: #f2676b; margin-top: 10px; color: white"> <i class="fa fa-plus"> Add Other</i></button>
 						<div class="login-box" >
 						<h3>Trip Detail</h3>
 						<div class="booking-form">
@@ -278,23 +278,25 @@
  <?php $this->load->view("user/side/js"); ?>
 </body>
 </html>
-<div class="modal fade" id="modalku" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-6">
-            bhnjmk
-          </div>
-          <div class="col-md-6">
-            bhjnjmk,l
-          </div>
-        </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" style="margin-top: 100px; border-radius: 50px;" aria-labelledby="myModalLabel" aria-hidden="true" >
+	<div class="modal-dialog">
+		<div class="modal-content">
+      <div class="modal-header">
+        <h2>What do you want to order?</h2>
       </div>
-      <div class="row modal-footer">
-        <button class="btn btn-primary btn-md pull-right" data-dismiss="modal" id="done_destination">Done</button>
-      </div>
-    </div>
-  </div>
+				<div class="modal-body">
+					<div class="row">
+            <div class="col-md-6 text-center">
+              <h3 style="color: white;z-index: 2; position: absolute;">Wisata</h3>
+              <a href="<?php echo base_url('Wisata'); ?>"><img style="border-radius:10px; z-index: 1; position: relative; top: 0px " class="img-responsive" src="<?php echo base_url('gallery/icon/tour.jpg'); ?>" alt=""></a>
+            </div>
+            <div class="col-md-6 text-center">
+              <h3>Hotel</h3>
+              <a href="<?php echo base_url('Hotel'); ?>"><img class="img-responsive" src="<?php echo base_url('gallery/icon/hotel.jpg'); ?>" alt=""></a>
+            </div>
+          </div>
+				</div>
+		</div>
+	</div>
 </div>
 <!-- end modal small -->
