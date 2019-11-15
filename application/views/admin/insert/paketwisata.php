@@ -1,6 +1,6 @@
 <?php $this->load->view("admin/side/head"); ?>
 <link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/select2/dist/css/select2.min.css">
-<link rel="stylesheet" href="<?php echo base_url()?>master/assets/vendor/quill/dist/quill.core.css">
+<link href="<?php echo base_url('master/summernote/summernote.css'); ?>" rel="stylesheet">
 <?php $this->load->view("admin/side/navbar"); ?>
 <div class="header bg-primary pb-6">
  <div class="container-fluid">
@@ -54,19 +54,19 @@
            <div class="row">
              <div class="form-group col-lg-12">
                <label class="form-control-label" for="exampleFormControlInput1">Keterangan</label>
-               <textarea class="form-control" name="keterangan"></textarea>
+               <textarea id="summernote1" name="keterangan"></textarea>
              </div>
            </div>
            <div class="row">
              <div class="form-group col-lg-12">
                <label class="form-control-label" for="exampleFormControlInput1">Include</label>
-               <textarea class="form-control" name="include"></textarea>
+               <textarea id="summernote2" name="include"></textarea>
              </div>
            </div>
            <div class="row">
              <div class="form-group col-lg-12">
                <label class="form-control-label" for="exampleFormControlInput1">Exclude</label>
-               <textarea class="form-control" name="exclude"></textarea>
+               <textarea id="summernote3" name="exclude"></textarea>
              </div>
            </div>
            <div class="row">
@@ -95,7 +95,28 @@
 <script src="<?php echo base_url()?>master/assets/vendor/select2/dist/js/select2.min.js"></script>
 <script src="<?php echo base_url()?>master/assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
 <script src="<?php echo base_url()?>master/assets/js/argon.min9f1e.js?v=1.1.0"></script>
-
+<script src="<?php echo base_url('master/summernote/summernote.js'); ?>"></script>
+<script>
+	$('#summernote1').summernote({
+		placeholder: 'Edit Keterangan',
+		tabsize: 2,
+		height: 200
+	});
+</script>
+<script>
+	$('#summernote2').summernote({
+		placeholder: 'Edit Include',
+		tabsize: 2,
+		height: 200
+	});
+</script>
+<script>
+	$('#summernote3').summernote({
+		placeholder: 'Edit Exclude',
+		tabsize: 2,
+		height: 200
+	});
+</script>
 <?php if ($this->session->flashdata()) { ?>
  <?php echo $this->session->flashdata('Pesan'); ?>
 <?php } ?>
