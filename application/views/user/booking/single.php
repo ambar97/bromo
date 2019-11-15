@@ -1,13 +1,5 @@
  <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
-<!-- START: PAGE TITLE -->
-	<div class="row page-title">
-		<div class="container clear-padding text-center flight-title">
-			<h3>YOUR SELECTION</h3>
-			<h4>Wonderful Europe</h4>
-			<span><i class="fa fa-calendar"></i> Start - 05 Aug <i class="fa fa-calendar"></i> End - 05 Aug <i class="fa fa-male"></i> Traveller - 2 Adult</span>
-		</div>
-	</div>
 	<!-- END: PAGE TITLE -->
 
 	<!-- START: BOOKING TAB -->
@@ -32,7 +24,7 @@
 								<img src="<?php echo base_url().'gallery/wisata/'.$items['gambar']; ?>" alt="cruise">
 							</div>
 							<div class="col-md-6 col-sm-6">
-								<h4><?php echo $items['rowid'] ?></h4>
+								<h4><i class="fa fa-map-marker"></i> <?php echo $items['name'] ?></h4>
 								<div class="col-md-6 col-sm-6 col-xs-6 clear-padding">
 									<p>START</p>
 									<p><i class="fa fa-calendar"></i> SAT, 22 AUG</p>
@@ -42,17 +34,43 @@
 									<p><i class="fa fa-calendar"></i> SAT, 29 AUG</p>
 								</div>
 								<div class="clearfix"></div>
-								<p><span>Traveller</span> - 2 Adult</p>
-								<p><span>Theme</span> - <?php echo $items['id'] ?></p>
+								<p><span><i class="fa fa-user"></i></span> <small>For Max 5 Person</small></p>
+								<p><i class="fa fa-money"></i><span> IDR</span> - <?php echo $items['price'] ?></p>
 							</div>
 							<div class="clearfix visible-sm-block"></div>
 							<div class="col-md-2 text-center">
-								<a href="<?php echo base_url('Booking/hapusCart/'.$items['rowid']) ?>">CHANGE</a>
+								<a href="<?php echo base_url('Booking/hapusCart/'.$items['rowid']) ?>" style="border-radius : 10px;"><small><i class="fa fa-trash" ></i> DELETE </small></a>
 							</div>
 						</div>
+            <br>
 						<?php endforeach ?>
-						<button data-toggle="modal" data-target="#myModal" class="btn btn-danger" style="background-color: #f2676b; margin-top: 10px; color: white"> <i class="fa fa-plus"> Add Other</i></button>
 						<div class="login-box" >
+              <button data-toggle="modal" data-target="#myModal" class="btn btn-danger" style="background-color: #f2676b; margin-top: 10px; color: white"> <i class="fa fa-plus"> Add Other</i></button>
+					</div> <br>
+					<div class="col-md-4 col-sm-4 booking-sidebar">
+						<div class="sidebar-item">
+							<h4><i class="fa fa-bookmark"></i>Price Details</h4>
+							<div class="sidebar-body">
+								<table class="table">
+                  <?php foreach ($this->cart->contents() as $items): ?>
+									<tr>
+										<td><?php echo $items['name'] ?></td>
+										<td><?php echo $items['price'] ?></td>
+									</tr>
+                <?php endforeach ?>
+									<tr>
+										<td>You Pay</td>
+                    <?php $er = $this->cart->total() ?>
+										<td class="total">IDR <?php echo number_format($er) ?></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="passenger-info" class="tab-pane fade">
+          <div class="col-md-8 col-sm-8">
+            <div class="login-box" style="margin-top:0px;">
 						<h3>Trip Detail</h3>
 						<div class="booking-form">
 							<div class="col-md-12 col-sm-12">
@@ -82,100 +100,58 @@
 											<input style="border-radius:10px;" id="adult_count" name="adult_count" value="1" class="form-control quantity-padding" max="5">
 										</div>
 									</div>
-									<button style="border-radius: 10px; float: right;" type="button" data-toggle="tab" href="#passenger-info">Next</button>
+									<!-- <button style="border-radius: 10px; float: right;" type="button" data-toggle="tab" href="#passenger-info">Next</button> -->
 								</form>
 							</div>
 						</div>
-					</div>
-					</div>
+					</div> <br>
+  					<div class="passenger-detail">
+  						<h3>Guest Details</h3>
+  						<div class="passenger-detail-body">
+  							<form >
+  								<div class="col-md-6 ol-sm-6">
+  									<label>First Name</label>
+  									<input type="text" name="firstname" required class="form-control">
+  								</div>
+  								<div class="col-md-6 ol-sm-6">
+  									<label>Last Name</label>
+  									<input type="text" name="lastname" required class="form-control">
+  								</div>
+  								<div class="col-md-6 ol-sm-6">
+  									<label>Email</label>
+  									<input type="email" name="email" required class="form-control">
+  								</div>
+  								<div class="col-md-6 ol-sm-6">
+  									<label>Phone Number</label>
+  									<input type="text" name="phonenumber" class="form-control" required>
+  								</div>
+  								<div class="col-md-12">
+  									<!-- <label><input type="checkbox" name="alert"> Send me newsletters and updates</label> -->
+  								</div>
+  								<div class="" style="float: right;">
+  									<button type="submit" style="border-radius: 10px;">CONTINUE <i class="fa fa-chevron-right"></i></button>
+  								</div>
+  							</form>
+  						</div>
+  					</div>
+  				</div>
 					<div class="col-md-4 col-sm-4 booking-sidebar">
-						<div class="sidebar-item">
+            <div class="sidebar-item">
 							<h4><i class="fa fa-bookmark"></i>Price Details</h4>
 							<div class="sidebar-body">
 								<table class="table">
+                  <?php foreach ($this->cart->contents() as $items): ?>
 									<tr>
-										<td>Adult 1</td>
-										<td>$199</td>
+										<td><?php echo $items['name'] ?></td>
+										<td><?php echo $items['price'] ?></td>
 									</tr>
-									<tr>
-										<td>Base Ammount</td>
-										<td>$100</td>
-									</tr>
-									<tr>
-										<td>Service Tax</td>
-										<td>$50</td>
-									</tr>
-									<tr>
-										<td>Other Taxes</td>
-										<td>$20</td>
-									</tr>
+                <?php endforeach ?>
 									<tr>
 										<td>You Pay</td>
-										<td class="total">$500</td>
+                    <?php $er = $this->cart->total() ?>
+										<td class="total">IDR <?php echo number_format($er) ?></td>
 									</tr>
 								</table>
-							</div>
-						</div>
-						<div class="sidebar-item contact-box">
-							<h4><i class="fa fa-phone"></i>Need Help?</h4>
-							<div class="sidebar-body text-center">
-								<p>Need Help? Call us or drop a message. Our agents will be in touch shortly.</p>
-								<h2>+91 1234567890</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="passenger-info" class="tab-pane fade">
-					<div class="col-md-8 col-sm-8">
-						<div class="passenger-detail">
-							<h3>Guest Details</h3>
-							<div class="passenger-detail-body">
-								<form >
-									<div class="col-md-6 ol-sm-6">
-										<label>First Name</label>
-										<input type="text" name="firstname" required class="form-control">
-									</div>
-									<div class="col-md-6 ol-sm-6">
-										<label>Last Name</label>
-										<input type="text" name="lastname" required class="form-control">
-									</div>
-									<div class="col-md-6 ol-sm-6">
-										<label>Email</label>
-										<input type="email" name="email" required class="form-control">
-									</div>
-									<div class="col-md-6 ol-sm-6">
-										<label>Verify Email</label>
-										<input type="email" name="verify_email" class="form-control">
-									</div>
-									<div class="col-md-6 ol-sm-6">
-										<label>Country Code</label>
-										<select name="countrycode" class="form-control">
-											<option>+1 United States</option>
-											<option>+1 Canada</option>
-											<option>+44 United Kingdom</option>
-											<option>+91 India</option>
-										</select>
-									</div>
-									<div class="col-md-6 ol-sm-6">
-										<label>Phone Number</label>
-										<input type="text" name="phonenumber" class="form-control" required>
-									</div>
-									<div class="col-md-12">
-										<label><input type="checkbox" name="alert"> Send me newsletters and updates</label>
-									</div>
-									<div class="text-center">
-										<button type="submit">CONTINUE <i class="fa fa-chevron-right"></i></button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4 booking-sidebar">
-						<div class="sidebar-item">
-							<h4><i class="fa fa-phone"></i>Need Help?</h4>
-							<div class="sidebar-body text-center">
-								<p>Need Help? Call us or drop a message. Our agents will be in touch shortly.</p>
-								<h2>+91 1234567890</h2>
 							</div>
 						</div>
 					</div>
@@ -261,11 +237,22 @@
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-4 booking-sidebar">
-						<div class="sidebar-item">
-							<h4><i class="fa fa-phone"></i>Need Help?</h4>
-							<div class="sidebar-body text-center">
-								<p>Need Help? Call us or drop a message. Our agents will be in touch shortly.</p>
-								<h2>+91 1234567890</h2>
+            <div class="sidebar-item">
+							<h4><i class="fa fa-bookmark"></i>Price Details</h4>
+							<div class="sidebar-body">
+								<table class="table">
+                  <?php foreach ($this->cart->contents() as $items): ?>
+									<tr>
+										<td><?php echo $items['name'] ?></td>
+										<td><?php echo $items['price'] ?></td>
+									</tr>
+                <?php endforeach ?>
+									<tr>
+										<td>You Pay</td>
+                    <?php $er = $this->cart->total() ?>
+										<td class="total">IDR <?php echo number_format($er) ?></td>
+									</tr>
+								</table>
 							</div>
 						</div>
 					</div>
