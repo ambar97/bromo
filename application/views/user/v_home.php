@@ -1,4 +1,4 @@
- <?php $this->load->model('M_paket'); ?>
+<?php $this->load->model('M_paket'); ?>
  <?php $this->load->model('M_wisata'); ?>
  <?php $this->load->view("user/side/head"); ?>
  <?php $this->load->view("user/side/navbar"); ?>
@@ -39,24 +39,18 @@
                 </div>
                 <div style="margin-top:10px;margin-Bottom:5px;border-radius:15px;" class="col-md-3 m-t-30 col-sm-3 search-col-padding">
                   <div class="input-group">
-                    <input style="background:transparent;" type="text" name="drtn" id="drtn" class="duration form_depan form-control" required placeholder="Duration">
+                    <input style="background:transparent;" type="text" name="departure_city" class="duration form_depan form-control" required placeholder="Duration">
                     <span class="input-group-addon"><i class="fa fa-clock-o fa-fw"></i></span>
                   </div>
                 </div>
                 <div class="col-md-3 col-sm-3 search-col-padding">
-                  <button type="button" style="padding:1px;border-radius:10px;" id="lets_go" class="search-button btn btn-sm form-control transition-effect">Let's Go</button>
+                  <button type="button" style="padding:1px;border-radius:10px;" class="search-button btn btn-sm form-control transition-effect">Let's Go</button>
                 </div>
 
 
 
                 <div class="clearfix"></div>
                 <input type="hidden" name="travelers" id="travelers">
-                <input type="hidden" name="destinations" id="destinations">
-                <input type="hidden" name="id_destinations" id="id_destinations">
-                <input type="hidden" name="hrg_destinations" id="hrg_destinations">
-                <input type="hidden" name="durations" id="durations">
-                <input type="hidden" name="days" id="days">
-
               </form>
             </div>
 
@@ -190,7 +184,6 @@
             jQuery(function($){
                 "use strict";
                 $.supersized({
-
                     //Functionality
                     slideshow               :   1,      //Slideshow on/off
                     autoplay                :   1,      //Slideshow starts playing automatically
@@ -204,7 +197,6 @@
                     keyboard_nav            :   0,      //Keyboard navigation on/off
                     performance             :   1,      //0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
                     image_protect           :   1,      //Disables image dragging and right click with Javascript
-
                     //Size & Position
                     min_width               :   0,      //Min width allowed (in pixels)
                     min_height              :   0,      //Min height allowed (in pixels)
@@ -212,7 +204,6 @@
                     horizontal_center       :   1,      //Horizontally center background
                     fit_portrait            :   1,      //Portrait images will not exceed browser height
                     fit_landscape           :   0,      //Landscape images will not exceed browser width
-
                     //Components
                     navigation              :   1,      //Slideshow controls on/off
                     thumbnail_navigation    :   1,      //Thumbnail navigation
@@ -223,10 +214,8 @@
                                                         {image : '<?php echo base_url().$slidere->gambar ?>', title : 'Slide 1'},
                                                         <?php } ?>
                                                 ]
-
                 });
             });
-
   $(document).ready(function(){
     $(document).on("focus",".destination",function(){
       $("#destination").modal("toggle");
@@ -236,7 +225,6 @@
     })
     $(document).on("focus",".duration",function(){
       $("#duration").modal("toggle");
-
     })
   })
 </script>
