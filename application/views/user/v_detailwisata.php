@@ -73,9 +73,10 @@
               <?php echo base_url('PaketWisata/gagal/'.$p->idwisata) ?>
             <?php endif; ?>" method="post">
             <div class="sidebar-body text-center">
-              <input type="text" name="idwis" value="<?php echo $p->idwisata ?>">
-              <input type="text" name="nama" value="<?php echo $p->nama_wisata ?>">
-              <input type="text" name="harga" value="<?php echo $p->harga ?>">
+              <input type="hidden" name="idwis" value="<?php echo $p->idwisata ?>">
+              <input type="hidden" name="nama" value="<?php echo $p->nama_wisata ?>">
+              <input type="hidden" name="harga" value="<?php echo $p->harga ?>">
+              <input type="hidden" name="foto" value="<?php echo $g->gambar ?>">
               <button class="btn btn-primary" type="submit">Book Now</button>
             </div>
             </form>

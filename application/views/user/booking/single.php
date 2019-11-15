@@ -9,15 +9,15 @@
 		</div>
 	</div>
 	<!-- END: PAGE TITLE -->
-	
+
 	<!-- START: BOOKING TAB -->
 	<div class="row booking-tab">
 		<div class="container clear-padding">
 			<ul class="nav nav-tabs">
 				<li class="active col-md-4 col-sm-4 col-xs-4"><a data-toggle="tab" href="#review-booking" class="text-center"><i class="fa fa-edit"></i> <span>Review Booking</span></a></li>
-				<li class="col-md-4 col-sm-4 col-xs-4"><a data-toggle="tab" href="#passenger-info" class="text-center"><i class="fa fa-male"></i> <span>Passenger Info</span></a></li>	
+				<li class="col-md-4 col-sm-4 col-xs-4"><a data-toggle="tab" href="#passenger-info" class="text-center"><i class="fa fa-male"></i> <span>Passenger Info</span></a></li>
 				<li class="col-md-4 col-sm-4 col-xs-4"><a data-toggle="tab" href="#billing-info" class="text-center"><i class="fa fa-check-square"></i> <span>Billing Info</span></a></li>
-			</ul> 
+			</ul>
 		</div>
 	</div>
 	<div class="row booking-detail">
@@ -26,14 +26,13 @@
 				<div id="review-booking" class="tab-pane fade in active">
 					<div class="col-md-8 col-sm-8">
 						<?php foreach ($this->cart->contents() as $items): ?>
-							<?php if ($this->cart->has_options($items['idwisata']) == TRUE): ?>
 
 						<div class="booking-summary-v2">
 							<div class="col-md-4 col-sm-6 clear-padding">
-								<img src="assets/images/tour2.jpg" alt="cruise">
+								<img src="<?php echo base_url().'gallery/wisata/'.$items['gambar']; ?>" alt="cruise">
 							</div>
 							<div class="col-md-6 col-sm-6">
-								<h4>Wonderful Europe</h4>
+								<h4><?php echo $items['name'] ?></h4>
 								<div class="col-md-6 col-sm-6 col-xs-6 clear-padding">
 									<p>START</p>
 									<p><i class="fa fa-calendar"></i> SAT, 22 AUG</p>
@@ -44,16 +43,15 @@
 								</div>
 								<div class="clearfix"></div>
 								<p><span>Traveller</span> - 2 Adult</p>
-								<p><span>Theme</span> - Honeymoon</p>
+								<p><span>Theme</span> - <?php echo $items['id'] ?></p>
 							</div>
 							<div class="clearfix visible-sm-block"></div>
 							<div class="col-md-2 text-center">
-								<a href="#">CHANGE</a>
+								<a href="<?php echo base_url('Booking/hapusCart/'.$items['id']) ?>">CHANGE</a>
 							</div>
 						</div>
-							<?php endif ?>
 						<?php endforeach ?>
-						<button class="btn btn-danger" style="background-color: #f2676b; margin-top: 10px; color: white"> <i class="fa fa-plus"> Add Other</i></button>
+						<button data-toggle="modal" data-target="#modalku" class="btn btn-danger" style="background-color: #f2676b; margin-top: 10px; color: white"> <i class="fa fa-plus"> Add Other</i></button>
 						<div class="login-box" >
 						<h3>Trip Detail</h3>
 						<div class="booking-form">
@@ -64,20 +62,20 @@
 											<label>Start Date</label>
 											<input class="form-control" type="date" name="emailid" required >
 										</div>
-										
+
 										<div class="col-md-6">
 											<label>Pick Up Point</label>
 											<select class="form-control">
 												<option>fghjhjmk</option>
 											</select>
-											
+
 										</div>
 										<div class="col-md-6">
 											<label>Drop Point</label>
 											<select class="form-control">
 												<option>fghjhjmk</option>
 											</select>
-											
+
 										</div>
 										<div class="col-md-6 col-sm-6 search-col-padding">
 											<label>Traveler</label><br>
@@ -209,7 +207,7 @@
 											<button type="submit">CONFIRM BOOKING <i class="fa fa-chevron-right"></i></button>
 										</div>
 									</form>
-								</div>	
+								</div>
 								<div class="payment-seperator clearfix"></div>
 								<div class="add-new-card">
 									<h4>Add New Card</h4>
@@ -280,3 +278,23 @@
  <?php $this->load->view("user/side/js"); ?>
 </body>
 </html>
+<div class="modal fade" id="modalku" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            bhnjmk
+          </div>
+          <div class="col-md-6">
+            bhjnjmk,l
+          </div>
+        </div>
+      </div>
+      <div class="row modal-footer">
+        <button class="btn btn-primary btn-md pull-right" data-dismiss="modal" id="done_destination">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end modal small -->
