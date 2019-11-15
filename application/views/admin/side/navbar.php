@@ -83,7 +83,7 @@
               <div class="collapse" id="navbar-maps">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="<?php echo base_url('admin/Dashboard/home') ?>" class="nav-link">Home</a>
+                    <a href="<?php echo base_url('admin/Dashboard/home') ?>" class="nav-link">Slider & Why Choose Us</a>
                   </li>
                   <li class="nav-item">
                     <a href="<?php echo base_url('admin/Contact') ?>" class="nav-link">Contact Us</a>

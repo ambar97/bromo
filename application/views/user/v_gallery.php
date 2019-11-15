@@ -10,7 +10,7 @@
 			<?php foreach ($lery->result() as $ler): ?>
 			<div class="col-md-3 col-sm-4" >
 				<div class="image-wrapper">
-					<img src="<?php echo base_url().$ler->gambar ?>" alt="Cruise" style="border-radius: 20px; height: 250px; width: 100%;">
+					<img src="<?php echo base_url().$ler->gambar ?>" alt="Cruise" style="border-radius: 20px; height: 280px; width: 100%;">
 					<div class="img-caption">
 						<div class="link">
 							<a  href="" data-toggle="modal" data-target="#myModal<?php echo $ler->idgalery ?>">
@@ -31,7 +31,7 @@
 </html>
 <?php foreach ($lery->result() as $ler): ?>
 <div class="modal fade" id="myModal<?php echo $ler->idgalery ?>" tabindex="-1" role="dialog" style="margin-top: 100px; border-radius: 50px;" aria-labelledby="myModalLabel" aria-hidden="true" >
-	<div class="modal-dialog">
+	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 				<div class="modal-body" style="height: 400px; ">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -39,11 +39,12 @@
 					</button>
 					<div class="row" style="margin-top: 10px">
 						<div class="col-sm-6">
-					<img src="<?php echo base_url().$ler->gambar ?>" alt="Cruise" style="border-radius: 20px; height: 250px; width: 100%;">
+					<img src="<?php echo base_url().$ler->gambar ?>" alt="Cruise" style="border-radius: 20px; margin-top: 30px; width: 100%;">
 							
 						</div>
 						
-					<div class="col-sm-6" style="margin-top: 20px;">
+					<div class="col-sm-6" style="margin-top: 20px; padding-left: 20px;">
+							<p style="font-weight: bold;"><?php echo $ler->tag ?></p>
 							<blockquote><small><?php echo $ler->deskripsi ?></small></blockquote>
 						</div>
 					</div>

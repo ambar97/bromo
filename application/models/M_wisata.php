@@ -48,4 +48,10 @@ public $tabel ="wisata";
     $data=$this->db->get();
     return $data;
   }
+
+  public function showlimit(){
+    $this->db->order_by('rating','DESC');
+    $this->db->limit(6);
+    return $this->db->get('wisata') ;	
+  }
 }

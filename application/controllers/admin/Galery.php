@@ -22,8 +22,9 @@ class Galery extends CI_Controller {
 			if ($this->upload->do_upload('ght')){
 				$upload_data = $this->upload->data ();
 				$foto = "gallery/galeri/".$upload_data['file_name'];
-				$data = array('deskripsi' =>$this->input->post('desk') ,
-							'gambar'=>$foto);
+				$data = array('deskripsi' =>$this->input->post('judul') ,
+							'gambar'=>$foto,
+							'tag'=>$this->input->post('desk'));
 				$data = $this->M_model->insert('galery',$data);
 				redirect(base_url('admin/Galery'));
 			}else{
