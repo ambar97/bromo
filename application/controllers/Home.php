@@ -58,4 +58,19 @@ class Home extends CI_Controller {
 
 	}
 
+	public function coba(){
+		$data = array(
+        'id'      => 'sku_123ABC',
+        'qty'     => 1,
+        'price'   => 39.95,
+        'name'    => 'T-Shirt',
+        'options' => array('Size' => 'L', 'Color' => 'Red')
+			);
+
+			$this->cart->insert($data);
+			$this->cart->destroy();
+			var_dump($this->cart->contents());
+	}
+
 }
+?>
