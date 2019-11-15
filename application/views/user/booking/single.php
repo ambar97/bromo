@@ -19,9 +19,9 @@
 					<div class="col-md-8 col-sm-8">
 						<?php foreach ($this->cart->contents() as $items): ?>
 
-						<div class="booking-summary-v2">
+						<div class="booking-summary-v2" style="border-radius: 10px;">
 							<div class="col-md-4 col-sm-6 clear-padding">
-								<img src="<?php echo base_url().'gallery/wisata/'.$items['gambar']; ?>" alt="cruise">
+								<img style="border-radius: 20px;" src="<?php echo base_url().'gallery/wisata/'.$items['gambar']; ?>" alt="cruise">
 							</div>
 							<div class="col-md-6 col-sm-6">
 								<h4><i class="fa fa-map-marker"></i> <?php echo $items['name'] ?></h4>
@@ -46,15 +46,15 @@
 						<?php endforeach ?>
 						<button data-toggle="modal" data-target="#modalku" class="btn btn-danger" style="background-color: #f2676b; margin-top: 10px; color: white"> <i class="fa fa-plus"> Add Other</i></button><br>
 					</div> <br>
-					<div class="col-md-4 col-sm-4 booking-sidebar">
-						<div class="sidebar-item">
+					<div class="col-md-4 col-sm-4 booking-sidebar" style="border-radius: 10px;" >
+						<div class="sidebar-item" style="border-radius: 10px;">
 							<h4><i class="fa fa-bookmark"></i>Price Details</h4>
 							<div class="sidebar-body">
 								<table class="table">
                   <?php foreach ($this->cart->contents() as $items): ?>
 									<tr>
 										<td><?php echo $items['name'] ?></td>
-										<td><?php echo $items['price'] ?></td>
+										<td><?php echo number_format($items['price']) ?></td>
 									</tr>
                 <?php endforeach ?>
 									<tr>
@@ -108,13 +108,9 @@
   						<h3>Guest Details</h3>
   						<div class="passenger-detail-body">
   							<form >
-  								<div class="col-md-6 ol-sm-6">
-  									<label>First Name</label>
+  								<div class="col-md-12 ol-sm-12">
+  									<label>Full Name</label>
   									<input type="text" name="firstname" required class="form-control">
-  								</div>
-  								<div class="col-md-6 ol-sm-6">
-  									<label>Last Name</label>
-  									<input type="text" name="lastname" required class="form-control">
   								</div>
   								<div class="col-md-6 ol-sm-6">
   									<label>Email</label>
@@ -142,7 +138,7 @@
                   <?php foreach ($this->cart->contents() as $items): ?>
 									<tr>
 										<td><?php echo $items['name'] ?></td>
-										<td><?php echo $items['price'] ?></td>
+										<td><?php echo number_format($items['price']) ?></td>
 									</tr>
                 <?php endforeach ?>
 									<tr>
@@ -158,29 +154,25 @@
 				<div id="billing-info" class="tab-pane fade">
 					<div class="col-md-8 col-sm-8">
 						<div class="passenger-detail">
-							<h3>Total Payment to be made $499</h3>
+							<h3>Choose Your Payment</h3>
 							<div class="passenger-detail-body">
 								<div class="saved-card">
 									<form >
-										<label data-toggle="collapse" data-target="#saved-card-1"><input type="radio" name="card"> <span>Bank of America 1234 XXXX XXXX 1290</span></label>
+										<label data-toggle="collapse" data-target="#saved-card-1"><input type="radio" name="card"> <span>Bank BCA</span></label>
 										<div id="saved-card-1" class="collapse">
-											<div class="col-md-4 col-sm-4">
-												<label>CVV</label>
-												<input type="password" required class="form-control">
+											<div class="col-md-2 ">
 											</div>
+                      <div class="col-md-8">
+                        <!-- <label>CVV</label> --><br>
+                        <img src="<?php echo base_url() ?>gallery/icon/bca.png" style="width:300px;" alt="">
+												<p class="text-center">a.n.</p>
+                      </div>
 										</div>
 										<div class="clearfix"></div>
-										<label data-toggle="collapse" data-target="#saved-card-2"><input type="radio" name="card"> <span>State Bank of India 1234 XXXX XXXX 1290</span></label>
+										<!-- <label data-toggle="collapse" data-target="#saved-card-2"><input type="radio" name="card"> <span>State Bank of India 1234 XXXX XXXX 1290</span></label> -->
 										<div id="saved-card-2" class="collapse">
-											<div class="col-md-4 col-sm-4">
-												<label>CVV</label>
-												<input type="password" required class="form-control">
-											</div>
 										</div>
 										<div class="clearfix"></div>
-										<div>
-											<button type="submit">CONFIRM BOOKING <i class="fa fa-chevron-right"></i></button>
-										</div>
 									</form>
 								</div>
 								<div class="payment-seperator clearfix"></div>
@@ -228,7 +220,7 @@
 									<div class="col-md-2 col-sm-2 col-xs-4">
 										<i class="fa fa-paypal"></i>
 									</div>
-									<div class="col-md-10 col-sm-10 col-xs-8">
+									<div class="col-md-10 col-sm-10 col-xs-8 ">
 										<a href="#">CONFIRM BOOKING</a>
 									</div>
 								</div>
@@ -243,7 +235,7 @@
                   <?php foreach ($this->cart->contents() as $items): ?>
 									<tr>
 										<td><?php echo $items['name'] ?></td>
-										<td><?php echo $items['price'] ?></td>
+										<td><?php echo number_format($items['price']) ?></td>
 									</tr>
                 <?php endforeach ?>
 									<tr>
@@ -254,13 +246,16 @@
 								</table>
 							</div>
 						</div>
-					</div>
+            <br>
+            <div class=" ">
+              <a href="#" type="button"class="btn btn-primary" >CONFIRM ALL BOOKING</a>
+            </div>
+          </div>
 				</div>
 			</div>
 		</div>
 	</div>
 		<?php $this->load->view("user/side/footer"); ?>
-
  <?php $this->load->view("user/side/js"); ?>
 </body>
 </html>
